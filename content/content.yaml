@@ -1,0 +1,7 @@
+# Built-in
+filters_pre:
+  - erb
+
+# Custom
+title:        "Home"
+size:         "halfwidth"
