@@ -148,30 +148,39 @@ body {
 
 /* ----- GENERAL ----- */
 
-/* main */
+/* main wrappers */
 
-#main-wrapper-outside {
+#main-wrapper-outside.halfwidth {
+	background: url(/assets/images/background/right-middle.jpg) repeat-y top left;
+}
+
+#main-wrapper-outside.fullwidth {
+	background: url(/assets/images/background/full-middle.jpg) repeat-y top left;
 }
 
 #main-wrapper-inside {
-	width: 960px;
-	height: 824px;
+	width:  960px;
+	min-height: 844px;
 }
 
-#main-wrapper-inside.halfwidth {
-	background: url(/assets/images/background/right.jpg) no-repeat top left;
+.halfwidth #main-wrapper-inside {
+	background: url(/assets/images/background/right-bottom.jpg) no-repeat bottom left;
 }
 
-#main-wrapper-inside.fullwidth {
-	background: url(/assets/images/background/full.jpg) no-repeat top left;
+.fullwidth #main-wrapper-inside {
+	background: url(/assets/images/background/full-bottom.jpg) no-repeat bottom left;
 }
 
-#main-wrapper-inside.halfwidth #main {
-	padding: 80px 60px 0 471px;
+.halfwidth #main {
+	background: url(/assets/images/background/right-top.jpg) no-repeat top left;
+
+	padding: 80px 60px 60px 471px;
 }
 
-#main-wrapper-inside.fullwidth #main {
-	padding: 100px 180px 0 180px;
+.fullwidth #main {
+	background: url(/assets/images/background/full-top.jpg) no-repeat top left;
+
+	padding: 100px 180px 60px 180px;
 }
 
 #main {
