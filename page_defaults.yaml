@@ -3,9 +3,11 @@
 
 # Built-in
 layout:       "default"
-filters_pre:  []
 filename:     "index"
-extension:    "html"
+extension:    "php"
+filters_pre:
+  - erb
+  - php
 
 # Custom
 size:         fullwidth
