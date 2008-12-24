@@ -5,3 +5,4 @@ filters_pre:
 # Custom
 title:        "Home"
 size:         "halfwidth"
+has_intro:    true

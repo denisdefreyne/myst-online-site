@@ -1,4 +1,4 @@
 # Built-in
+filter: 'erb'
 
 # Custom 
-filter: erb

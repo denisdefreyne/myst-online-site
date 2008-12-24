@@ -9,3 +9,4 @@ extension:    "html"
 
 # Custom
 size:         fullwidth
+has_intro:    false
