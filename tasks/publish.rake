@@ -16,6 +16,6 @@ task :publish do
 
   # Don't touch this!
   puts 'Publishing site...'
-  system('rsync', '-gpPrvz', '--exclude=".hg"', src, dst)
+  system('rsync', '-gpPrvz', '--delete-after', '--exclude=".hg"', src, dst)
   puts 'Site published.'
 end
