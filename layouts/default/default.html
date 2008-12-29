@@ -20,15 +20,17 @@
 				<li id="nav-media"><a href="/media/"><span>Media</span></a></li>
 				<li id="nav-development"><a href="/development/"><span>Development</span></a></li>
 			</ul>
-<% if @page.has_intro? %>
-			<div id="intro">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-<% end %>
+<% if @page.has_banner? %>
+			<div id="banner"></div>
+			<div id="main-wrapper-outside" class="<%= @page.size %> <%= @page.size %>-with-banner">
+<% else %>
 			<div id="main-wrapper-outside" class="<%= @page.size %>">
+<% end %>
 				<div id="main-wrapper-inside">
 					<div id="main">
+						<div id="page">
 <%= @page.content %>
+						</div>
 					</div>
 				</div>
 			</div>
