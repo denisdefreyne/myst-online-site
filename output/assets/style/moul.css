@@ -118,18 +118,18 @@ body {
 #nav li#nav-media a:hover       { background-position: -640px -69px; }
 #nav li#nav-development a:hover { background-position: -800px -69px; }
 
-/* ----- INTRO ----- */
+/* ----- BANNER ----- */
 
-#intro {
+#banner {
 	width: 960px;
-	height: 313px;
+	height: 213px;
 
 	background: url(/assets/images/header/banner.jpg) no-repeat top left;
 
 	position: relative;
 }
 
-#intro p {
+#banner p {
 	bottom: 42px;
 	left: 30px;
 	width: 280px;
@@ -148,7 +148,7 @@ body {
 
 /* ----- GENERAL ----- */
 
-/* main wrappers */
+/* main wrapper out */
 
 #main-wrapper-outside.halfwidth {
 	background: url(/assets/images/background/right-middle.jpg) repeat-y top left;
@@ -158,9 +158,10 @@ body {
 	background: url(/assets/images/background/full-middle.jpg) repeat-y top left;
 }
 
+/* main wrapper in */
+
 #main-wrapper-inside {
-	width:  960px;
-	min-height: 844px;
+	width:      960px;
 }
 
 .halfwidth #main-wrapper-inside {
@@ -171,8 +172,20 @@ body {
 	background: url(/assets/images/background/full-bottom.jpg) no-repeat bottom left;
 }
 
+/* main wrapper main */
+
 .halfwidth #main {
 	background: url(/assets/images/background/right-top.jpg) no-repeat top left;
+
+	min-height: 640px;
+
+	padding: 80px 60px 60px 471px;
+}
+
+.halfwidth-with-banner #main {
+	background: url(/assets/images/background/right-top-with-banner.jpg) no-repeat top left;
+
+	min-height: 640px;
 
 	padding: 80px 60px 60px 471px;
 }
@@ -180,11 +193,19 @@ body {
 .fullwidth #main {
 	background: url(/assets/images/background/full-top.jpg) no-repeat top left;
 
-	padding: 100px 180px 60px 180px;
+	min-height: 440px;
+
+	padding: 100px 60px 100px 80px;
 }
 
 #main {
 	position: relative;
+}
+
+/* page */
+
+.halfwidth-with-banner #page {
+	margin: -120px 0 0 0;
 }
 
 /* headers */
@@ -196,9 +217,14 @@ body {
 
 	text-transform: uppercase;
 
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 
-	margin: 0 0 40px 0;
+	margin: 0 0 20px 0;
+	padding: 0 0 0 0;
+}
+
+.halfwidth-with-banner #main h1 {
+	display: none;
 }
 
 #main h2 {
@@ -278,8 +304,11 @@ body {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 12px;
 	font-weight: normal;
+
 	color: #824000;
+
 	line-height: 18px;
+
 	text-decoration: none;
 }
 
@@ -287,69 +316,102 @@ body {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 12px;
 	font-weight: normal;
+
 	color: #824000;
+
 	line-height: 18px;
+
 	text-decoration: underline;
 }
 
 /* sub-navigation */
 
-.sub-nav {
+#main #subnav {
+	margin: 20px 0;
+}
+
+#main #subnav li {
+	display: inline;
+
+	margin: 0 10px 0 0;
+}
+
+#main #subnav a,
+#main #subnav span.active {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 9px;
+	font-size: 10px;
 	font-weight: bold;
 
 	text-transform: uppercase;
-
-	color: #927250;
-
-	margin: 5px 0 20px 0;
 }
 
-.sub-nav a {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 9px;
-	font-weight: bold;
-
+#main #subnav a:link,
+#main #subnav a:visited {
 	color: #927250;
-
-	text-transform: uppercase;
-	text-decoration: none;
 }
 
-.sub-nav a:hover {
+#main #subnav a:hover {
 	color: #541b00;
 
 	text-decoration: underline;
 }
 
-.sub-nav .active {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 9px;
-	font-weight: bold;
+#main #subnav a:active {
+	color: #000000;
 
-	color: #541b00;
-
-	text-transform: uppercase;
 	text-decoration: none;
+}
+
+#main #subnav span.active {
+	color: #541b00;
 }
 
 /* special */
 
-.special {
+#main .special {
 	background: #fddfb7;
 
-	padding: 1px 8px;
+	margin: 20px 0;
+	padding: 0 10px;
 }
 
-.special p {
-	margin: 14px 0;
+#main .special p {
+	margin: 0;
+	padding: 10px 0;
 
 	color: #824000;
 
-	font-size: 12px;
+	font-size: 13px;
 
-	line-height: 16px;
+	line-height: 18px;
+}
+
+/* gallery */
+
+#main .gallery {
+	margin:  0;
+	padding: 20px 0;
+
+	position: relative;
+}
+
+#main .gallery li {
+	display: inline;
+
+	list-style-type: none;
+
+	line-height: 50px;
+
+	margin-right: 10px;
+}
+
+#main .gallery li a img {
+	border: 0;
+}
+
+#main .gallery img {
+	width: 193px;
+	height: 120px;
 }
 
 /* ----- FOOTER ----- */
