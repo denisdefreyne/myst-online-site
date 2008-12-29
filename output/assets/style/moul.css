@@ -104,19 +104,19 @@ body {
 	display: none;
 }
 
-#nav li#nav-home a              { background-position: 0      0; }
-#nav li#nav-play a              { background-position: -160px 0; }
-#nav li#nav-about a             { background-position: -320px 0; }
-#nav li#nav-forums a            { background-position: -480px 0; }
-#nav li#nav-media a             { background-position: -640px 0; }
-#nav li#nav-development a       { background-position: -800px 0; }
+#nav li#nav-home a             { background-position: 0      0; }
+#nav li#nav-play a             { background-position: -160px 0; }
+#nav li#nav-about a            { background-position: -320px 0; }
+#nav li#nav-forums a           { background-position: -480px 0; }
+#nav li#nav-media a            { background-position: -640px 0; }
+#nav li#nav-developers a       { background-position: -800px 0; }
 
-#nav li#nav-home a:hover        { background-position: 0      -69px; }
-#nav li#nav-play a:hover        { background-position: -160px -69px; }
-#nav li#nav-about a:hover       { background-position: -320px -69px; }
-#nav li#nav-forums a:hover      { background-position: -480px -69px; }
-#nav li#nav-media a:hover       { background-position: -640px -69px; }
-#nav li#nav-development a:hover { background-position: -800px -69px; }
+#nav li#nav-home a:hover       { background-position: 0      -69px; }
+#nav li#nav-play a:hover       { background-position: -160px -69px; }
+#nav li#nav-about a:hover      { background-position: -320px -69px; }
+#nav li#nav-forums a:hover     { background-position: -480px -69px; }
+#nav li#nav-media a:hover      { background-position: -640px -69px; }
+#nav li#nav-developers a:hover { background-position: -800px -69px; }
 
 /* ----- BANNER ----- */
 
