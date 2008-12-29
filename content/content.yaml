@@ -2,5 +2,4 @@
 
 # Custom
 title:        "Home"
-size:         "halfwidth"
-has_intro:    true
+has_banner:   true
