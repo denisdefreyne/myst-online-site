@@ -10,5 +10,5 @@ filters_pre:
   - php
 
 # Custom
-size:         fullwidth
-has_intro:    false
+size:         "halfwidth"
+has_banner:   false
