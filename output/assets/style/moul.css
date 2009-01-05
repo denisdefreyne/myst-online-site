@@ -1,24 +1,8 @@
+/* ----- GENERAL ----- */
+
 * {
 	margin: 0;
 	padding: 0;
-}
-
-/* ----- GENERAL ----- */
-
-a {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;
-	font-weight: normal;
-
-	color: #824000;
-
-	line-height: 18px;
-
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 /* ----- WRAPPER ----- */
@@ -246,17 +230,15 @@ body#page-developers #main h1 {
 
 #main h2 {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: normal;
 
 	color: #6a4a17;
 
 	text-transform: uppercase;
 
-	letter-spacing: 1px;
-
-	padding: 8px 0 0 0;
-	margin: 29px 0 18px 0;
+	padding: 6px 0 0 0;
+	margin: 47px 0 18px 0;
 }
 
 #main h2 span {
@@ -265,14 +247,15 @@ body#page-developers #main h1 {
 
 #main h3 {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 
 	text-transform: uppercase;
 
 	color: #6a4a17;
+	color: #000;
 
-	margin: 5px 0 10px 0;
+	margin: 20px 0;
 }
 
 /* pictures */
@@ -326,25 +309,13 @@ body#page-developers #main h1 {
 }
 
 #main p a {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;
-	font-weight: normal;
-
 	color: #824000;
-
-	line-height: 18px;
 
 	text-decoration: underline;
 }
 
 #main p a:hover {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 12px;
-	font-weight: normal;
-
-	color: #824000;
-
-	line-height: 18px;
+	color: #541b00;
 
 	text-decoration: underline;
 }
