@@ -3,11 +3,14 @@
 <img src="/assets/images/sidebar/<?php echo $pair; ?>/top.jpg"    id="sidebar-pic-top">
 <img src="/assets/images/sidebar/<?php echo $pair; ?>/bottom.jpg" id="sidebar-pic-bottom">
 
-<h1><span>About</span></h1>
+<h1><span>About: News</span></h1>
 
 <ul id="subnav">
 	<li><a href="/about/history/">History</a></li>
-	<li><a href="/about/news/">News</a></li>
+	<li><span class="active">News</span></li>
 </ul>
 
-<p>This section is under construction. Stay tuned!</p>
+<% @pages.select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.reverse.each do |article| %>
+<h2><%=h article.title %></h2>
+<%= article.content %>
+<% end %>

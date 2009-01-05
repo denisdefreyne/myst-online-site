@@ -1,0 +1,12 @@
+# Built-in
+filters_pre:
+  - "erb"
+filters_post: []
+layout:     "none"
+extension:  "xml"
+
+# Custom
+is_hidden:    "true"
+#feed_url:     "http://feeds.feedburner.com/stoneship"
+title:        "Myst Online: Uru Live news"
+base_url:     "http://mystonline.com"
