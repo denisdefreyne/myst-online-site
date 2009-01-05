@@ -7,7 +7,11 @@
 
 		<link href="/assets/style/moul.css" rel="stylesheet" type="text/css">
 	</head>
+<% if @page.page_id %>
+	<body id="page-<%=h @page.page_id %>">
+<% else %>
 	<body>
+<% end %>
 		<div id="wrapper">
 			<div id="header">
 				<div><a href="/"><span>Myst Online: Uru Live</span></a></div>
