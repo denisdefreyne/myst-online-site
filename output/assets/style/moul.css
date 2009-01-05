@@ -191,7 +191,7 @@ body {
 
 	min-height: 440px;
 
-	padding: 100px 60px 100px 80px;
+	padding: 38px 60px 100px 80px;
 }
 
 #main {
@@ -226,6 +226,10 @@ body#page-about #main h1 {
 
 body#page-media #main h1 {
 	background: url(/assets/images/header/page-media.jpg) no-repeat top left;
+}
+
+body#page-media-screenshots #main h1 {
+	background: url(/assets/images/header/page-media-screenshots.jpg) no-repeat top left;
 }
 
 body#page-developers #main h1 {
@@ -363,8 +367,11 @@ body#page-developers #main h1 {
 	font-size: 11px;
 	font-weight: bold;
 
-	text-decoration: underline;
 	text-transform: uppercase;
+}
+
+#main #subnav a {
+	text-decoration: underline;
 }
 
 #main #subnav a:link,
