@@ -160,10 +160,6 @@ body {
 
 /* main wrapper in */
 
-#main-wrapper-inside {
-	width:      960px;
-}
-
 .halfwidth #main-wrapper-inside {
 	background: url(/assets/images/background/right-bottom.jpg) no-repeat bottom left;
 }
@@ -179,7 +175,7 @@ body {
 
 	min-height: 640px;
 
-	padding: 80px 60px 60px 471px;
+	padding: 38px 60px 60px 471px;
 }
 
 .halfwidth-with-banner #main {
@@ -211,19 +207,36 @@ body {
 /* headers */
 
 #main h1 {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 40px;
-	font-weight: normal;
+	position: relative;
 
-	text-transform: uppercase;
+	height: 132px;
+	width:  489px;
 
-	letter-spacing: 1px;
+	right: 0;
+	top:   0;
+}
 
-	margin: 0 0 20px 0;
-	padding: 0 0 0 0;
+body#page-play #main h1 {
+	background: url(/assets/images/header/page-play.jpg) no-repeat top left;
+}
+
+body#page-about #main h1 {
+	background: url(/assets/images/header/page-about.jpg) no-repeat top left;
+}
+
+body#page-media #main h1 {
+	background: url(/assets/images/header/page-media.jpg) no-repeat top left;
+}
+
+body#page-developers #main h1 {
+	background: url(/assets/images/header/page-developers.jpg) no-repeat top left;
 }
 
 .halfwidth-with-banner #main h1 {
+	display: none;
+}
+
+#main h1 span {
 	display: none;
 }
 
@@ -237,8 +250,6 @@ body {
 	text-transform: uppercase;
 
 	letter-spacing: 1px;
-
-	border-top: 1px solid #c49860;
 
 	padding: 8px 0 0 0;
 	margin: 29px 0 18px 0;
@@ -282,6 +293,16 @@ body {
 	left: 0;
 }
 
+#main #sidebar-pic-home {
+	position: absolute;
+
+	width: 471px;
+	height: 640px;
+
+	top: 0;
+	left: 0;
+}
+
 /* text */
 
 #main p {
@@ -309,7 +330,7 @@ body {
 
 	line-height: 18px;
 
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 #main p a:hover {
@@ -327,7 +348,7 @@ body {
 /* sub-navigation */
 
 #main #subnav {
-	margin: 20px 0;
+	margin: 0 0 20px 0;
 }
 
 #main #subnav li {
@@ -339,9 +360,10 @@ body {
 #main #subnav a,
 #main #subnav span.active {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: bold;
 
+	text-decoration: underline;
 	text-transform: uppercase;
 }
 
