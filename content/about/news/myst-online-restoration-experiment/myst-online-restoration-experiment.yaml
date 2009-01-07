@@ -1,4 +1,5 @@
 # Built-in
+skip_output: true
 
 # Custom 
 title: "Myst Online: Restoration Experiment"
