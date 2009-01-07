@@ -8,6 +8,6 @@ custom_path:  /about/news/_feed.xml
 
 # Custom
 is_hidden:    "true"
-#feed_url:     "http://feeds.feedburner.com/stoneship"
+feed_url:     "http://feeds.feedburner.com/uru"
 title:        "Myst Online: Uru Live news"
 base_url:     "http://mystonline.com"
