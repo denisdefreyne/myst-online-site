@@ -208,6 +208,10 @@ body#page-about #main h1 {
 	background: url(/assets/images/header/page-about.jpg) no-repeat top left;
 }
 
+body#page-about-news #main h1 {
+	background: url(/assets/images/header/page-about-news.jpg) no-repeat top left;
+}
+
 body#page-media #main h1 {
 	background: url(/assets/images/header/page-media.jpg) no-repeat top left;
 }
