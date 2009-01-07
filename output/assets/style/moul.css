@@ -157,7 +157,7 @@ body {
 .halfwidth #main {
 	background: url(/assets/images/background/right-top.jpg) no-repeat top left;
 
-	min-height: 640px;
+	min-height: 800px;
 
 	padding: 38px 60px 60px 471px;
 }
@@ -165,9 +165,9 @@ body {
 .halfwidth-with-banner #main {
 	background: url(/assets/images/background/right-top-with-banner.jpg) no-repeat top left;
 
-	min-height: 640px;
+	min-height: 800px;
 
-	padding: 80px 60px 60px 471px;
+	padding: 58px 60px 60px 471px;
 }
 
 .fullwidth #main {
@@ -302,6 +302,25 @@ body#page-developers #main h1 {
 	line-height: 18px;
 
 	margin: 0 0 20px 0;
+}
+
+#main .meta {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #927250;
+
+	line-height: 18px;
+
+	margin: -10px 0 30px 0;
+}
+
+#main p.note {
+	font-style: italic;
+
+	color: #927250;
 }
 
 #main q {
