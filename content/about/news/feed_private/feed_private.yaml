@@ -2,8 +2,9 @@
 filters_pre:
   - "erb"
 filters_post: []
-layout:     "none"
-extension:  "xml"
+layout:       "none"
+extension:    "xml"
+custom_path:  /about/news/_feed.xml
 
 # Custom
 is_hidden:    "true"

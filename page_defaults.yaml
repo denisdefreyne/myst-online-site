@@ -4,10 +4,11 @@
 # Built-in
 layout:       "default"
 filename:     "index"
-extension:    "php"
+extension:    "html"
 filters_pre:
   - erb
-  - php
+filters_post:
+  - rewrite_urls_in_html
 
 # Custom
 size:         "halfwidth"
