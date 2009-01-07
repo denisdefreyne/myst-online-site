@@ -5,12 +5,8 @@
 
 <h1><span>About: News</span></h1>
 
-<ul id="subnav">
-	<li><a href="/about/history/">History</a></li>
-	<li><span class="active">News</span></li>
-</ul>
+<p class="note">Be sure to subscribe to the <a href="#">news feed</a> to stay informed!</p>
 
 <% @pages.select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.reverse.each do |article| %>
-<h2><%=h article.title %></h2>
-<%= article.content %>
+	<%= render 'article', :article => article %>
 <% end %>
