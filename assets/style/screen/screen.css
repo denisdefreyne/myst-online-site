@@ -220,6 +220,10 @@ body#page-media-screenshots #main h1 {
 	background: url(/assets/images/header/page-media-screenshots.jpg) no-repeat top left;
 }
 
+body#page-media-concept-art #main h1 {
+	background: url(/assets/images/header/page-media-concept-art.jpg) no-repeat top left;
+}
+
 body#page-developers #main h1 {
 	background: url(/assets/images/header/page-developers.jpg) no-repeat top left;
 }
