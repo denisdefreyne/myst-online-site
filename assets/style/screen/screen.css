@@ -28,7 +28,7 @@ body {
 /* ----- HEADER ----- */
 
 #header {
-	background: url(/assets/images/header/header.jpg) no-repeat;
+	background: #6a3506 url(/assets/images/header/header.jpg) no-repeat;
 
 	position: relative;
 
@@ -81,7 +81,7 @@ body {
 	width: 160px;
 	height: 69px;
 	
-	background: url(/assets/images/header/nav.jpg);
+	background: #43290D url(/assets/images/header/nav.jpg);
 }
 
 #nav li a span {
@@ -108,7 +108,7 @@ body {
 	width: 960px;
 	height: 213px;
 
-	background: url(/assets/images/header/banner.jpg) no-repeat top left;
+	background: #715535 url(/assets/images/header/banner.jpg) no-repeat top left;
 
 	position: relative;
 }
@@ -135,11 +135,11 @@ body {
 /* main wrapper out */
 
 #main-wrapper-outside.halfwidth {
-	background: url(/assets/images/background/right-middle.jpg) repeat-y top left;
+	background: #fecc99 url(/assets/images/background/right-middle.jpg) repeat-y top left;
 }
 
 #main-wrapper-outside.fullwidth {
-	background: url(/assets/images/background/full-middle.jpg) repeat-y top left;
+	background: #fecc99 url(/assets/images/background/full-middle.jpg) repeat-y top left;
 }
 
 /* main wrapper in */
