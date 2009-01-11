@@ -8,93 +8,11 @@
 <p>Click on any image for a larger version. <a href="/media/">Back to the media page</a>.</p>
 
 <ul class="gallery">
+<% (1..17).each do |i| %>
 	<li>
-		<a href="/assets/images/media/concept-art/1.jp">
-			<img src="/assets/images/media/concept-art/1.jpg">
+		<a href="/assets/images/media/concept-art/full/<%= i %>.jpg">
+			<img src="/assets/images/media/concept-art/thumbnails/<%= i %>.jpg">
 		</a>
 	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/2.jpg">
-			<img src="/assets/images/media/concept-art/2.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/3.jpg">
-			<img src="/assets/images/media/concept-art/3.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/4.jpg">
-			<img src="/assets/images/media/concept-art/4.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/5.jpg">
-			<img src="/assets/images/media/concept-art/5.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/6.jpg">
-			<img src="/assets/images/media/concept-art/6.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/7.jpg">
-			<img src="/assets/images/media/concept-art/7.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/8.jpg">
-			<img src="/assets/images/media/concept-art/8.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/9.jpg">
-			<img src="/assets/images/media/concept-art/9.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/10.jpg">
-			<img src="/assets/images/media/concept-art/10.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/11.jpg">
-			<img src="/assets/images/media/concept-art/11.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/12.jpg">
-			<img src="/assets/images/media/concept-art/12.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/13.jpg">
-			<img src="/assets/images/media/concept-art/13.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/14.jpg">
-			<img src="/assets/images/media/concept-art/14.jpg">
-		</a>
-	</li>
-
-	<li>
-		<a href="/assets/images/media/concept-art/15.jpg">
-			<img src="/assets/images/media/concept-art/15.jpg">
-		</a>
-	</li>
+<% end %>
 </ul>
