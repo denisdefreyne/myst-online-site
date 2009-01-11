@@ -6,6 +6,11 @@ include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::XMLSitemap
 
+# Returns the asset with the given asset ID.
+def asset(asset_id)
+  @assets.find { |asset| asset.asset_id == asset_id }
+end
+
 class Fixnum
 
   def to_mon_s

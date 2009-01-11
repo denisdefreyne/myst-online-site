@@ -5,7 +5,7 @@
 
 		<title>Myst Online: Uru Live - <%= @page.title %></title>
 
-		<link href="/assets/style/screen.css" rel="stylesheet" type="text/css">
+		<link href="<%= asset('style-screen').path %>" rel="stylesheet" type="text/css">
 
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
 	</head>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 			<div id="footer">
-				<img src="/assets/images/footer/logo-cyan.jpg" id="footer-logo-cyan">
+				<img src="/assets/images/footer/logo-cyan.jpg" id="footer-logo-cyan" alt="Cyan Worlds, inc. logo">
 				<p class="copyright">
 					Myst Online: Uru Live&trade;&reg; is the sole property of Cyan Worlds Inc. Copyright 2003-2009 Cyan Worlds, Inc. All Rights reserved.<br>
 					Myst is a registered trademark of Cyan Worlds, inc. © 1994-2008 Cyan Worlds, inc. The Myst logo is a registered trademark of Cyan Worlds, inc.<br>

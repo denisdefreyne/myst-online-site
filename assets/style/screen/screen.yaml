@@ -1,0 +1,7 @@
+# Built-in
+binary:       false
+filters:      []
+
+# Custom
+asset_id:     "style-screen"
+version:      "2"
