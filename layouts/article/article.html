@@ -1,5 +1,7 @@
 <h2><%=h @article.title %></h2>
 
-<div class="meta">Posted on February 31, 2009.</div>
-
+<% if @article.has_real_created_at? %>
+<div class="meta">Written on <%= @article.created_at.mon.to_mon_s %> <%= @article.created_at.mday.ordinal %>, <%= @article.created_at.year %>.</div>
+<% end 
+%>
 <%= @article.content %>
