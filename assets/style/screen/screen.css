@@ -28,7 +28,7 @@ body {
 /* ----- HEADER ----- */
 
 #header {
-	background: #6a3506 url(/assets/images/header/header.jpg) no-repeat;
+	background: #6a3506 url(/assets/images/header/header-v2.jpg) no-repeat;
 
 	position: relative;
 
@@ -51,7 +51,7 @@ body {
 	width: 313px;
 	height: 126px;
 	
-	background: url(/assets/images/header/header.jpg) -320px 0;
+	background: url(/assets/images/header/header-v2.jpg) -320px 0;
 }
 
 #header div a:hover {
@@ -81,7 +81,7 @@ body {
 	width: 160px;
 	height: 69px;
 	
-	background: #43290D url(/assets/images/header/nav.jpg);
+	background: #43290D url(/assets/images/header/nav-v2.jpg);
 }
 
 #nav li a span {
