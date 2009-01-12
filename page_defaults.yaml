@@ -7,9 +7,9 @@ filename:     "index"
 extension:    "html"
 filters_pre:
   - erb
-filters_post:
-  - rewrite_urls_in_html
 
 # Custom
-size:         "halfwidth"
-has_banner:   false
+size:             "halfwidth"
+has_banner:       false
+assets_base_url:  http://moul-assets.stoneship.org
+base_url:         http://mystonline.com
