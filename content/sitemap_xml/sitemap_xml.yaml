@@ -1,0 +1,9 @@
+# Built-in
+filters_pre:
+  - "erb"
+extension:    "xml"
+layout:       "none"
+custom_path:  "/sitemap.xml"
+
+# Custom
+is_hidden:    "true"
