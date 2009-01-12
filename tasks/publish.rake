@@ -16,6 +16,17 @@ task :publish do
 
   # Don't touch this!
   puts 'Publishing site...'
-  system('rsync', '-gpPrvz', '--delete-after', '--exclude=".hg"', src, dst)
+  system('rsync', '-gpPrvz', '--delete-after', src, dst)
   puts 'Site published.'
+end
+
+task :'publish-assets' do
+  # Settings
+  src = '/Users/ddfreyne/Documents/Cyan/Myst Online/moul-nanoc/output/assets/' # trailing slash
+  dst = 'ddfreyne@ectype:/home/ddfreyne/sites/moul-assets/public/assets'       # no trailing slash
+
+  # Don't touch this!
+  puts 'Publishing assets...'
+  system('rsync', '-gpPrvz', src, dst)
+  puts 'Assets published.'
 end
