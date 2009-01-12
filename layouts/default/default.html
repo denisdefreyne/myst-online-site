@@ -56,5 +56,19 @@
 				</p>
 			</div>
 		</div>
+		<script type="text/javascript">
+			// Preload
+			if(document.images)
+			{
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-top.jpg';
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-middle.jpg';
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-bottom.jpg';
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-top.jpg';
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-middle.jpg';
+				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-bottom.jpg';
+			}
+		</script>
+		<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
+		<script type="text/javascript">_uacct = "UA-528970-2"; urchinTracker();</script>
 	</body>
 </html>
