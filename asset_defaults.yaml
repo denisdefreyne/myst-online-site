@@ -1,6 +1,4 @@
 # Built-in
 binary:  false
-filters:
-  - rewrite_urls_in_css
 
 # Custom
