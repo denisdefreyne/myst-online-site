@@ -268,23 +268,13 @@ body#page-developers #main h1 {
 
 /* pictures */
 
-#main #sidebar-pic-top {
+#main #sidebar-pic {
 	position: absolute;
 
 	width: 471px;
-	height: 352px; 
+	height: 681px; 
 
 	top: 20px;
-	left: 0;
-}
-
-#main #sidebar-pic-bottom {
-	position: absolute;
-
-	width: 471px;
-	height: 329px;
-
-	top: 372px;
 	left: 0;
 }
 
