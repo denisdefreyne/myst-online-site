@@ -109,6 +109,34 @@ body.lang-nl #nav li a { background: #43290D url(/assets/images/header/nav-v2-nl
 #nav li#nav-media a:hover      { background-position: -640px -69px; }
 #nav li#nav-developers a:hover { background-position: -800px -69px; }
 
+/* ----- INTERNET EXPLORER 6 WARNING ----- */
+
+.ie6-warning {
+	padding: 4px 3px;
+
+	background: #ffc;
+
+	color: #900;
+
+	font-size: 11px;
+	font-family: Verdana, Arial, sans-serif;
+
+	line-height: 15px
+}
+
+.ie6-warning a:link,
+.ie6-warning a:visited {
+	color: #000;
+}
+
+.ie6-warning a:hover {
+	color: #333;
+}
+
+.ie6-warning a:active {
+	color: #000;
+}
+
 /* ----- BANNER ----- */
 
 #banner {
