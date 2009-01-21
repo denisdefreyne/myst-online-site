@@ -11,7 +11,5 @@ filters_pre:
 # Custom
 size:             "halfwidth"
 has_banner:       false
-#assets_base_url:  http://moul-assets.stoneship.org
-assets_base_url:  ""
-base_url:         http://mystonline.com
-lang:             en
+assets_base_url:  http://moul-new.stoneship.org # FIXME update
+base_url:         http://moul-new.stoneship.org # FIXME update
