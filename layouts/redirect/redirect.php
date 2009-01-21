@@ -55,7 +55,6 @@ function redirect($lang)
 {
 	global $base_url, $page_path, $path_mapping;
 
-	header('HTTP/1.1 301 Moved Permanently');
 	header('Location: ' . $base_url . '/' . $lang . $path_mapping[$lang][$page_path]);
 
 	exit();
