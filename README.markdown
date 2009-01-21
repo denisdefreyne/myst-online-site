@@ -7,6 +7,10 @@ To do
 ### High priority
 
 * Translations
+	* Localize feed
+	* Set up redirects
+	* Add language picker
+	* Localize description
 
 ### Low priority
 

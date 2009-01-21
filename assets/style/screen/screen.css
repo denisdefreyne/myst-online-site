@@ -80,9 +80,16 @@ body {
 	
 	width: 160px;
 	height: 69px;
-	
-	background: #43290D url(/assets/images/header/nav-v2.jpg);
+
+	background: #43290D;
 }
+
+body.lang-en #nav li a { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
+body.lang-de #nav li a { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
+body.lang-es #nav li a { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fr #nav li a { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
+body.lang-it #nav li a { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
+body.lang-nl #nav li a { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
 
 #nav li a span {
 	display: none;
@@ -108,10 +115,17 @@ body {
 	width: 960px;
 	height: 213px;
 
-	background: #715535 url(/assets/images/header/banner.jpg) no-repeat top left;
+	background: #715535;
 
 	position: relative;
 }
+
+body.lang-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
+body.lang-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
+body.lang-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
+body.lang-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
+body.lang-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
+body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
 
 #banner p {
 	bottom: 42px;
@@ -200,33 +214,21 @@ body {
 	top:   0;
 }
 
-body#page-play #main h1 {
-	background: url(/assets/images/header/page-play.jpg) no-repeat top left;
-}
+body.lang-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
+body.lang-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
+body.lang-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
+body.lang-en#page-media             h1 { background: url(/assets/images/header/page-media-en.jpg)             no-repeat top left; }
+body.lang-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
+body.lang-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
+body.lang-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
 
-body#page-about #main h1 {
-	background: url(/assets/images/header/page-about.jpg) no-repeat top left;
-}
-
-body#page-about-news #main h1 {
-	background: url(/assets/images/header/page-about-news.jpg) no-repeat top left;
-}
-
-body#page-media #main h1 {
-	background: url(/assets/images/header/page-media.jpg) no-repeat top left;
-}
-
-body#page-media-screenshots #main h1 {
-	background: url(/assets/images/header/page-media-screenshots.jpg) no-repeat top left;
-}
-
-body#page-media-concept-art #main h1 {
-	background: url(/assets/images/header/page-media-concept-art.jpg) no-repeat top left;
-}
-
-body#page-developers #main h1 {
-	background: url(/assets/images/header/page-developers.jpg) no-repeat top left;
-}
+body.lang-nl#page-play              h1 { background: url(/assets/images/header/page-play-nl.jpg)              no-repeat top left; }
+body.lang-nl#page-about             h1 { background: url(/assets/images/header/page-about-nl.jpg)             no-repeat top left; }
+body.lang-nl#page-about-news        h1 { background: url(/assets/images/header/page-about-news-nl.jpg)        no-repeat top left; }
+body.lang-nl#page-media             h1 { background: url(/assets/images/header/page-media-nl.jpg)             no-repeat top left; }
+body.lang-nl#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-nl.jpg) no-repeat top left; }
+body.lang-nl#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-nl.jpg) no-repeat top left; }
+body.lang-nl#page-developers        h1 { background: url(/assets/images/header/page-developers-nl.jpg)        no-repeat top left; }
 
 .halfwidth-with-banner #main h1 {
 	display: none;

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="<%= @page.language %>">
+<html lang="<%= @page.lang %>">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -12,27 +12,16 @@
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
 	</head>
 <% if @page.page_id %>
-	<body class="mystonline-com" id="page-<%=h @page.page_id %>">
+	<body class="mystonline-com lang-<%= @page.lang %>" id="page-<%=h @page.page_id %>">
 <% else %>
-	<body class="mystonline-com">
+	<body class="mystonline-com lang-<%= @page.lang %>">
 <% end %>
 		<div id="wrapper">
 			<div id="header">
-				<div><a href="/"><span>Myst Online: Uru Live</span></a></div>
+				<div><a href="/<%= @page.lang %>"><span>Myst Online: Uru Live</span></a></div>
 			</div>
-			<ul id="nav">
-				<li id="nav-home"><a href="/"><span>Home</span></a></li>
-				<li id="nav-play"><a href="/play/"><span>Play</span></a></li>
-				<li id="nav-about"><a href="/about/"><span>About</span></a></li>
-				<li id="nav-forums"><a href="/forums/"><span>Forums</span></a></li>
-				<li id="nav-media"><a href="/media/"><span>Media</span></a></li>
-				<li id="nav-developers"><a href="/developers/"><span>Developers</span></a></li>
-			</ul>
-<!--[if lte IE 6]>
-			<div style="padding: 4px 3px; background: #ffc; color: #900; font-size: 11px; font-family: Verdana, Arial, sans-serif; line-height: 15px">
-				You appear to be running Internet Explorer 6, an eight-year-old browser that is no longer supported. Please consider upgrading to <a style="color: #000" href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer 7</a> or <a style="color: #000" href="http://www.mozilla-europe.org/en/firefox/">Firefox</a>. You will not be prevented from visiting this site in IE 6, but your experience may not be satisfactory.
-			</div>
-<![endif]-->
+<%= render 'nav' %>
+<%= render 'ie6-warning' %>
 <% if @page.has_banner? %>
 			<div id="banner"></div>
 			<div id="main-wrapper-outside" class="<%= @page.size %> <%= @page.size %>-with-banner">
