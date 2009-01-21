@@ -13,3 +13,4 @@ size:             "halfwidth"
 has_banner:       false
 assets_base_url:  http://moul-assets.stoneship.org
 base_url:         http://mystonline.com
+language:         en
