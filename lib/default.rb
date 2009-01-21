@@ -11,6 +11,16 @@ def asset(asset_id)
   @assets.find { |asset| asset.asset_id == asset_id }
 end
 
+# Returns the page's language
+def page_lang(page=@page)
+  page.path[1..2]
+end
+
+# Returns all articles in the given language
+def articles(language)
+  @pages.select { |p| p.kind == 'article' && page_lang(p) == language }.sort_by { |a| a.created_at }.reverse
+end
+
 class Fixnum
 
   def to_mon_s

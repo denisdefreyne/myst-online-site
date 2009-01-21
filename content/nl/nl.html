@@ -4,6 +4,6 @@
 
 <h1>Laatste Nieuws</h1>
 
-<%= render 'article', :article => @pages.select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.last %>
+<%= render 'article', :article => articles('nl').first %>
 
 <p>(Deze pagina is nog niet beschikbaar in het Nederlands.)</p>
