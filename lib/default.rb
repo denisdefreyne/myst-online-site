@@ -21,6 +21,19 @@ def articles(language)
   @pages.select { |p| p.kind == 'article' && page_lang(p) == language }.sort_by { |a| a.created_at }.reverse
 end
 
+# Returns the page's translations
+def translations(page=@page)
+  @pages.select { |p| p.canonical_path == page.canonical_path && p.path != page.path }
+end
+
+# Returns the name of the language with the given code
+def lang_code_to_name(lang_code)
+  {
+    'en' => 'English',
+    'nl' => 'Dutch'
+  }[lang_code]
+end
+
 class Fixnum
 
   def to_mon_s

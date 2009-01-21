@@ -3,12 +3,19 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+		<!-- title and description -->
 		<title>Myst Online: Uru Live - <%= @page.title %></title>
-
 		<meta name="description" content="Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.">
 
+		<!-- style -->
 		<link href="<%= @page.assets_base_url + asset('style-screen').path %>" rel="stylesheet" type="text/css">
 
+		<!-- translations -->
+<% translations.each do |t| %>
+		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= page_lang(t) %>" title="<%= lang_code_to_name(page_lang(t)) %> translation">
+<% end %>
+
+		<!-- feed -->
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
 	</head>
 <% if @page.page_id %>
