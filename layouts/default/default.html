@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="<%= @page.lang %>">
+<html lang="<%= page_lang %>">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -12,13 +12,13 @@
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
 	</head>
 <% if @page.page_id %>
-	<body class="mystonline-com lang-<%= @page.lang %>" id="page-<%=h @page.page_id %>">
+	<body class="mystonline-com lang-<%= page_lang %>" id="page-<%=h @page.page_id %>">
 <% else %>
-	<body class="mystonline-com lang-<%= @page.lang %>">
+	<body class="mystonline-com lang-<%= page_lang %>">
 <% end %>
 		<div id="wrapper">
 			<div id="header">
-				<div><a href="/<%= @page.lang %>"><span>Myst Online: Uru Live</span></a></div>
+				<div><a href="/<%= page_lang %>/"><span>Myst Online: Uru Live</span></a></div>
 			</div>
 <%= render 'nav' %>
 <%= render 'ie6-warning' %>
