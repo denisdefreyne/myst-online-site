@@ -1,2 +1,3 @@
-output_dir: "output"
-router:     "versioned"
+output_dir:      "output"
+router:          "versioned"
+index_filenames: [ 'index.html', 'index.php' ]
