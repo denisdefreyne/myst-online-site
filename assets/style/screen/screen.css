@@ -36,7 +36,7 @@ body {
 	height: 126px;
 }
 
-/* h1 */
+/* header */
 
 #header div span {
 	display: none;
@@ -236,10 +236,20 @@ body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.j
 	position: relative;
 
 	height: 132px;
-	width:  489px;
+}
 
-	right: 0;
-	top:   0;
+.halfwidth #main h1 {
+	top:  0;
+	left: 0;
+
+	width: 489px;
+}
+
+.fullwidth #main h1 {
+	top:  0;
+	left: 5px;
+
+	width: 880px;
 }
 
 body.lang-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
