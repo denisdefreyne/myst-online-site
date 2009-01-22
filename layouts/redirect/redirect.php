@@ -20,8 +20,8 @@ $path_mapping = array(
 		'/about/'             => '/over/',
 		'/about/news/'        => '/over/nieuws/',
 		'/media/'             => '/media/',
-		'/media/screenshots/' => '/media/screenshots/',
-		'/media/concept-art/' => '/media/concept-art/',
+		'/media/screenshots/' => '/media/schermafbeeldingen/',
+		'/media/concept-art/' => '/media/ontwerpschetsen/',
 		'/developers/'        => '/ontwikkelaars/'
 	)
 );
