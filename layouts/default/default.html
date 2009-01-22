@@ -9,6 +9,11 @@
 
 		<!-- style -->
 		<link href="<%= @page.assets_base_url + asset('style-screen').path %>" rel="stylesheet" type="text/css">
+		<!--[if lte IE 6]>
+		<style type="text/css" media="screen">
+			#sidebar-pic, #sidebar-pic-home { display: none; }
+		</style>
+		<![endif]-->
 
 		<!-- translations -->
 <% translations.each do |t| %>
