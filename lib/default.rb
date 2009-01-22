@@ -1,59 +1,16 @@
-# All files in the 'lib' directory will be loaded
-# before nanoc starts compiling.
-
 # Helpers - built-in
 include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::XMLSitemap
 
-# Returns the asset with the given asset ID.
-def asset(asset_id)
-  @assets.find { |asset| asset.asset_id == asset_id }
-end
+# Module in which all MO:UL site-specific helpers reside
+module MOULSiteHelpers
 
-# Returns the page's language
-def page_lang(page=@page)
-  page.path[1..2]
-end
-
-# Returns all articles in the given language
-def articles(language)
-  @pages.select { |p| p.kind == 'article' && page_lang(p) == language }.sort_by { |a| a.created_at }.reverse
-end
-
-# Returns the page's translations
-def translations(page=@page)
-  @pages.select { |p| p.canonical_path == page.canonical_path && p.path != page.path }
-end
-
-# Returns the name of the language with the given code
-def lang_code_to_name(lang_code)
-  {
-    'en' => 'English',
-    'nl' => 'Dutch'
-  }[lang_code]
-end
-
-class Fixnum
-
-  def to_mon_s
-    Date::MONTHNAMES[self]
-  end
-
-  def to_abbr_mon_s
-    Date::ABBR_MONTHNAMES[self]
+  # Returns the asset with the given asset ID.
+  def asset(asset_id)
+    @assets.find { |asset| asset.asset_id == asset_id }
   end
 
 end
 
-class Numeric
-
-  def ordinal
-    if (10...20).include?(self) then
-      self.to_s + 'th'
-    else
-      self.to_s + %w{th st nd rd th th th th th th}[self % 10]
-    end
-  end
-
-end
+include MOULSiteHelpers
