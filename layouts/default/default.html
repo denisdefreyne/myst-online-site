@@ -30,48 +30,15 @@
 <% end %>
 		<div id="lang-picker">
 			<ul>
-				<li id="lang-picker-en">
-<% if page_lang == 'en' %>
-					<span>English</span>
+<% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano' ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
+				<li id="lang-picker-<%= lang[0] %>">
+<% if page_lang == lang[0] %>
+					<span><%=h lang[1] %></span>
 <% else %>
-					<a href="<%= translation(@page, 'en') ? translation(@page, 'en').path : '#' %>">English</a>
+					<a href="<%= translation(@page, lang[0]) ? translation(@page, lang[0]).path : '#' %>"><%= lang[1] %></a>
 <% end %>
 				</li>
-				<li id="lang-picker-de">
-<% if page_lang == 'de' %>
-					<span>Deutsch</span>
-<% else %>
-					<a href="<%= translation(@page, 'de') ? translation(@page, 'de').path : '#' %>">Deutsch</a>
 <% end %>
-				</li>
-				<li id="lang-picker-es">
-<% if page_lang == 'es' %>
-					<span>Español</span>
-<% else %>
-					<a href="<%= translation(@page, 'es') ? translation(@page, 'es').path : '#' %>">Español</a>
-<% end %>
-				</li>
-				<li id="lang-picker-fr">
-<% if page_lang == 'fr' %>
-					<span>français</span>
-<% else %>
-					<a href="<%= translation(@page, 'fr') ? translation(@page, 'fr').path : '#' %>">français</a>
-<% end %>
-				</li>
-				<li id="lang-picker-it">
-<% if page_lang == 'it' %>
-					<span>Italiano</span>
-<% else %>
-					<a href="<%= translation(@page, 'it') ? translation(@page, 'it').path : '#' %>">Italiano</a>
-<% end %>
-				</li>
-				<li id="lang-picker-nl">
-<% if page_lang == 'nl' %>
-					<span>Nederlands</span>
-<% else %>
-					<a href="<%= translation(@page, 'nl') ? translation(@page, 'nl').path : '#' %>">Nederlands</a>
-<% end %>
-				</li>
 			</ul>
 		</div>
 		<div id="wrapper">
