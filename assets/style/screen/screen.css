@@ -8,21 +8,63 @@
 /* ----- WRAPPER ----- */
 
 body {
-	margin: 10px auto;
-
 	text-align: center;
 
 	background: #000;
-
-	width: 960px;
 }
 
 #wrapper {
 	width: 960px;
 	
-	margin: 0 auto;
+	margin: 10px auto;
 
 	text-align: left;
+}
+
+/* ----- LANGUAGE PICKER ----- */
+
+#lang-picker {
+	text-align: right;
+}
+
+#lang-picker ul {
+	width: 960px;
+	
+	margin: 10px auto;
+}
+
+#lang-picker ul li {
+	display: inline;
+
+	margin: 0 0 0 10px;
+}
+
+#lang-picker a,
+#lang-picker span {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 10px;
+
+	letter-spacing: 1px;
+
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#lang-picker span {
+	color: #fff;
+}
+
+#lang-picker a:link,
+#lang-picker a:visited {
+	color: #666;
+}
+
+#lang-picker a:hover {
+	color: #999;
+}
+
+#lang-picker a:active {
+	color: #fff;
 }
 
 /* ----- HEADER ----- */
