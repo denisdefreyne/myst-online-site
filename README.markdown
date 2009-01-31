@@ -10,7 +10,6 @@ To do
 	* Localize feed
 	* Localize description
 	* Localize IE6 warning
-	* Add language picker
 * Low priority
 	* Set Content-Language
 	* Real partials
