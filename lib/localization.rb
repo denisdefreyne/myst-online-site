@@ -13,6 +13,16 @@ def translations(page=@page)
   @pages.select { |p| p.page_id == page.page_id && p.path != page.path }
 end
 
+# Returns the page's translation in the given language
+def translation(page, lang)
+  @pages.find { |p| p.page_id == page.page_id && page_lang(p) == lang }
+end
+
+# Returns the page's english translation
+def english_translation_of(page)
+  translation(page, 'en')
+end
+
 # Returns the name of the language with the given code
 def lang_code_to_name(lang_code)
   {
