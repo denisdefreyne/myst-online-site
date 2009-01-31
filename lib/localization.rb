@@ -10,7 +10,7 @@ end
 
 # Returns the page's translations
 def translations(page=@page)
-  @pages.select { |p| p.canonical_path == page.canonical_path && p.path != page.path }
+  @pages.select { |p| p.page_id == page.page_id && p.path != page.path }
 end
 
 # Returns the name of the language with the given code
