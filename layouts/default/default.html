@@ -5,8 +5,13 @@
 
 		<!-- title and description -->
 		<title>Myst Online: Uru Live - <%= @page.title %></title>
+<% if language_code_of(@page) == 'en' %>
 		<meta name="description" content="Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.">
-
+<% elsif language_code_of(@page) == 'nl' %>
+		<meta name="description" content="Myst Online: Uru Live is een massive multiplayer online adventure-spel dat binnenkort open-source gemaakt zal worden.">
+<% else %>
+		<!-- WARNING: untranslated -->
+<% end %>
 		<!-- style -->
 		<link href="<%= @page.assets_base_url + asset('style-screen').path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
