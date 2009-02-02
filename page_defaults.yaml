@@ -11,5 +11,5 @@ filters_pre:
 # Custom
 size:             "halfwidth"
 has_banner:       false
-assets_base_url:  http://moul-new.stoneship.org # FIXME update
-base_url:         http://moul-new.stoneship.org # FIXME update
+assets_base_url:  '' # http://moul-new.stoneship.org # FIXME update
+base_url:         '' # http://moul-new.stoneship.org # FIXME update
