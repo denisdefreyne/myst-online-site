@@ -4,6 +4,6 @@
 
 <p class="note">Schrijf je zeker in op het <a href="http://feeds.feedburner.com/uru_nl">nieuwskanaal</a> om geïnformeerd te blijven!</p>
 
-<% articles('nl').each do |article| %>
+<% articles_in('nl').each do |article| %>
 	<%= render 'article', :article => article %>
 <% end %>

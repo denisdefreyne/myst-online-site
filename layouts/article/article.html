@@ -2,10 +2,10 @@
 
 <% if @article.has_real_created_at? %>
 <div class="meta">
-<% if page_lang(@article) == 'nl' %>
-	Geschreven op <%= @article.created_at.to_localized_string(page_lang(@article)) %>.
+<% if language_code_of(@article) == 'nl' %>
+	Geschreven op <%= @article.created_at.to_localized_string(language_code_of(@article)) %>.
 <% else %>
-	Written on <%= @article.created_at.to_localized_string(page_lang(@article)) %>.
+	Written on <%= @article.created_at.to_localized_string(language_code_of(@article)) %>.
 <% end %>
 </div>
 <% end %>

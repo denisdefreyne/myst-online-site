@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="<%= page_lang %>">
+<html lang="<%= language_code_of(@page) %>">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -16,26 +16,26 @@
 		<![endif]-->
 
 		<!-- translations -->
-<% translations.each do |t| %>
-		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= page_lang(t) %>" title="<%= lang_code_to_name(page_lang(t)) %> translation">
+<% translations_of(@page).each do |t| %>
+		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= language_code_of(t) %>" title="<%= language_of(t, language_code_of(@page)) %> translation">
 <% end %>
 
 		<!-- feed -->
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
 	</head>
 <% if @page.page_id %>
-	<body class="mystonline-com lang-<%= page_lang %>" id="page-<%=h @page.page_id %>">
+	<body class="mystonline-com lang-<%= language_code_of(@page) %>" id="page-<%=h @page.page_id %>">
 <% else %>
-	<body class="mystonline-com lang-<%= page_lang %>">
+	<body class="mystonline-com lang-<%= language_code_of(@page) %>">
 <% end %>
 		<div id="lang-picker">
 			<ul>
 <% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano' ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
-<% if page_lang == lang[0] %>
+<% if language_code_of(@page) == lang[0] %>
 					<span><%=h lang[1] %></span>
 <% else %>
-					<a href="<%= translation(@page, lang[0]) ? translation(@page, lang[0]).path : '#' %>"><%= lang[1] %></a>
+					<a href="<%= translation_of(@page, lang[0]) ? translation_of(@page, lang[0]).path : '#' %>"><%= lang[1] %></a>
 <% end %>
 				</li>
 <% end %>
@@ -43,7 +43,7 @@
 		</div>
 		<div id="wrapper">
 			<div id="header">
-				<div><a href="/<%= page_lang %>/"><span>Myst Online: Uru Live</span></a></div>
+				<div><a href="/<%= language_code_of(@page) %>/"><span>Myst Online: Uru Live</span></a></div>
 			</div>
 <%= render 'nav' %>
 <%= render 'ie6-warning' %>
