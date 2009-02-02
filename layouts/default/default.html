@@ -26,7 +26,13 @@
 <% end %>
 
 		<!-- feed -->
+<% if language_code_of(@page) == 'en' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
+<% elsif language_code_of(@page) == 'nl' %>
+		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live nieuws" href="http://feeds.feedburner.com/uru_en">
+<% else %>
+		<!-- WARNING: untranslated -->
+<% end %>
 	</head>
 <% if @page.page_id %>
 	<body class="mystonline-com lang-<%= language_code_of(@page) %>" id="page-<%=h @page.page_id %>">

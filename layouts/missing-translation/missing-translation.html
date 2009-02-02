@@ -1,9 +1,11 @@
-<% if language_code_of(@page) == 'nl' %>
+<% if language_code_of(@page) == 'en' %>
+	<p>This page is not yet available in English. We apologise for any inconvenience this may cause.</p>
+<% elsif language_code_of(@page) == 'nl' %>
 	<% if @page.kind == 'article' %>
 		<p>Dit artikel is nog niet beschikbaar in het Nederlands. U kunt de <%= link_to 'Engelstalige versie van dit artikel', translation_of(@pages.find { |p| p.page_id == 'about-news' && language_code_of(p) == 'en' }, 'en') %> lezen tot de Nederlandstalige versie er komt. Onze excuses voor dit ongemak.</p>
 	<% else %>
 		<p>Deze pagina is nog niet beschikbaar in het Nederlands. U kunt de <%= link_to 'Engelstalige versie van deze pagina', translation_of(@page, 'en') %> lezen tot de Nederlandstalige versie er komt. Onze excuses voor dit ongemak.</p>
 	<% end %>
 <% else %>
-	<p>This page is not yet available in English. We apologise for any inconvenience this may cause.</p>
+	<!-- WARNING: untranslated -->
 <% end %>
