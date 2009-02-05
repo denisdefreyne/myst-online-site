@@ -2,8 +2,8 @@
 skip_output: true
 
 # Custom 
-title: "MORE Urulive status - Strange times"
+title: "MORE Urulive status - vreemde tijden"
 kind: article
 created_at: 2009-01-05 11:00:00
-custom_path_in_feed: /about/news/
+custom_path_in_feed: /nl/over/nieuws/
 has_real_created_at: false
