@@ -12,12 +12,57 @@ module MOULSiteHelpers::Localization
     }
   }
 
+  TRANSLATED_STRINGS = {
+    'English translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Engelse vertaling'
+    },
+    'German translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Duitse vertaling'
+    },
+    'Spanish translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Spaanse vertaling'
+    },
+    'French translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Franse vertaling'
+    },
+    'Italian translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Italiaanse vertaling'
+    },
+    'Dutch translation' => {
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'Nederlandse vertaling'
+    },
+  }
+
   # Returns the page's language code
   def language_code_of(page)
     page.path[1..2]
   end
 
-  # Returns the page's language
+  # Returns the page's human-readable language
   def language_of(page, lang)
     LANGUAGE_NAMES[lang][language_code_of(page)]
   end
@@ -35,6 +80,16 @@ module MOULSiteHelpers::Localization
   # Returns the page's translation in the given language
   def translation_of(page, lang)
     @pages.find { |p| p.page_id == page.page_id && language_code_of(p) == lang }
+  end
+
+  # Translates the given string into the given language
+  def t(string, dst_lang)
+    # Don't translate English texts
+    return string if dst_lang == 'en'
+
+    # Translate
+    translations = TRANSLATED_STRINGS[string] || {}
+    translations[dst_lang] || 'WARNING: untranslated'
   end
 
   module TimeExtensions
