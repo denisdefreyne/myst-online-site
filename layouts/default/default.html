@@ -44,9 +44,9 @@
 <% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano' ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
 <% if language_code_of(@page) == lang[0] %>
-					<span><%=h lang[1] %></span>
+					<span lang="<%=h lang[0] %>"><%=h lang[1] %></span>
 <% else %>
-					<a href="<%= translation_of(@page, lang[0]) ? translation_of(@page, lang[0]).path : '#' %>"><%= lang[1] %></a>
+					<a href="<%= translation_of(@page, lang[0]) ? translation_of(@page, lang[0]).path : '#' %>" lang="<%=h lang[0] %>" hreflang="<%=h lang[0] %>"><%= lang[1] %></a>
 <% end %>
 				</li>
 <% end %>
