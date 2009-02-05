@@ -22,7 +22,7 @@
 
 		<!-- translations -->
 <% translations_of(@page).each do |t| %>
-		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= language_code_of(t) %>" title="<%= language_of(t, language_code_of(@page)) %> translation">
+		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= language_code_of(t) %>" title="<%= t("#{language_of(@page, 'en')} translation", language_code_of(@page)) %>">
 <% end %>
 
 		<!-- feed -->
