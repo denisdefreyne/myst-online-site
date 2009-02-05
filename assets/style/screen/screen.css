@@ -388,6 +388,10 @@ body.lang-nl#page-developers        h1 { background: url(/assets/images/header/p
 	color: #927250;
 }
 
+#main abbr.acronym {
+	font-variant: small-caps;
+}
+
 #main q {
 	font-style: italic;
 }
