@@ -114,7 +114,7 @@ module MOULSiteHelpers::Localization
 
   # Returns the page's translations
   def translations_of(page)
-    @pages.select { |p| p.page_id == page.page_id && p.path != page.path }
+    @pages.select { |p| p.page_id && p.page_id == page.page_id && p.path != page.path }
   end
 
   # Returns the page's translation in the given language
