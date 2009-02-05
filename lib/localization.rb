@@ -134,41 +134,43 @@ module MOULSiteHelpers::Localization
 
   module TimeExtensions
 
-    MONTHNAMES_ENGLISH = %w(
-      January
-      February
-      March
-      April
-      May
-      June
-      July
-      August
-      September
-      October
-      November
-      December
-    )
-
-    MONTHNAMES_DUTCH = %w(
-      januari
-      februari
-      maart
-      april
-      mei
-      juni
-      juli
-      augustus
-      september
-      oktober
-      november
-      december
-    )
+    # Month names in all languages
+    MONTH_NAMES = {
+      'en' => %w(
+        January
+        February
+        March
+        April
+        May
+        June
+        July
+        August
+        September
+        October
+        November
+        December
+      ),
+      'nl' => %w(
+        januari
+        februari
+        maart
+        april
+        mei
+        juni
+        juli
+        augustus
+        september
+        oktober
+        november
+        december
+      )
+    }
 
     def to_localized_string(lang)
       if lang == 'nl'
-        "#{self.mday} #{Time::MONTHNAMES_DUTCH[self.mon]} #{self.year}"
+        "#{self.mday} #{MONTH_NAMES['nl'][self.mon]} #{self.year}"
       else
-        "#{Time::MONTHNAMES_ENGLISH[self.mon]} #{self.mday.ordinal}, #{self.year}"
+        "#{MONTH_NAMES['en'][self.mon]} #{self.mday.ordinal}, #{self.year}"
       end
     end
 
