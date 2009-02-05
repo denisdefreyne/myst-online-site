@@ -4,10 +4,50 @@ module MOULSiteHelpers::Localization
   LANGUAGE_NAMES = {
     'en' => {
       'en' => 'English',
+      'de' => 'German',
+      'es' => 'Spanish',
+      'fr' => 'French',
+      'it' => 'Italian',
       'nl' => 'Dutch'
+    },
+    'de' => {
+      'en' => 'WARNING: untranslated',
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'WARNING: untranslated'
+    },
+    'es' => {
+      'en' => 'WARNING: untranslated',
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'WARNING: untranslated'
+    },
+    'fr' => {
+      'en' => 'WARNING: untranslated',
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'WARNING: untranslated'
+    },
+    'it' => {
+      'en' => 'WARNING: untranslated',
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'WARNING: untranslated'
     },
     'nl' => {
       'en' => 'Engels',
+      'de' => 'Duits',
+      'es' => 'Spaans',
+      'fr' => 'Frans',
+      'it' => 'Italiaans',
       'nl' => 'Nederlands'
     }
   }
