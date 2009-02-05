@@ -21,8 +21,8 @@
 		<![endif]-->
 
 		<!-- translations -->
-<% translations_of(@page).each do |t| %>
-		<link rel="alternate" href="<%=h t.path %>" hreflang="<%= language_code_of(t) %>" title="<%= t("#{language_of(@page, 'en')} translation", language_code_of(@page)) %>">
+<% translations_of(@page).each do |tp| %>
+		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp, 'en') + ' translation', language_code_of(@page)) %>">
 <% end %>
 
 		<!-- feed -->
