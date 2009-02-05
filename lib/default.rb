@@ -1,6 +1,8 @@
 # Helpers - built-in
 include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::HTMLEscape
 include Nanoc::Helpers::LinkTo
+include Nanoc::Helpers::Render
 include Nanoc::Helpers::XMLSitemap
 
 # Module in which all MO:UL site-specific helpers reside
