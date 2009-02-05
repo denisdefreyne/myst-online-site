@@ -7,6 +7,8 @@ filename:     "index"
 extension:    "html"
 filters_pre:
   - erb
+filters_post:
+  - rubypants
 
 # Custom
 size:             "halfwidth"
