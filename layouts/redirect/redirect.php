@@ -55,6 +55,11 @@ function redirect($lang)
 {
 	global $base_url, $page_path, $path_mapping;
 
+	if($_SERVER['SERVER_PROTOCOL'] == 'HTTP/1.1')
+		header('HTTP/1.1 303 See Other');
+	else
+		header('HTTP/1.0 302 Moved Temporarily');
+
 	header('Location: ' . $base_url . '/' . $lang . $path_mapping[$lang][$page_path]);
 
 	exit();
