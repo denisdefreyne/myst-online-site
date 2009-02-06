@@ -6,13 +6,7 @@ To do
 
 ### Translation
 
-* High priority
-	* Localize feed
-	* Localize description
-	* Localize IE6 warning
-* Low priority
-	* Set Content-Language
-	* Real partials
+* Create translated FeedBurner feeds
 
 ### Miscellaneous
 
