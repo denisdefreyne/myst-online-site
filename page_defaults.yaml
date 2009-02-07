@@ -7,6 +7,7 @@ filename:     "index"
 extension:    "html"
 filters_pre:
   - erb
+  - italicize_proper_names
 filters_post:
   - rubypants
 
