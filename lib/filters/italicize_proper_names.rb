@@ -34,7 +34,7 @@ module MOULSiteFilters
       'GameTap',
       'Plasma20',
       'Plasma',
-      '3DS Max',
+      '3ds Max',
       'Guild of Messengers',
       'Guild of Writers'
     ]
