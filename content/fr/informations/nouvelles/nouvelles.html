@@ -1,0 +1,9 @@
+<img src="<%= @page.assets_base_url %>/assets/images/sidebar/2.jpg" id="sidebar-pic">
+
+<h1><span>Informations: Nouvelles</span></h1>
+
+<p class="note">N'oubliez pas de souscrire au <a href="http://feeds.feedburner.com/uru">Flux RSS</a> pour rester informés!</p>
+
+<% articles_in('fr').each do |article| %>
+	<%= render 'article', :article => article %>
+<% end %>

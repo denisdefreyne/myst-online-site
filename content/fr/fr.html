@@ -1,0 +1,7 @@
+<img src="<%= @page.assets_base_url %>/assets/images/sidebar/home.jpg" id="sidebar-pic-home">
+
+<h1>Dernières Nouvelles</h1>
+
+<%= render 'article', :article => articles_in('fr').first %>
+
+<p class="note">Vous pouvez trouver d'anciens articles dans la <a href="/fr/informations/nouvelles/">section "Nouvelles" des Archives</a>. N'oubliez pas de souscrire au <a href="http://feeds.feedburner.com/uru_fr">Flux RSS</a> afin de recevoir les mises à jour.</p>

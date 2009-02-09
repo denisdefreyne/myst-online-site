@@ -56,42 +56,42 @@ module MOULSiteHelpers::Localization
     'English translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version anglaise',
       'it' => 'WARNING: untranslated',
       'nl' => 'Engelse vertaling'
     },
     'German translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version allemande',
       'it' => 'WARNING: untranslated',
       'nl' => 'Duitse vertaling'
     },
     'Spanish translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version espagnole',
       'it' => 'WARNING: untranslated',
       'nl' => 'Spaanse vertaling'
     },
     'French translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version française',
       'it' => 'WARNING: untranslated',
       'nl' => 'Franse vertaling'
     },
     'Italian translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version italienne',
       'it' => 'WARNING: untranslated',
       'nl' => 'Italiaanse vertaling'
     },
     'Dutch translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
+      'fr' => 'Version néerlandaise',
       'it' => 'WARNING: untranslated',
       'nl' => 'Nederlandse vertaling'
     },

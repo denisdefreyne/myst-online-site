@@ -1,0 +1,18 @@
+<h1><span>Médias: Concepts artistiques</span></h1>
+
+<ul id="subnav">
+	<li><span class="active">Captures d’écran</span></li>
+	<li><a href="/fr/medias/concepts-artistiques/">Concepts artistiques</a></li>
+</ul>
+
+<%= render 'missing-translation' %>
+
+<ul class="gallery">
+<% (1..67).each do |i| %>
+	<li>
+		<a href="/assets/images/media/screenshots/full/<%= i %>.jpg">
+			<img src="<%= @page.assets_base_url %>/assets/images/media/screenshots/thumbnails/<%= i %>.jpg">
+		</a>
+	</li>
+<% end %>
+</ul>
