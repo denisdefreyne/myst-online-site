@@ -35,6 +35,7 @@ module MOULSiteFilters
       'Plasma20',
       'Plasma',
       '3ds Max',
+      'Guild of Maintainers',
       'Guild of Messengers',
       'Guild of Writers'
     ]
