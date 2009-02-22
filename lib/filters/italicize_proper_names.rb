@@ -15,6 +15,7 @@ module MOULSiteFilters
       'Myst Online Restoration Experiment',
       '"Myst Online"',
       'Myst Online',
+      'MystOnline.com',
       'Myst: le livre d\'Atrus',
       'Myst: le livre de Ti\'ana',
       'Myst: le livre de D\'ni',
