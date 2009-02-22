@@ -30,9 +30,11 @@
 
 		<!-- feed -->
 <% if language_code_of(@page) == 'en' %>
-		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds.feedburner.com/uru">
+		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds2.feedburner.com/uru">
+<% elsif language_code_of(@page) == 'fr' %>
+		<link rel="alternate" type="application/atom+xml" title="Nouvelles de Myst Online: Uru Live" href="http://feeds2.feedburner.com/uru_fr">
 <% elsif language_code_of(@page) == 'nl' %>
-		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live nieuws" href="http://feeds.feedburner.com/uru_nl">
+		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live nieuws" href="http://feeds2.feedburner.com/uru_nl">
 <% else %>
 		<!-- WARNING: untranslated -->
 <% end %>
