@@ -76,18 +76,14 @@ function redirect($lang)
 }
 
 // Show correct site
-foreach($langs as $lang => $qval)
+foreach($langs as $request_lang => $qval)
 {
-	if(strpos($lang, 'de') === 0)
-		redirect('de');
-	else if(strpos($lang, 'es') === 0)
-		redirect('es');
-	else if(strpos($lang, 'fr') === 0)
-		redirect('fr');
-	else if(strpos($lang, 'it') === 0)
-		redirect('it');
-	else if(strpos($lang, 'nl') === 0)
-		redirect('nl');
+	$site_languages = array_keys($path_mapping);
+	foreach($site_languages as $site_lang)
+	{
+		if(strpos($request_lang, $site_lang) === 0)
+			redirect($site_lang);
+	}
 }
 redirect('en');
 
