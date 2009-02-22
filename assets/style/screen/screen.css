@@ -15,7 +15,7 @@ body {
 
 #wrapper {
 	width: 960px;
-	
+
 	margin: 10px auto;
 
 	text-align: left;
@@ -29,7 +29,7 @@ body {
 
 #lang-picker ul {
 	width: 960px;
-	
+
 	margin: 10px auto;
 }
 
@@ -82,25 +82,30 @@ body {
 
 /* header */
 
-#header div span {
+#header #link-home span {
 	display: none;
 }
 
-#header div a {
+#header #link-home a,
+#header #link-home div.hover {
 	position: absolute;
-	
+
 	top: 0;
 	left: 320px;
-	
+
 	width: 313px;
 	height: 126px;
-	
+
 	background: url(/assets/images/header/header-v2.jpg) -320px 0;
 }
 
-#header div a:hover {
+#header #link-home a:hover,
+#header #link-home div.hover {
 	background-position: -320px -126px;
 }
+
+#header #link-home a   { z-index: 100; }
+#header #link-home div { z-index: 50;  }
 
 /* ----- NAVIGATION ----- */
 
@@ -108,50 +113,65 @@ body {
 	position: relative;
 
 	height: 69px;
-}
-
-#nav li {
-	float: left;
-	
-	display: block;
-	
-	width: 160px;
-	height: 69px;
-}
-
-#nav li a {
-	display: block;
-	
-	width: 160px;
-	height: 69px;
 
 	background: #43290D;
 }
 
-body.lang-en #nav li a { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
-body.lang-de #nav li a { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
-body.lang-es #nav li a { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
-body.lang-fr #nav li a { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
-body.lang-it #nav li a { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
-body.lang-nl #nav li a { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
+body.lang-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
+body.lang-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
+body.lang-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
+body.lang-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
+body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li,
+#nav li a,
+#nav li div.hover {
+	display: block;
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 160px;
+	height: 69px;
+}
+
+#nav li a   { z-index: 100; }
+#nav li div { z-index: 50;  }
 
 #nav li a span {
 	display: none;
 }
 
-#nav li#nav-home a             { background-position: 0      0; }
-#nav li#nav-play a             { background-position: -160px 0; }
-#nav li#nav-about a            { background-position: -320px 0; }
-#nav li#nav-forums a           { background-position: -480px 0; }
-#nav li#nav-media a            { background-position: -640px 0; }
-#nav li#nav-developers a       { background-position: -800px 0; }
+#nav li#nav-home       { top: 0; left: 0;     }
+#nav li#nav-play       { top: 0; left: 160px; }
+#nav li#nav-about      { top: 0; left: 320px; }
+#nav li#nav-forums     { top: 0; left: 480px; }
+#nav li#nav-media      { top: 0; left: 640px; }
+#nav li#nav-developers { top: 0; left: 800px; }
 
-#nav li#nav-home a:hover       { background-position: 0      -69px; }
-#nav li#nav-play a:hover       { background-position: -160px -69px; }
-#nav li#nav-about a:hover      { background-position: -320px -69px; }
-#nav li#nav-forums a:hover     { background-position: -480px -69px; }
-#nav li#nav-media a:hover      { background-position: -640px -69px; }
-#nav li#nav-developers a:hover { background-position: -800px -69px; }
+body.lang-en #nav li a, body.lang-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
+body.lang-de #nav li a, body.lang-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
+body.lang-es #nav li a, body.lang-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fr #nav li a, body.lang-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
+body.lang-it #nav li a, body.lang-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
+body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li#nav-home a                                               { background-position: 0      0; }
+#nav li#nav-play a                                               { background-position: -160px 0; }
+#nav li#nav-about a                                              { background-position: -320px 0; }
+#nav li#nav-forums a                                             { background-position: -480px 0; }
+#nav li#nav-media a                                              { background-position: -640px 0; }
+#nav li#nav-developers a                                         { background-position: -800px 0; }
+
+#nav li#nav-home a:hover,       #nav li#nav-home div.hover       { background-position: 0      -69px; }
+#nav li#nav-play a:hover,       #nav li#nav-play div.hover       { background-position: -160px -69px; }
+#nav li#nav-about a:hover,      #nav li#nav-about div.hover      { background-position: -320px -69px; }
+#nav li#nav-forums a:hover,     #nav li#nav-forums div.hover     { background-position: -480px -69px; }
+#nav li#nav-media a:hover,      #nav li#nav-media div.hover      { background-position: -640px -69px; }
+#nav li#nav-developers a:hover, #nav li#nav-developers div.hover { background-position: -800px -69px; }
 
 /* ----- INTERNET EXPLORER 6 WARNING ----- */
 
@@ -347,7 +367,7 @@ body.lang-nl#page-developers        h1 { background: url(/assets/images/header/p
 	position: absolute;
 
 	width: 471px;
-	height: 681px; 
+	height: 681px;
 
 	top: 20px;
 	left: 0;
