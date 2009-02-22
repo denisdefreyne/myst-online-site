@@ -45,7 +45,7 @@ module MOULSiteFilters
     ]
 
     def run(content)
-      @regex ||= Regexp.union([ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new(Regexp.escape(w)) }].flatten)
+      @regex ||= Regexp.union(*[ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new(Regexp.escape(w)) }].flatten)
 
       inside_element = false
       inside_header  = false
