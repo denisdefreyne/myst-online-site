@@ -46,7 +46,7 @@
 <% end %>
 		<div id="lang-picker">
 			<ul>
-<% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano' ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
+<% [ [ 'en', 'English' ], [ 'fr', 'français' ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
 <% if language_code_of(@page) == lang[0] %>
 					<span lang="<%=h lang[0] %>"><%=h lang[1] %></span>
