@@ -12,6 +12,8 @@ module MOULSiteFilters
       'Mudpie',
       'Untìl Uru',
       'Myst Online: Uru Live',
+      'Myst Online: Restauration de l\'Expérience',
+      'Myst Online: Esperimento di Restaurazione',
       'Myst Online Restoration Experiment',
       '"Myst Online"',
       'Myst Online',

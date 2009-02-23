@@ -57,42 +57,42 @@ module MOULSiteHelpers::Localization
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version anglaise',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Inglese',
       'nl' => 'Engelse vertaling'
     },
     'German translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version allemande',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Tedesca',
       'nl' => 'Duitse vertaling'
     },
     'Spanish translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version espagnole',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Spagnola',
       'nl' => 'Spaanse vertaling'
     },
     'French translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version française',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Francese',
       'nl' => 'Franse vertaling'
     },
     'Italian translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version italienne',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Italiana',
       'nl' => 'Italiaanse vertaling'
     },
     'Dutch translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
       'fr' => 'Version néerlandaise',
-      'it' => 'WARNING: untranslated',
+      'it' => 'Traduzione Olandese',
       'nl' => 'Nederlandse vertaling'
     },
   }

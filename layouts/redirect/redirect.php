@@ -24,6 +24,16 @@ $path_mapping = array(
 		'/media/concept-art/' => '/medias/concepts-artistiques/',
 		'/developers/'        => '/developpeurs/'
 	),
+	'it' => array(
+		'/'                   => '/',
+		'/play/'              => '/gioca/',
+		'/about/'             => '/informazioni/',
+		'/about/news/'        => '/informazioni/notizie/',
+		'/media/'             => '/media/',
+		'/media/screenshots/' => '/media/immagini/',
+		'/media/concept-art/' => '/media/concept-art/',
+		'/developers/'        => '/sviluppatori/'
+	),
 	'nl' => array(
 		'/'                   => '/',
 		'/play/'              => '/speel/',
