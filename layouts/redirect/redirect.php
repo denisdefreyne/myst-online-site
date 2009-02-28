@@ -1,7 +1,7 @@
 <?php
 
 // Configuration
-$base_url  = '<%= @page.base_url %>';
+$base_url  = '<%= @site.config[:base_url] %>';
 $page_path = '<%= @page.path %>';
 $path_mapping = array(
 	'en' => array(

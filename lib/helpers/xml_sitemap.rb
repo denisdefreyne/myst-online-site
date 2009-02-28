@@ -45,7 +45,7 @@ module Nanoc::Helpers
         # Add page
         @pages.reject { |p| p.is_hidden || p.skip_output }.each do |page|
           xml.url do
-            xml.loc         @page.base_url + page.path
+            xml.loc         @site.config[:base_url] + page.path
             xml.lastmod     page.mtime.to_iso8601_date unless page.mtime.nil?
             xml.changefreq  page.changefreq unless page.changefreq.nil?
             xml.priority    page.priority unless page.priority.nil?

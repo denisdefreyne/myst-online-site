@@ -11,7 +11,7 @@
 <% (1..67).each do |i| %>
 	<li>
 		<a href="/assets/images/media/screenshots/full/<%= i %>.jpg">
-			<img src="<%= @page.assets_base_url %>/assets/images/media/screenshots/thumbnails/<%= i %>.jpg">
+			<img src="<%= @site.config[:assets_base_url] %>/assets/images/media/screenshots/thumbnails/<%= i %>.jpg">
 		</a>
 	</li>
 <% end %>

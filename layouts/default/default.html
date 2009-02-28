@@ -17,7 +17,7 @@
 		<!-- WARNING: untranslated -->
 <% end %>
 		<!-- style -->
-		<link href="<%= @page.assets_base_url + asset('style-screen').path %>" rel="stylesheet" type="text/css">
+		<link href="<%= @site.config[:assets_base_url] + asset('style-screen').path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
 		<style type="text/css" media="screen">
 			#sidebar-pic, #sidebar-pic-home { display: none; }
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 			<div id="footer">
-				<img src="<%= @page.assets_base_url %>/assets/images/footer/logo-cyan.jpg" id="footer-logo-cyan" alt="Cyan Worlds, inc. logo">
+				<img src="<%= @site.config[:assets_base_url] %>/assets/images/footer/logo-cyan.jpg" id="footer-logo-cyan" alt="Cyan Worlds, inc. logo">
 				<p class="copyright">
 					Myst Online: Uru Live&trade;&reg; is the sole property of Cyan Worlds Inc. Copyright 2003-2009 Cyan Worlds, Inc. All Rights reserved.<br>
 					Myst is a registered trademark of Cyan, Inc. &copy; 1994-2008 Cyan, Inc. The Myst logo is a registered trademark of Cyan, Inc.<br>
@@ -96,12 +96,12 @@
 			// Preload
 			if(document.images)
 			{
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-top.jpg';
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-middle.jpg';
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/right-bottom.jpg';
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-top.jpg';
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-middle.jpg';
-				new Image().src = '<%= @page.assets_base_url %>/assets/images/background/full-bottom.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/right-top.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/right-middle.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/right-bottom.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/full-top.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/full-middle.jpg';
+				new Image().src = '<%= @site.config[:assets_base_url] %>/assets/images/background/full-bottom.jpg';
 			}
 		</script>
 		<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
