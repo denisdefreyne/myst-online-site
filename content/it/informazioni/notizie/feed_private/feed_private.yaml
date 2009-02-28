@@ -4,12 +4,12 @@ filters_pre:
 filters_post: []
 layout:       "none"
 extension:    "xml"
-custom_path:  /en/about/news/_feed.xml
+custom_path:  /it/informazioni/notizie/_feed.xml
 
 # Custom
 is_hidden:    "true"
 feed_url:     "http://feeds2.feedburner.com/uru"
-title:        "Myst Online: Uru Live news"
+title:        "Notizie di Myst Online: Uru Live"
 base_url:     "http://mystonline.com"
 author_name:  "Myst Online: Uru Live team"
 author_uri:   "http://mystonline.com/"
