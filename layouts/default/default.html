@@ -69,9 +69,9 @@
 <%= render 'ie6-warning' %>
 <% if @page.has_banner? %>
 			<div id="banner"></div>
-			<div id="main-wrapper-outside" class="<%= @page.size %> <%= @page.size %>-with-banner">
+			<div id="main-wrapper-outside" class="<%= @page.size || 'halfwidth' %> <%= @page.size || 'halfwidth' %>-with-banner">
 <% else %>
-			<div id="main-wrapper-outside" class="<%= @page.size %>">
+			<div id="main-wrapper-outside" class="<%= @page.size || 'halfwidth' %>">
 <% end %>
 				<div id="main-wrapper-inside">
 					<div id="main">
