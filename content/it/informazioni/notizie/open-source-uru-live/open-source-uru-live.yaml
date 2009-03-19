@@ -1,6 +1,7 @@
 # Built-in
 skip_output: true
-filters_pre: []
+filters_pre:
+  - erb
 
 # Custom 
 title: "Open Source Uru Live"
