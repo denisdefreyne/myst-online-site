@@ -43,7 +43,13 @@ module MOULSiteFilters
       '3ds Max',
       'Guild of Maintainers',
       'Guild of Messengers',
-      'Guild of Writers'
+      'Guild of Writers',
+      'Gilda dei Mantenitori',
+      'Gilda dei Messaggeri',
+      'Gilda degli Scrittori',
+      'Guilde de la Maintenance',
+      'Guilde des Messagers',
+      'Guilde des Ecrivains'
     ]
 
     def run(content)
