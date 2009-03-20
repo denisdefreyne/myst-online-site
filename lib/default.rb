@@ -9,9 +9,9 @@ include Nanoc::Helpers::XMLSitemap
 module MOULSiteHelpers
 
   WEBSITE_URLS = {
-    :guild_of_maintainers => 'http://www.guildofwriters.com/',
+    :guild_of_maintainers => 'http://www.guildofmaintainers.org/',
     :guild_of_messengers  => 'http://www.guildofmessengers.com/',
-    :guild_of_writers     => 'http://www.guildofmaintainers.org/'
+    :guild_of_writers     => 'http://www.guildofwriters.com/'
   }
 
   # Returns the asset with the given asset ID.
