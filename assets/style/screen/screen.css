@@ -120,6 +120,7 @@ body {
 body.lang-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
 body.lang-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
 body.lang-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fi #nav { background: #43290D url(/assets/images/header/nav-v2-fi.jpg); }
 body.lang-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
 body.lang-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
 body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
@@ -155,6 +156,7 @@ body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg)
 body.lang-en #nav li a, body.lang-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
 body.lang-de #nav li a, body.lang-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
 body.lang-es #nav li a, body.lang-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fi #nav li a, body.lang-fi #nav li div.hover { background: url(/assets/images/header/nav-v2-fi.jpg); }
 body.lang-fr #nav li a, body.lang-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
 body.lang-it #nav li a, body.lang-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
 body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
@@ -215,6 +217,7 @@ body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets
 body.lang-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
 body.lang-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
 body.lang-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
+body.lang-fi #banner { background: #715535 url(/assets/images/header/banner-fi.jpg) no-repeat top left; }
 body.lang-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
 body.lang-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
 body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
@@ -306,6 +309,14 @@ body.lang-en#page-media             h1 { background: url(/assets/images/header/p
 body.lang-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
 body.lang-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
 body.lang-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
+
+body.lang-fi#page-play              h1 { background: url(/assets/images/header/page-play-fi.jpg)              no-repeat top left; }
+body.lang-fi#page-about             h1 { background: url(/assets/images/header/page-about-fi.jpg)             no-repeat top left; }
+body.lang-fi#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fi.jpg)        no-repeat top left; }
+body.lang-fi#page-media             h1 { background: url(/assets/images/header/page-media-fi.jpg)             no-repeat top left; }
+body.lang-fi#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fi.jpg) no-repeat top left; }
+body.lang-fi#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fi.jpg) no-repeat top left; }
+body.lang-fi#page-developers        h1 { background: url(/assets/images/header/page-developers-fi.jpg)        no-repeat top left; }
 
 body.lang-fr#page-play              h1 { background: url(/assets/images/header/page-play-fr.jpg)              no-repeat top left; }
 body.lang-fr#page-about             h1 { background: url(/assets/images/header/page-about-fr.jpg)             no-repeat top left; }

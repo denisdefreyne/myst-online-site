@@ -1,0 +1,7 @@
+<img src="<%= @site.config[:assets_base_url] %>/assets/images/sidebar/home.jpg" id="sidebar-pic-home">
+
+<h1>Tuoreimmat uutiset</h1>
+
+<%= render 'article', :article => articles_in('fi').first %>
+
+<p class="note">Vanhempia uutisartikkeleita löytyy <a href="/fi/tietoa/uutisia/">uutisarkistosta</a>. Varmista, että tilaat <a href="http://feeds2.feedburner.com/uru_fi">uutissyötteen</a> pysyäksesi ajan tasalla!</p>

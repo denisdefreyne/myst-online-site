@@ -1,0 +1,18 @@
+<h1><span>Media: Luonnoksia</span></h1>
+
+<ul id="subnav">
+	<li><a href="/fi/media/kuvakaappauksia/">Kuvakaappauksia</a></li>
+	<li><span class="active">Luonnoksia</span></li>
+</ul>
+
+<p>Saat kuvan suurempana klikkaamalla sitä. Takaisin <a href="/fi/media/">mediasivulle</a>.</p>
+
+<ul class="gallery">
+<% (1..16).each do |i| %>
+	<li>
+		<a href="/assets/images/media/concept-art/full/<%= i %>.jpg">
+			<img src="<%= @site.config[:assets_base_url] %>/assets/images/media/concept-art/thumbnails/<%= i %>.jpg">
+		</a>
+	</li>
+<% end %>
+</ul>

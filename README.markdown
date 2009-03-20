@@ -10,3 +10,4 @@ To do
 * Fix some odd bugs
 	* make sure all guilds are linked (writers, messengers, maintainers)
 	* make sure all guilds are in the correct format
+* Add Finnish feed

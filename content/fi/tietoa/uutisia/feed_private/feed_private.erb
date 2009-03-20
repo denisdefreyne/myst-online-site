@@ -1,0 +1,1 @@
+<%= atom_feed(:limit => 10, :articles => @pages.select { |p| p.kind == 'article' && language_code_of(p) == 'fi' }.sort_by { |a| a.created_at }.reverse) %>

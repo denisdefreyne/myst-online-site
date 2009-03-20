@@ -7,6 +7,8 @@
 		<title>Myst Online: Uru Live - <%= @page.title %></title>
 <% if language_code_of(@page) == 'en' %>
 		<meta name="description" content="Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.">
+<% elsif language_code_of(@page) == 'fi' %>
+		<meta name="description" content="Myst Online: Uru Live tulee pian olemaan avoimeen lähdekoodiin perustuva massiivinen seikkailu-verkkomoninpeli.">
 <% elsif language_code_of(@page) == 'fr' %>
 		<meta name="description" content="Myst Online: Uru Live sera bientôt un jeu d'aventure en ligne multijoueurs à code source ouverte.">
 <% elsif language_code_of(@page) == 'it' %>
@@ -33,6 +35,8 @@
 		<!-- feed -->
 <% if language_code_of(@page) == 'en' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds2.feedburner.com/uru">
+<% elsif language_code_of(@page) == 'fi' %>
+		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live uutisia" href="http://feeds2.feedburner.com/uru_fi">
 <% elsif language_code_of(@page) == 'fr' %>
 		<link rel="alternate" type="application/atom+xml" title="Nouvelles de Myst Online: Uru Live" href="http://feeds2.feedburner.com/uru_fr">
 <% elsif language_code_of(@page) == 'it' %>
@@ -50,7 +54,7 @@
 <% end %>
 		<div id="lang-picker">
 			<ul>
-<% [ [ 'en', 'English' ], [ 'fr', 'français' ], [ 'it', 'Italiano', ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
+<% [ [ 'en', 'English' ], [ 'fi', 'Suomi' ], [ 'fr', 'français' ], [ 'it', 'Italiano', ], [ 'nl', 'Nederlands' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
 <% if language_code_of(@page) == lang[0] %>
 					<span lang="<%=h lang[0] %>"><%=h lang[1] %></span>

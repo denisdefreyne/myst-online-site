@@ -1,5 +1,11 @@
 <% if language_code_of(@page) == 'en' %>
 	<!-- WARNING: untranslated -->
+<% elsif language_code_of(@page) == 'fi' %>
+	<% if @page.kind == 'article' %>
+		<p>Artikkelia ei ole vielä saatavana suomeksi. Voit lukea <%= link_to 'artikkelin englanniksi', translation_of(@pages.find { |p| p.page_id == 'about-news' && language_code_of(p) == 'en' }, 'en') %> kunnes suomalainen käännös valmistuu. Pahoittelemme asiasta koituvaa hankaluutta.</p>
+	<% else %>
+		<p>Sivua ei ole vielä saatavana suomeksi. Voit lukea <%= link_to 'sivun englanniksi', translation_of(@page, 'en') %> kunnes suomalainen käännös valmistuu. Pahoittelemme asiasta koituvaa hankaluutta.</p>
+	<% end %>
 <% elsif language_code_of(@page) == 'fr' %>
 	<% if @page.kind == 'article' %>
 		<p>Cet article n'est pas encore disponible en français. Vous pouvez <%= link_to 'le lire en anglais', translation_of(@pages.find { |p| p.page_id == 'about-news' && language_code_of(p) == 'en' }, 'en') %> en attendant que la version française soit disponible. Veuillez-nous excuser pour cet inconvénient.</p>

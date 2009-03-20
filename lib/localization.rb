@@ -6,6 +6,7 @@ module MOULSiteHelpers::Localization
       'en' => 'English',
       'de' => 'German',
       'es' => 'Spanish',
+      'fi' => 'Finnish',
       'fr' => 'French',
       'it' => 'Italian',
       'nl' => 'Dutch'
@@ -14,6 +15,7 @@ module MOULSiteHelpers::Localization
       'en' => 'WARNING: untranslated',
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
       'fr' => 'WARNING: untranslated',
       'it' => 'WARNING: untranslated',
       'nl' => 'WARNING: untranslated'
@@ -22,6 +24,16 @@ module MOULSiteHelpers::Localization
       'en' => 'WARNING: untranslated',
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
+      'fr' => 'WARNING: untranslated',
+      'it' => 'WARNING: untranslated',
+      'nl' => 'WARNING: untranslated'
+    },
+    'fi' => {
+      'en' => 'WARNING: untranslated',
+      'de' => 'WARNING: untranslated',
+      'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
       'fr' => 'WARNING: untranslated',
       'it' => 'WARNING: untranslated',
       'nl' => 'WARNING: untranslated'
@@ -30,6 +42,7 @@ module MOULSiteHelpers::Localization
       'en' => 'WARNING: untranslated',
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
       'fr' => 'WARNING: untranslated',
       'it' => 'WARNING: untranslated',
       'nl' => 'WARNING: untranslated'
@@ -38,6 +51,7 @@ module MOULSiteHelpers::Localization
       'en' => 'WARNING: untranslated',
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
       'fr' => 'WARNING: untranslated',
       'it' => 'WARNING: untranslated',
       'nl' => 'WARNING: untranslated'
@@ -46,6 +60,7 @@ module MOULSiteHelpers::Localization
       'en' => 'Engels',
       'de' => 'Duits',
       'es' => 'Spaans',
+      'fi' => 'Fins',
       'fr' => 'Frans',
       'it' => 'Italiaans',
       'nl' => 'Nederlands'
@@ -56,6 +71,7 @@ module MOULSiteHelpers::Localization
     'English translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös englanniksi',
       'fr' => 'Version anglaise',
       'it' => 'Traduzione Inglese',
       'nl' => 'Engelse vertaling'
@@ -63,6 +79,7 @@ module MOULSiteHelpers::Localization
     'German translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös saksaksi',
       'fr' => 'Version allemande',
       'it' => 'Traduzione Tedesca',
       'nl' => 'Duitse vertaling'
@@ -70,13 +87,23 @@ module MOULSiteHelpers::Localization
     'Spanish translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös espanjaksi',
       'fr' => 'Version espagnole',
       'it' => 'Traduzione Spagnola',
       'nl' => 'Spaanse vertaling'
     },
+    'Finnish translation' => {
+      'de' => 'Finnische Übersetzung',
+      'es' => 'WARNING: untranslated',
+      'fi' => 'WARNING: untranslated',
+      'fr' => 'Version finlandaise',
+      'it' => 'Traduzione Finlandese',
+      'nl' => 'Finse vertaling'
+    },
     'French translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös ranskaksi',
       'fr' => 'Version française',
       'it' => 'Traduzione Francese',
       'nl' => 'Franse vertaling'
@@ -84,6 +111,7 @@ module MOULSiteHelpers::Localization
     'Italian translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös italiaksi',
       'fr' => 'Version italienne',
       'it' => 'Traduzione Italiana',
       'nl' => 'Italiaanse vertaling'
@@ -91,6 +119,7 @@ module MOULSiteHelpers::Localization
     'Dutch translation' => {
       'de' => 'WARNING: untranslated',
       'es' => 'WARNING: untranslated',
+      'fi' => 'Käännös hollanniksi',
       'fr' => 'Version néerlandaise',
       'it' => 'Traduzione Olandese',
       'nl' => 'Nederlandse vertaling'
