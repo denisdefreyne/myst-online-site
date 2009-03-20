@@ -13,3 +13,5 @@ To do
 * Add feeds
 	* Finnish
 	* German
+* Fix quotes „ “ …
+* MO:RE or MORE?

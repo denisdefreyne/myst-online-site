@@ -1,9 +1,9 @@
 <img src="<%= @site.config[:assets_base_url] %>/assets/images/sidebar/2.jpg" id="sidebar-pic">
 
-<h1><span>Over: Nieuws</span></h1>
+<h1><span>Informationen: News</span></h1>
 
-<p class="note">Schrijf je zeker in op het <a href="http://feeds2.feedburner.com/uru_nl">nieuwskanaal</a> om geïnformeerd te blijven!</p>
+<p class="note">Abonniere den <a href="http://feeds2.feedburner.com/uru_de">News-Feed</a> um auf dem Laufenden zu bleiben!</p>
 
-<% articles_in('nl').each do |article| %>
+<% articles_in('de').each do |article| %>
 	<%= render 'article', :article => article %>
 <% end %>

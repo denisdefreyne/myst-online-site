@@ -14,6 +14,8 @@ module MOULSiteFilters
       'Myst Online: Uru Live',
       'Myst Online: Restauration de l\'Expérience',
       'Myst Online: Esperimento di Restaurazione',
+      'Myst Online: Restaurationsexperiment',
+      'Myst Online: Restauratie-experiment',
       'Myst Online Restoration Experiment',
       '"Myst Online"',
       'Myst Online',
