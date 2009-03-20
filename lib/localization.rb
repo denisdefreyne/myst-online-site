@@ -1,70 +1,14 @@
 module MOULSiteHelpers::Localization
 
-  # Language names in all languages
-  LANGUAGE_NAMES = {
-    'en' => {
-      'en' => 'English',
-      'de' => 'German',
-      'es' => 'Spanish',
-      'fi' => 'Finnish',
-      'fr' => 'French',
-      'it' => 'Italian',
-      'nl' => 'Dutch'
-    },
-    'de' => {
-      'en' => 'WARNING: untranslated',
-      'de' => 'WARNING: untranslated',
-      'es' => 'WARNING: untranslated',
-      'fi' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
-      'it' => 'WARNING: untranslated',
-      'nl' => 'WARNING: untranslated'
-    },
-    'es' => {
-      'en' => 'WARNING: untranslated',
-      'de' => 'WARNING: untranslated',
-      'es' => 'WARNING: untranslated',
-      'fi' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
-      'it' => 'WARNING: untranslated',
-      'nl' => 'WARNING: untranslated'
-    },
-    'fi' => {
-      'en' => 'WARNING: untranslated',
-      'de' => 'WARNING: untranslated',
-      'es' => 'WARNING: untranslated',
-      'fi' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
-      'it' => 'WARNING: untranslated',
-      'nl' => 'WARNING: untranslated'
-    },
-    'fr' => {
-      'en' => 'WARNING: untranslated',
-      'de' => 'WARNING: untranslated',
-      'es' => 'WARNING: untranslated',
-      'fi' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
-      'it' => 'WARNING: untranslated',
-      'nl' => 'WARNING: untranslated'
-    },
-    'it' => {
-      'en' => 'WARNING: untranslated',
-      'de' => 'WARNING: untranslated',
-      'es' => 'WARNING: untranslated',
-      'fi' => 'WARNING: untranslated',
-      'fr' => 'WARNING: untranslated',
-      'it' => 'WARNING: untranslated',
-      'nl' => 'WARNING: untranslated'
-    },
-    'nl' => {
-      'en' => 'Engels',
-      'de' => 'Duits',
-      'es' => 'Spaans',
-      'fi' => 'Fins',
-      'fr' => 'Frans',
-      'it' => 'Italiaans',
-      'nl' => 'Nederlands'
-    }
+  # Language names in English
+  ENGLISH_LANGUAGE_NAMES = {
+    'en' => 'English',
+    'de' => 'German',
+    'es' => 'Spanish',
+    'fi' => 'Finnish',
+    'fr' => 'French',
+    'it' => 'Italian',
+    'nl' => 'Dutch'
   }
 
   TRANSLATED_STRINGS = {
@@ -131,9 +75,9 @@ module MOULSiteHelpers::Localization
     page.path[1..2]
   end
 
-  # Returns the page's human-readable language
-  def language_of(page, lang)
-    LANGUAGE_NAMES[lang][language_code_of(page)]
+  # Returns the page's human-readable language in English
+  def language_of(page)
+    ENGLISH_LANGUAGE_NAMES[language_code_of(page)]
   end
 
   # Returns all articles in the given language
