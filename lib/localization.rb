@@ -13,7 +13,7 @@ module MOULSiteHelpers::Localization
 
   TRANSLATED_STRINGS = {
     'English translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Englische Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös englanniksi',
       'fr' => 'Version anglaise',
@@ -21,7 +21,7 @@ module MOULSiteHelpers::Localization
       'nl' => 'Engelse vertaling'
     },
     'German translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Deutsche Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös saksaksi',
       'fr' => 'Version allemande',
@@ -29,7 +29,7 @@ module MOULSiteHelpers::Localization
       'nl' => 'Duitse vertaling'
     },
     'Spanish translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Spanische Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös espanjaksi',
       'fr' => 'Version espagnole',
@@ -45,7 +45,7 @@ module MOULSiteHelpers::Localization
       'nl' => 'Finse vertaling'
     },
     'French translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Französische Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös ranskaksi',
       'fr' => 'Version française',
@@ -53,7 +53,7 @@ module MOULSiteHelpers::Localization
       'nl' => 'Franse vertaling'
     },
     'Italian translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Italienische Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös italiaksi',
       'fr' => 'Version italienne',
@@ -61,7 +61,7 @@ module MOULSiteHelpers::Localization
       'nl' => 'Italiaanse vertaling'
     },
     'Dutch translation' => {
-      'de' => 'WARNING: untranslated',
+      'de' => 'Niederländische Übersetzung',
       'es' => 'WARNING: untranslated',
       'fi' => 'Käännös hollanniksi',
       'fr' => 'Version néerlandaise',

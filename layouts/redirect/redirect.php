@@ -14,6 +14,16 @@ $path_mapping = array(
 		'/media/concept-art/' => '/media/concept-art/',
 		'/developers/'        => '/developers/'
 	),
+	'de' => array(
+		'/'                   => '/',
+		'/play/'              => '/spielen/',
+		'/about/'             => '/info/',
+		'/about/news/'        => '/info/news/',
+		'/media/'             => '/medien/',
+		'/media/screenshots/' => '/medien/screenshots/',
+		'/media/concept-art/' => '/medien/concept-art/',
+		'/developers/'        => '/entwickler/'
+	),
 	'fi' => array(
 		'/'                   => '/',
 		'/play/'              => '/pelaa/',
