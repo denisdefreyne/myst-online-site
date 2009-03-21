@@ -446,10 +446,12 @@ class RubyPantsDdfreyne < String
     
     if kind == :german
       # Get most opening single quotes:
-      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/, '\1&#8216;')
+      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/, '\1&#8218;')
+      # Abbreviation
+      str.gsub!(/(\w+)'(\w+)/, '\1&#8217;\2')
       # Single closing quotes:
-      str.gsub!(/(#{close_class})'/, '\1&#8219;')
-      str.gsub!(/'(\s|s\b|$)/, '&#8219;\1')
+      str.gsub!(/(#{close_class})'/, '\1&#8216;')
+      str.gsub!(/'(\s|s\b|$)/, '&#8216;\1')
       # Any remaining single quotes should be opening ones:
       str.gsub!(/'/, '&#8218;')
     else
