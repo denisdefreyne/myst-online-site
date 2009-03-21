@@ -176,7 +176,7 @@
 #
 
 
-class RubyPants < String
+class RubyPantsDdfreyne < String
   VERSION = "0.2"
 
   # Create a new RubyPants instance with the text in +string+.
@@ -219,21 +219,25 @@ class RubyPants < String
       return self
     elsif @options.include? 1
       # Do everything, turn all options on.
-      do_quotes = do_backticks = do_ellipses = true
+      do_backticks = do_ellipses = true
       do_dashes = :normal
+      do_quotes = :normal
     elsif @options.include? 2
       # Do everything, turn all options on, use old school dash shorthand.
-      do_quotes = do_backticks = do_ellipses = true
+      do_backticks = do_ellipses = true
       do_dashes = :oldschool
+      do_quotes = :normal
     elsif @options.include? 3
       # Do everything, turn all options on, use inverted old school
       # dash shorthand.
-      do_quotes = do_backticks = do_ellipses = true
+      do_backticks = do_ellipses = true
       do_dashes = :inverted
+      do_quotes = :normal
     elsif @options.include?(-1)
       do_stupefy = true
     else
-      do_quotes =                @options.include? :quotes
+      do_quotes = :normal     if @options.include? :quotes
+      do_quotes = :german     if @options.include? :german_quotes
       do_backticks =             @options.include? :backticks
       do_backticks = :both    if @options.include? :allbackticks
       do_dashes = :normal     if @options.include? :dashes
@@ -307,7 +311,7 @@ class RubyPants < String
               end
             else
               # Normal case:                  
-              t = educate_quotes t
+              t = educate_quotes(t, do_quotes)
             end
           end
 
@@ -394,7 +398,21 @@ class RubyPants < String
 
   # Return the string, with "educated" curly quote HTML entities.
   #
-  def educate_quotes(str)
+  def educate_quotes(str, kind)
+    # NORMAL:
+    #   ‘ 8216 LEFT SINGLE QUOTATION MARK
+    #   ’ 8217 RIGHT SINGLE QUOTATION MARK
+    # GERMAN:
+    #   ‚ 8218 SINGLE LOW-9 QUOTATION MARK
+    #   ‛ 8219 SINGLE HIGH-REVERSED-9 QUOTATION MARK
+    #
+    # NORMAL:
+    #   “ 8220 LEFT DOUBLE QUOTATION MARK
+    #   ” 8221 RIGHT DOUBLE QUOTATION MARK
+    # GERMAN:
+    #   „ 8222 DOUBLE LOW-9 QUOTATION MARK
+    #   ‟ 8223 DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+
     punct_class = '[!"#\$\%\'()*+,\-.\/:;<=>?\@\[\\\\\]\^_`{|}~]'
 
     str = str.dup
@@ -402,13 +420,23 @@ class RubyPants < String
     # Special case if the very first character is a quote followed by
     # punctuation at a non-word-break. Close the quotes by brute
     # force:
-    str.gsub!(/^'(?=#{punct_class}\B)/, '&#8217;')
-    str.gsub!(/^"(?=#{punct_class}\B)/, '&#8221;')
+    if kind == :german
+      str.gsub!(/^'(?=#{punct_class}\B)/, '&#8219;')
+      str.gsub!(/^"(?=#{punct_class}\B)/, '&#8223;')
+    else
+      str.gsub!(/^'(?=#{punct_class}\B)/, '&#8217;')
+      str.gsub!(/^"(?=#{punct_class}\B)/, '&#8221;')
+    end
 
     # Special case for double sets of quotes, e.g.:
     #   <p>He said, "'Quoted' words in a larger quote."</p>
-    str.gsub!(/"'(?=\w)/, '&#8220;&#8216;')
-    str.gsub!(/'"(?=\w)/, '&#8216;&#8220;')
+    if kind == :german
+      str.gsub!(/"'(?=\w)/, '&#8222;&#8218;')
+      str.gsub!(/'"(?=\w)/, '&#8218;&#8222;')
+    else
+      str.gsub!(/"'(?=\w)/, '&#8220;&#8216;')
+      str.gsub!(/'"(?=\w)/, '&#8216;&#8220;')
+    end
 
     # Special case for decade abbreviations (the '80s):
     str.gsub!(/'(?=\d\ds)/, '&#8217;')
@@ -416,23 +444,41 @@ class RubyPants < String
     close_class = %![^\ \t\r\n\\[\{\(\-]!
     dec_dashes = '&#8211;|&#8212;'
     
-    # Get most opening single quotes:
-    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/,
-             '\1&#8216;')
-    # Single closing quotes:
-    str.gsub!(/(#{close_class})'/, '\1&#8217;')
-    str.gsub!(/'(\s|s\b|$)/, '&#8217;\1')
-    # Any remaining single quotes should be opening ones:
-    str.gsub!(/'/, '&#8216;')
+    if kind == :german
+      # Get most opening single quotes:
+      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/, '\1&#8216;')
+      # Single closing quotes:
+      str.gsub!(/(#{close_class})'/, '\1&#8219;')
+      str.gsub!(/'(\s|s\b|$)/, '&#8219;\1')
+      # Any remaining single quotes should be opening ones:
+      str.gsub!(/'/, '&#8218;')
+    else
+      # Get most opening single quotes:
+      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)'(?=\w)/, '\1&#8218;')
+      # Single closing quotes:
+      str.gsub!(/(#{close_class})'/, '\1&#8217;')
+      str.gsub!(/'(\s|s\b|$)/, '&#8217;\1')
+      # Any remaining single quotes should be opening ones:
+      str.gsub!(/'/, '&#8216;')
+    end
 
-    # Get most opening double quotes:
-    str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/,
-             '\1&#8220;')
-    # Double closing quotes:
-    str.gsub!(/(#{close_class})"/, '\1&#8221;')
-    str.gsub!(/"(\s|s\b|$)/, '&#8221;\1')
-    # Any remaining quotes should be opening ones:
-    str.gsub!(/"/, '&#8220;')
+    if kind == :german
+      # Get most opening double quotes:
+      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/, '\1&#8222;')
+      # Double closing quotes:
+      str.gsub!(/(#{close_class})"/, '\1&#8223;')
+      str.gsub!(/"(\s|s\b|$)/, '&#8223;\1')
+      # Any remaining quotes should be opening ones:
+      str.gsub!(/"/, '&#8222;')
+    else
+      # Get most opening double quotes:
+      str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/, '\1&#8220;')
+      # Double closing quotes:
+      str.gsub!(/(#{close_class})"/, '\1&#8221;')
+      str.gsub!(/"(\s|s\b|$)/, '&#8221;\1')
+      # Any remaining quotes should be opening ones:
+      str.gsub!(/"/, '&#8220;')
+    end
 
     str
   end
