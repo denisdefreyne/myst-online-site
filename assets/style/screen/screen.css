@@ -302,6 +302,9 @@ body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.j
 	width: 880px;
 }
 
+body#page-404                       h1 { background: url(/assets/images/header/page-404-en.jpg)              no-repeat top left; }
+body#page-410                       h1 { background: url(/assets/images/header/page-410-en.jpg)              no-repeat top left; }
+
 body.lang-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
 body.lang-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
 body.lang-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
