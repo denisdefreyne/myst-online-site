@@ -404,14 +404,14 @@ class RubyPantsDdfreyne < String
     #   ’ 8217 RIGHT SINGLE QUOTATION MARK
     # GERMAN:
     #   ‚ 8218 SINGLE LOW-9 QUOTATION MARK
-    #   ‛ 8219 SINGLE HIGH-REVERSED-9 QUOTATION MARK
+    #   ‘ 8216 LEFT SINGLE QUOTATION MARK
     #
     # NORMAL:
     #   “ 8220 LEFT DOUBLE QUOTATION MARK
     #   ” 8221 RIGHT DOUBLE QUOTATION MARK
     # GERMAN:
     #   „ 8222 DOUBLE LOW-9 QUOTATION MARK
-    #   ‟ 8223 DOUBLE HIGH-REVERSED-9 QUOTATION MARK
+    #   “ 8220 LEFT DOUBLE QUOTATION MARK
 
     punct_class = '[!"#\$\%\'()*+,\-.\/:;<=>?\@\[\\\\\]\^_`{|}~]'
 
@@ -422,7 +422,7 @@ class RubyPantsDdfreyne < String
     # force:
     if kind == :german
       str.gsub!(/^'(?=#{punct_class}\B)/, '&#8219;')
-      str.gsub!(/^"(?=#{punct_class}\B)/, '&#8223;')
+      str.gsub!(/^"(?=#{punct_class}\B)/, '&#8220;')
     else
       str.gsub!(/^'(?=#{punct_class}\B)/, '&#8217;')
       str.gsub!(/^"(?=#{punct_class}\B)/, '&#8221;')
@@ -466,8 +466,8 @@ class RubyPantsDdfreyne < String
       # Get most opening double quotes:
       str.gsub!(/(\s|&nbsp;|--|&[mn]dash;|#{dec_dashes}|&#x201[34];)"(?=\w)/, '\1&#8222;')
       # Double closing quotes:
-      str.gsub!(/(#{close_class})"/, '\1&#8223;')
-      str.gsub!(/"(\s|s\b|$)/, '&#8223;\1')
+      str.gsub!(/(#{close_class})"/, '\1&#8220;')
+      str.gsub!(/"(\s|s\b|$)/, '&#8220;\1')
       # Any remaining quotes should be opening ones:
       str.gsub!(/"/, '&#8222;')
     else
