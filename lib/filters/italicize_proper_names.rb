@@ -16,7 +16,7 @@ module MOULSiteFilters
       'Myst Online: Esperimento di Restaurazione',
       'Myst Online: Restaurationsexperiment',
       'Myst Online: Restauratie-experiment',
-      'Myst Online Restoration Experiment',
+      'Myst Online: Restoration Experiment',
       '"Myst Online"',
       'Myst Online',
       'MystOnline.com',
