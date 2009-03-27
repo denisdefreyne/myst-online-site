@@ -56,9 +56,9 @@
 <% end %>
 	</head>
 <% if @page.page_id %>
-	<body class="mystonline-com lang-<%= language_code_of(@page) %>" id="page-<%=h @page.page_id %>">
+	<body class="mystonline-com mystonline-com-<%= language_code_of(@page) %>" id="page-<%=h @page.page_id %>">
 <% else %>
-	<body class="mystonline-com lang-<%= language_code_of(@page) %>">
+	<body class="mystonline-com mystonline-com-<%= language_code_of(@page) %>">
 <% end %>
 		<div id="lang-picker">
 			<ul>

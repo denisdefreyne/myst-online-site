@@ -117,13 +117,13 @@ body {
 	background: #43290D;
 }
 
-body.lang-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
-body.lang-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
-body.lang-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
-body.lang-fi #nav { background: #43290D url(/assets/images/header/nav-v2-fi.jpg); }
-body.lang-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
-body.lang-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
-body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
+body.mystonline-com-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
+body.mystonline-com-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
+body.mystonline-com-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.mystonline-com-fi #nav { background: #43290D url(/assets/images/header/nav-v2-fi.jpg); }
+body.mystonline-com-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
+body.mystonline-com-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
+body.mystonline-com-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
 
 #nav li,
 #nav li a,
@@ -153,13 +153,13 @@ body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg)
 #nav li#nav-media      { top: 0; left: 640px; }
 #nav li#nav-developers { top: 0; left: 800px; }
 
-body.lang-en #nav li a, body.lang-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
-body.lang-de #nav li a, body.lang-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
-body.lang-es #nav li a, body.lang-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
-body.lang-fi #nav li a, body.lang-fi #nav li div.hover { background: url(/assets/images/header/nav-v2-fi.jpg); }
-body.lang-fr #nav li a, body.lang-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
-body.lang-it #nav li a, body.lang-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
-body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
+body.mystonline-com-en #nav li a, body.mystonline-com-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
+body.mystonline-com-de #nav li a, body.mystonline-com-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
+body.mystonline-com-es #nav li a, body.mystonline-com-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
+body.mystonline-com-fi #nav li a, body.mystonline-com-fi #nav li div.hover { background: url(/assets/images/header/nav-v2-fi.jpg); }
+body.mystonline-com-fr #nav li a, body.mystonline-com-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
+body.mystonline-com-it #nav li a, body.mystonline-com-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
+body.mystonline-com-nl #nav li a, body.mystonline-com-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
 
 #nav li#nav-home a                                               { background-position: 0      0; }
 #nav li#nav-play a                                               { background-position: -160px 0; }
@@ -214,13 +214,13 @@ body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets
 	position: relative;
 }
 
-body.lang-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
-body.lang-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
-body.lang-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
-body.lang-fi #banner { background: #715535 url(/assets/images/header/banner-fi.jpg) no-repeat top left; }
-body.lang-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
-body.lang-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
-body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
+body.mystonline-com-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
+body.mystonline-com-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
+body.mystonline-com-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
+body.mystonline-com-fi #banner { background: #715535 url(/assets/images/header/banner-fi.jpg) no-repeat top left; }
+body.mystonline-com-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
+body.mystonline-com-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
+body.mystonline-com-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
 
 /* ----- GENERAL ----- */
 
@@ -302,64 +302,64 @@ body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.j
 	width: 880px;
 }
 
-body#page-error-404                 h1 { background: url(/assets/images/header/page-error-404-en.jpg)         no-repeat top left; }
-body#page-error-410                 h1 { background: url(/assets/images/header/page-error-410-en.jpg)         no-repeat top left; }
+body#page-error-404                           h1 { background: url(/assets/images/header/page-error-404-en.jpg)         no-repeat top left; }
+body#page-error-410                           h1 { background: url(/assets/images/header/page-error-410-en.jpg)         no-repeat top left; }
 
-body.lang-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
-body.lang-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
-body.lang-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
-body.lang-en#page-media             h1 { background: url(/assets/images/header/page-media-en.jpg)             no-repeat top left; }
-body.lang-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
-body.lang-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
-body.lang-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
+body.mystonline-com-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
+body.mystonline-com-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
+body.mystonline-com-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
+body.mystonline-com-en#page-media             h1 { background: url(/assets/images/header/page-media-en.jpg)             no-repeat top left; }
+body.mystonline-com-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
+body.mystonline-com-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
+body.mystonline-com-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
 
-body.lang-de#page-play              h1 { background: url(/assets/images/header/page-play-de.jpg)              no-repeat top left; }
-body.lang-de#page-about             h1 { background: url(/assets/images/header/page-about-de.jpg)             no-repeat top left; }
-body.lang-de#page-about-news        h1 { background: url(/assets/images/header/page-about-news-de.jpg)        no-repeat top left; }
-body.lang-de#page-media             h1 { background: url(/assets/images/header/page-media-de.jpg)             no-repeat top left; }
-body.lang-de#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-de.jpg) no-repeat top left; }
-body.lang-de#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-de.jpg) no-repeat top left; }
-body.lang-de#page-developers        h1 { background: url(/assets/images/header/page-developers-de.jpg)        no-repeat top left; }
+body.mystonline-com-de#page-play              h1 { background: url(/assets/images/header/page-play-de.jpg)              no-repeat top left; }
+body.mystonline-com-de#page-about             h1 { background: url(/assets/images/header/page-about-de.jpg)             no-repeat top left; }
+body.mystonline-com-de#page-about-news        h1 { background: url(/assets/images/header/page-about-news-de.jpg)        no-repeat top left; }
+body.mystonline-com-de#page-media             h1 { background: url(/assets/images/header/page-media-de.jpg)             no-repeat top left; }
+body.mystonline-com-de#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-de.jpg) no-repeat top left; }
+body.mystonline-com-de#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-de.jpg) no-repeat top left; }
+body.mystonline-com-de#page-developers        h1 { background: url(/assets/images/header/page-developers-de.jpg)        no-repeat top left; }
 
-body.lang-es#page-play              h1 { background: url(/assets/images/header/page-play-es.jpg)              no-repeat top left; }
-body.lang-es#page-about             h1 { background: url(/assets/images/header/page-about-es.jpg)             no-repeat top left; }
-body.lang-es#page-about-news        h1 { background: url(/assets/images/header/page-about-news-es.jpg)        no-repeat top left; }
-body.lang-es#page-media             h1 { background: url(/assets/images/header/page-media-es.jpg)             no-repeat top left; }
-body.lang-es#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-es.jpg) no-repeat top left; }
-body.lang-es#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-es.jpg) no-repeat top left; }
-body.lang-es#page-developers        h1 { background: url(/assets/images/header/page-developers-es.jpg)        no-repeat top left; }
+body.mystonline-com-es#page-play              h1 { background: url(/assets/images/header/page-play-es.jpg)              no-repeat top left; }
+body.mystonline-com-es#page-about             h1 { background: url(/assets/images/header/page-about-es.jpg)             no-repeat top left; }
+body.mystonline-com-es#page-about-news        h1 { background: url(/assets/images/header/page-about-news-es.jpg)        no-repeat top left; }
+body.mystonline-com-es#page-media             h1 { background: url(/assets/images/header/page-media-es.jpg)             no-repeat top left; }
+body.mystonline-com-es#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-es.jpg) no-repeat top left; }
+body.mystonline-com-es#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-es.jpg) no-repeat top left; }
+body.mystonline-com-es#page-developers        h1 { background: url(/assets/images/header/page-developers-es.jpg)        no-repeat top left; }
 
-body.lang-fi#page-play              h1 { background: url(/assets/images/header/page-play-fi.jpg)              no-repeat top left; }
-body.lang-fi#page-about             h1 { background: url(/assets/images/header/page-about-fi.jpg)             no-repeat top left; }
-body.lang-fi#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fi.jpg)        no-repeat top left; }
-body.lang-fi#page-media             h1 { background: url(/assets/images/header/page-media-fi.jpg)             no-repeat top left; }
-body.lang-fi#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fi.jpg) no-repeat top left; }
-body.lang-fi#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fi.jpg) no-repeat top left; }
-body.lang-fi#page-developers        h1 { background: url(/assets/images/header/page-developers-fi.jpg)        no-repeat top left; }
+body.mystonline-com-fi#page-play              h1 { background: url(/assets/images/header/page-play-fi.jpg)              no-repeat top left; }
+body.mystonline-com-fi#page-about             h1 { background: url(/assets/images/header/page-about-fi.jpg)             no-repeat top left; }
+body.mystonline-com-fi#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fi.jpg)        no-repeat top left; }
+body.mystonline-com-fi#page-media             h1 { background: url(/assets/images/header/page-media-fi.jpg)             no-repeat top left; }
+body.mystonline-com-fi#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fi.jpg) no-repeat top left; }
+body.mystonline-com-fi#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fi.jpg) no-repeat top left; }
+body.mystonline-com-fi#page-developers        h1 { background: url(/assets/images/header/page-developers-fi.jpg)        no-repeat top left; }
 
-body.lang-fr#page-play              h1 { background: url(/assets/images/header/page-play-fr.jpg)              no-repeat top left; }
-body.lang-fr#page-about             h1 { background: url(/assets/images/header/page-about-fr.jpg)             no-repeat top left; }
-body.lang-fr#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fr.jpg)        no-repeat top left; }
-body.lang-fr#page-media             h1 { background: url(/assets/images/header/page-media-fr.jpg)             no-repeat top left; }
-body.lang-fr#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fr.jpg) no-repeat top left; }
-body.lang-fr#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fr.jpg) no-repeat top left; }
-body.lang-fr#page-developers        h1 { background: url(/assets/images/header/page-developers-fr.jpg)        no-repeat top left; }
+body.mystonline-com-fr#page-play              h1 { background: url(/assets/images/header/page-play-fr.jpg)              no-repeat top left; }
+body.mystonline-com-fr#page-about             h1 { background: url(/assets/images/header/page-about-fr.jpg)             no-repeat top left; }
+body.mystonline-com-fr#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fr.jpg)        no-repeat top left; }
+body.mystonline-com-fr#page-media             h1 { background: url(/assets/images/header/page-media-fr.jpg)             no-repeat top left; }
+body.mystonline-com-fr#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fr.jpg) no-repeat top left; }
+body.mystonline-com-fr#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fr.jpg) no-repeat top left; }
+body.mystonline-com-fr#page-developers        h1 { background: url(/assets/images/header/page-developers-fr.jpg)        no-repeat top left; }
 
-body.lang-it#page-play              h1 { background: url(/assets/images/header/page-play-it.jpg)              no-repeat top left; }
-body.lang-it#page-about             h1 { background: url(/assets/images/header/page-about-it.jpg)             no-repeat top left; }
-body.lang-it#page-about-news        h1 { background: url(/assets/images/header/page-about-news-it.jpg)        no-repeat top left; }
-body.lang-it#page-media             h1 { background: url(/assets/images/header/page-media-it.jpg)             no-repeat top left; }
-body.lang-it#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-it.jpg) no-repeat top left; }
-body.lang-it#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-it.jpg) no-repeat top left; }
-body.lang-it#page-developers        h1 { background: url(/assets/images/header/page-developers-it.jpg)        no-repeat top left; }
+body.mystonline-com-it#page-play              h1 { background: url(/assets/images/header/page-play-it.jpg)              no-repeat top left; }
+body.mystonline-com-it#page-about             h1 { background: url(/assets/images/header/page-about-it.jpg)             no-repeat top left; }
+body.mystonline-com-it#page-about-news        h1 { background: url(/assets/images/header/page-about-news-it.jpg)        no-repeat top left; }
+body.mystonline-com-it#page-media             h1 { background: url(/assets/images/header/page-media-it.jpg)             no-repeat top left; }
+body.mystonline-com-it#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-it.jpg) no-repeat top left; }
+body.mystonline-com-it#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-it.jpg) no-repeat top left; }
+body.mystonline-com-it#page-developers        h1 { background: url(/assets/images/header/page-developers-it.jpg)        no-repeat top left; }
 
-body.lang-nl#page-play              h1 { background: url(/assets/images/header/page-play-nl.jpg)              no-repeat top left; }
-body.lang-nl#page-about             h1 { background: url(/assets/images/header/page-about-nl.jpg)             no-repeat top left; }
-body.lang-nl#page-about-news        h1 { background: url(/assets/images/header/page-about-news-nl.jpg)        no-repeat top left; }
-body.lang-nl#page-media             h1 { background: url(/assets/images/header/page-media-nl.jpg)             no-repeat top left; }
-body.lang-nl#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-nl.jpg) no-repeat top left; }
-body.lang-nl#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-nl.jpg) no-repeat top left; }
-body.lang-nl#page-developers        h1 { background: url(/assets/images/header/page-developers-nl.jpg)        no-repeat top left; }
+body.mystonline-com-nl#page-play              h1 { background: url(/assets/images/header/page-play-nl.jpg)              no-repeat top left; }
+body.mystonline-com-nl#page-about             h1 { background: url(/assets/images/header/page-about-nl.jpg)             no-repeat top left; }
+body.mystonline-com-nl#page-about-news        h1 { background: url(/assets/images/header/page-about-news-nl.jpg)        no-repeat top left; }
+body.mystonline-com-nl#page-media             h1 { background: url(/assets/images/header/page-media-nl.jpg)             no-repeat top left; }
+body.mystonline-com-nl#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-nl.jpg) no-repeat top left; }
+body.mystonline-com-nl#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-nl.jpg) no-repeat top left; }
+body.mystonline-com-nl#page-developers        h1 { background: url(/assets/images/header/page-developers-nl.jpg)        no-repeat top left; }
 
 .halfwidth-with-banner #main h1 {
 	display: none;
