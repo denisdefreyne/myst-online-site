@@ -16,16 +16,6 @@ $path_mapping = array(
 	),
 	'de' => array(
 		'/'                   => '/',
-		'/play/'              => '/jugar/',
-		'/about/'             => '/info/',
-		'/about/news/'        => '/info/noticias/',
-		'/media/'             => '/galeria/',
-		'/media/screenshots/' => '/galeria/capturas/',
-		'/media/concept-art/' => '/galeria/bocetos/',
-		'/developers/'        => '/desarrolladores/'
-	),
-	'es' => array(
-		'/'                   => '/',
 		'/play/'              => '/spielen/',
 		'/about/'             => '/info/',
 		'/about/news/'        => '/info/news/',
@@ -33,6 +23,16 @@ $path_mapping = array(
 		'/media/screenshots/' => '/medien/screenshots/',
 		'/media/concept-art/' => '/medien/concept-art/',
 		'/developers/'        => '/entwickler/'
+	),
+	'es' => array(
+		'/'                   => '/',
+		'/play/'              => '/jugar/',
+		'/about/'             => '/info/',
+		'/about/news/'        => '/info/noticias/',
+		'/media/'             => '/galeria/',
+		'/media/screenshots/' => '/galeria/capturas/',
+		'/media/concept-art/' => '/galeria/bocetos/',
+		'/developers/'        => '/desarrolladores/'
 	),
 	'fi' => array(
 		'/'                   => '/',
