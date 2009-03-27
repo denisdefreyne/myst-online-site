@@ -1,0 +1,8 @@
+# Built-in
+custom_path:    "/error-404.php"
+filters_post:   [] # FIXME run rubypants on everything but the PHP
+
+# Custom 
+title:          "Page Not Found"
+page_id:        error-404
+language_code:  "en"

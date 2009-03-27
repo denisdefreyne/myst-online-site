@@ -72,7 +72,7 @@ module MOULSiteHelpers::Localization
 
   # Returns the page's language code
   def language_code_of(page)
-    page.path[1..2]
+    page.language_code || page.path[1..2]
   end
 
   # Returns the page's human-readable language in English
