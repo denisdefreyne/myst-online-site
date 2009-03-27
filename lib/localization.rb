@@ -11,10 +11,11 @@ module MOULSiteHelpers::Localization
     'nl' => 'Dutch'
   }
 
+  # English strings and their translations in different languages.
   TRANSLATED_STRINGS = {
     'English translation' => {
       'de' => 'Englische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en inglés',
       'fi' => 'Käännös englanniksi',
       'fr' => 'Version anglaise',
       'it' => 'Traduzione Inglese',
@@ -22,7 +23,7 @@ module MOULSiteHelpers::Localization
     },
     'German translation' => {
       'de' => 'Deutsche Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en alemán',
       'fi' => 'Käännös saksaksi',
       'fr' => 'Version allemande',
       'it' => 'Traduzione Tedesca',
@@ -30,7 +31,7 @@ module MOULSiteHelpers::Localization
     },
     'Spanish translation' => {
       'de' => 'Spanische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en español',
       'fi' => 'Käännös espanjaksi',
       'fr' => 'Version espagnole',
       'it' => 'Traduzione Spagnola',
@@ -46,7 +47,7 @@ module MOULSiteHelpers::Localization
     },
     'French translation' => {
       'de' => 'Französische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en francés',
       'fi' => 'Käännös ranskaksi',
       'fr' => 'Version française',
       'it' => 'Traduzione Francese',
@@ -54,7 +55,7 @@ module MOULSiteHelpers::Localization
     },
     'Italian translation' => {
       'de' => 'Italienische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en italiano',
       'fi' => 'Käännös italiaksi',
       'fr' => 'Version italienne',
       'it' => 'Traduzione Italiana',
@@ -62,7 +63,7 @@ module MOULSiteHelpers::Localization
     },
     'Dutch translation' => {
       'de' => 'Niederländische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en holandés',
       'fi' => 'Käännös hollanniksi',
       'fr' => 'Version néerlandaise',
       'it' => 'Traduzione Olandese',
