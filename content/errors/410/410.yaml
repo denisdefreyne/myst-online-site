@@ -5,3 +5,4 @@ custom_path:    "/error-410.html"
 title:          "Page Is Gone"
 page_id:        error-410
 language_code:  "en"
+is_hidden:      true
