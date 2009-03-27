@@ -11,8 +11,8 @@ task :publish do
   # done (it's just a really simple rsync wrapper though).
 
   # Settings
-  src = '/Users/ddfreyne/Documents/Cyan/Myst Online/moul-nanoc/output/' # trailing slash
-  dst = 'ddfreyne@ectype:/home/ddfreyne/sites/moul-new/public'          # no trailing slash
+  src = '/Users/ddfreyne/Documents/Development/nanoc/sites-moul/output/' # trailing slash
+  dst = 'ddfreyne@ectype:/home/ddfreyne/sites/moul-new/public'           # no trailing slash
 
   # Don't touch this!
   puts 'Publishing site...'
@@ -22,8 +22,8 @@ end
 
 task :'publish-assets' do
   # Settings
-  src = '/Users/ddfreyne/Documents/Cyan/Myst Online/moul-nanoc/output/assets/' # trailing slash
-  dst = 'ddfreyne@ectype:/home/ddfreyne/sites/moul-assets/public/assets'       # no trailing slash
+  src = '/Users/ddfreyne/Documents/Development/nanoc/sites-moul/output/assets/' # trailing slash
+  dst = 'ddfreyne@ectype:/home/ddfreyne/sites/moul-assets/public/assets'        # no trailing slash
 
   # Don't touch this!
   puts 'Publishing assets...'

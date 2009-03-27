@@ -1,9 +1,0 @@
-<!--[if lte IE 6]>-->
-<img src="<%= @page.assets_base_url %>/assets/images/sidebar/home.jpg" id="sidebar-pic-home">
-<!--<![endif]-->
-
-<h1>Latest News</h1>
-
-<%= render 'article', :article => @pages.select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.last %>
-
-<p class="note">You can find older news articles in the <a href="/about/news/">news archive</a>. Be sure to subscribe to the <a href="http://feeds.feedburner.com/uru">news feed</a> to stay up-to-date!</p>

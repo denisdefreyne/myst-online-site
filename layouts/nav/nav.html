@@ -1,0 +1,57 @@
+<% if language_code_of(@page) == 'en' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/en/"><span>Home</span></a></li>
+				<li id="nav-play"><a href="/en/play/"><span>Play</span></a></li>
+				<li id="nav-about"><a href="/en/about/"><span>About</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Forums</span></a></li>
+				<li id="nav-media"><a href="/en/media/"><span>Media</span></a></li>
+				<li id="nav-developers"><a href="/en/developers/"><span>Developers</span></a></li>
+			</ul>
+<% elsif language_code_of(@page) == 'de' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/de/"><span>Startseite</span></a></li>
+				<li id="nav-play"><a href="/de/spielen/"><span>Spielen</span></a></li>
+				<li id="nav-about"><a href="/de/info/"><span>Informationen</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Foren</span></a></li>
+				<li id="nav-media"><a href="/de/medien/"><span>Medien</span></a></li>
+				<li id="nav-developers"><a href="/de/entwickler/"><span>Entwickler</span></a></li>
+			</ul>
+<% elsif language_code_of(@page) == 'fi' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/fi/"><span>Etusivu</span></a></li>
+				<li id="nav-play"><a href="/fi/pelaa/"><span>Pelaa</span></a></li>
+				<li id="nav-about"><a href="/fi/tietoa/"><span>Tietoa</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Foorumi</span></a></li>
+				<li id="nav-media"><a href="/fi/media/"><span>Media</span></a></li>
+				<li id="nav-developers"><a href="/fi/tuotekehittelijat/"><span>Tuotekehittelijät</span></a></li>
+			</ul>
+<% elsif language_code_of(@page) == 'fr' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/fr/"><span>Accueil</span></a></li>
+				<li id="nav-play"><a href="/fr/jouez/"><span>Jouez</span></a></li>
+				<li id="nav-about"><a href="/fr/informations/"><span>Informations</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Forums</span></a></li>
+				<li id="nav-media"><a href="/fr/medias/"><span>Médias</span></a></li>
+				<li id="nav-developers"><a href="/fr/developpeurs/"><span>Développeurs</span></a></li>
+			</ul>
+<% elsif language_code_of(@page) == 'it' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/it/"><span>Home</span></a></li>
+				<li id="nav-play"><a href="/it/gioca/"><span>Gioca</span></a></li>
+				<li id="nav-about"><a href="/it/informazioni/"><span>Informazioni</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Forum</span></a></li>
+				<li id="nav-media"><a href="/it/media/"><span>Media</span></a></li>
+				<li id="nav-developers"><a href="/it/sviluppatori/"><span>Sviluppatori</span></a></li>
+			</ul>
+<% elsif language_code_of(@page) == 'nl' %>
+			<ul id="nav">
+				<li id="nav-home"><a href="/nl/"><span>Thuis</span></a></li>
+				<li id="nav-play"><a href="/nl/speel/"><span>Speel</span></a></li>
+				<li id="nav-about"><a href="/nl/over/"><span>Over</span></a></li>
+				<li id="nav-forums"><a href="/forums/"><span>Forums</span></a></li>
+				<li id="nav-media"><a href="/nl/media/"><span>Media</span></a></li>
+				<li id="nav-developers"><a href="/nl/ontwikkelaars/"><span>Ontwikkelaars</span></a></li>
+			</ul>
+<% else %>
+			<!-- WARNING: untranslated -->
+<% end %>

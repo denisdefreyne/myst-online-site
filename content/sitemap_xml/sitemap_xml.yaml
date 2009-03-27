@@ -1,6 +1,6 @@
 # Built-in
-filters_pre:
-  - "erb"
+filters_pre:  [ 'erb' ]
+filters_post: []
 extension:    "xml"
 layout:       "none"
 custom_path:  "/sitemap.xml"

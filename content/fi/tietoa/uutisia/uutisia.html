@@ -1,0 +1,9 @@
+<img src="<%= @site.config[:assets_base_url] %>/assets/images/sidebar/2.jpg" id="sidebar-pic">
+
+<h1><span>Tietoa: Uutisia</span></h1>
+
+<p class="note">Varmista, että tilaat <a href="http://feeds2.feedburner.com/uru_fi">uutissyötteen</a> pysyäksesi ajan tasalla!</p>
+
+<% articles_in('fi').each do |article| %>
+	<%= render 'article', :article => article %>
+<% end %>

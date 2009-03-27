@@ -1,0 +1,18 @@
+<h1><span>Media: Concept Art</span></h1>
+
+<ul id="subnav">
+	<li><a href="/de/medien/screenshots/">Screenshots</a></li>
+	<li><span class="active">Concept Art</span></li>
+</ul>
+
+<p>Klicke auf ein Bild, um eine größere Version zu sehen. <a href="/de/medien/">Zurück zur Medien-Seite</a>.</p>
+
+<ul class="gallery">
+<% (1..16).each do |i| %>
+	<li>
+		<a href="/assets/images/media/concept-art/full/<%= i %>.jpg">
+			<img src="<%= @site.config[:assets_base_url] %>/assets/images/media/concept-art/thumbnails/<%= i %>.jpg">
+		</a>
+	</li>
+<% end %>
+</ul>

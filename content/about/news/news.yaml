@@ -1,5 +1,7 @@
 # Built-in
+layout:       none
+extension:    php
+filters_pre:  [ 'erb' ]
+filters_post: []
 
-# Custom 
-title:   "About: News"
-page_id: about-news
+# Custom

@@ -1,6 +1,7 @@
 # Built-in
+layout:       none
+extension:    php
+filters_pre:  [ 'erb' ]
+filters_post: []
 
-# Custom 
-title:   "Media: Screenshots"
-page_id: media-screenshots
-size:    fullwidth
+# Custom

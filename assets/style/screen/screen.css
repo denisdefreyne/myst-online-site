@@ -8,21 +8,65 @@
 /* ----- WRAPPER ----- */
 
 body {
-	margin: 10px auto;
-
 	text-align: center;
 
 	background: #000;
-
-	width: 960px;
 }
 
 #wrapper {
 	width: 960px;
-	
-	margin: 0 auto;
+
+	margin: 10px auto;
 
 	text-align: left;
+}
+
+/* ----- LANGUAGE PICKER ----- */
+
+#lang-picker {
+	text-align: right;
+}
+
+#lang-picker ul {
+	width: 960px;
+
+	margin: 10px auto;
+}
+
+#lang-picker ul li {
+	display: inline;
+
+	margin: 0 0 0 10px;
+}
+
+#lang-picker a,
+#lang-picker span {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 10px;
+
+	padding: 10px 0;
+
+	letter-spacing: 1px;
+
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#lang-picker span {
+	color: #fff;
+}
+
+#lang-picker a:link,
+#lang-picker a:visited {
+	color: #666;
+}
+
+#lang-picker a:hover {
+	color: #999;
+}
+
+#lang-picker a:active {
+	color: #fff;
 }
 
 /* ----- HEADER ----- */
@@ -36,27 +80,32 @@ body {
 	height: 126px;
 }
 
-/* h1 */
+/* header */
 
-#header div span {
+#header #link-home span {
 	display: none;
 }
 
-#header div a {
+#header #link-home a,
+#header #link-home div.hover {
 	position: absolute;
-	
+
 	top: 0;
 	left: 320px;
-	
+
 	width: 313px;
 	height: 126px;
-	
+
 	background: url(/assets/images/header/header-v2.jpg) -320px 0;
 }
 
-#header div a:hover {
+#header #link-home a:hover,
+#header #link-home div.hover {
 	background-position: -320px -126px;
 }
+
+#header #link-home a   { z-index: 100; }
+#header #link-home div { z-index: 50;  }
 
 /* ----- NAVIGATION ----- */
 
@@ -64,43 +113,95 @@ body {
 	position: relative;
 
 	height: 69px;
+
+	background: #43290D;
 }
 
-#nav li {
-	float: left;
-	
+body.lang-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
+body.lang-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
+body.lang-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fi #nav { background: #43290D url(/assets/images/header/nav-v2-fi.jpg); }
+body.lang-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
+body.lang-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
+body.lang-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li,
+#nav li a,
+#nav li div.hover {
 	display: block;
-	
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
 	width: 160px;
 	height: 69px;
 }
 
-#nav li a {
-	display: block;
-	
-	width: 160px;
-	height: 69px;
-	
-	background: #43290D url(/assets/images/header/nav-v2.jpg);
-}
+#nav li a   { z-index: 100; }
+#nav li div { z-index: 50;  }
 
 #nav li a span {
 	display: none;
 }
 
-#nav li#nav-home a             { background-position: 0      0; }
-#nav li#nav-play a             { background-position: -160px 0; }
-#nav li#nav-about a            { background-position: -320px 0; }
-#nav li#nav-forums a           { background-position: -480px 0; }
-#nav li#nav-media a            { background-position: -640px 0; }
-#nav li#nav-developers a       { background-position: -800px 0; }
+#nav li#nav-home       { top: 0; left: 0;     }
+#nav li#nav-play       { top: 0; left: 160px; }
+#nav li#nav-about      { top: 0; left: 320px; }
+#nav li#nav-forums     { top: 0; left: 480px; }
+#nav li#nav-media      { top: 0; left: 640px; }
+#nav li#nav-developers { top: 0; left: 800px; }
 
-#nav li#nav-home a:hover       { background-position: 0      -69px; }
-#nav li#nav-play a:hover       { background-position: -160px -69px; }
-#nav li#nav-about a:hover      { background-position: -320px -69px; }
-#nav li#nav-forums a:hover     { background-position: -480px -69px; }
-#nav li#nav-media a:hover      { background-position: -640px -69px; }
-#nav li#nav-developers a:hover { background-position: -800px -69px; }
+body.lang-en #nav li a, body.lang-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
+body.lang-de #nav li a, body.lang-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
+body.lang-es #nav li a, body.lang-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
+body.lang-fi #nav li a, body.lang-fi #nav li div.hover { background: url(/assets/images/header/nav-v2-fi.jpg); }
+body.lang-fr #nav li a, body.lang-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
+body.lang-it #nav li a, body.lang-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
+body.lang-nl #nav li a, body.lang-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li#nav-home a                                               { background-position: 0      0; }
+#nav li#nav-play a                                               { background-position: -160px 0; }
+#nav li#nav-about a                                              { background-position: -320px 0; }
+#nav li#nav-forums a                                             { background-position: -480px 0; }
+#nav li#nav-media a                                              { background-position: -640px 0; }
+#nav li#nav-developers a                                         { background-position: -800px 0; }
+
+#nav li#nav-home a:hover,       #nav li#nav-home div.hover       { background-position: 0      -69px; }
+#nav li#nav-play a:hover,       #nav li#nav-play div.hover       { background-position: -160px -69px; }
+#nav li#nav-about a:hover,      #nav li#nav-about div.hover      { background-position: -320px -69px; }
+#nav li#nav-forums a:hover,     #nav li#nav-forums div.hover     { background-position: -480px -69px; }
+#nav li#nav-media a:hover,      #nav li#nav-media div.hover      { background-position: -640px -69px; }
+#nav li#nav-developers a:hover, #nav li#nav-developers div.hover { background-position: -800px -69px; }
+
+/* ----- INTERNET EXPLORER 6 WARNING ----- */
+
+.ie6-warning {
+	padding: 4px 3px;
+
+	background: #ffc;
+
+	color: #900;
+
+	font-size: 11px;
+	font-family: Verdana, Arial, sans-serif;
+
+	line-height: 15px
+}
+
+.ie6-warning a:link,
+.ie6-warning a:visited {
+	color: #000;
+}
+
+.ie6-warning a:hover {
+	color: #333;
+}
+
+.ie6-warning a:active {
+	color: #000;
+}
 
 /* ----- BANNER ----- */
 
@@ -108,27 +209,18 @@ body {
 	width: 960px;
 	height: 213px;
 
-	background: #715535 url(/assets/images/header/banner.jpg) no-repeat top left;
+	background: #715535;
 
 	position: relative;
 }
 
-#banner p {
-	bottom: 42px;
-	left: 30px;
-	width: 280px;
-
-	position: absolute;
-
-	padding: 20px;
-
-	background: rgba(32, 32, 32, 0.8);
-
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 12px;
-
-	color: #ffffff;
-}
+body.lang-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
+body.lang-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
+body.lang-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
+body.lang-fi #banner { background: #715535 url(/assets/images/header/banner-fi.jpg) no-repeat top left; }
+body.lang-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
+body.lang-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
+body.lang-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
 
 /* ----- GENERAL ----- */
 
@@ -194,39 +286,72 @@ body {
 	position: relative;
 
 	height: 132px;
-	width:  489px;
-
-	right: 0;
-	top:   0;
 }
 
-body#page-play #main h1 {
-	background: url(/assets/images/header/page-play.jpg) no-repeat top left;
+.halfwidth #main h1 {
+	top:  0;
+	left: 0;
+
+	width: 489px;
 }
 
-body#page-about #main h1 {
-	background: url(/assets/images/header/page-about.jpg) no-repeat top left;
+.fullwidth #main h1 {
+	top:  0;
+	left: 5px;
+
+	width: 880px;
 }
 
-body#page-about-news #main h1 {
-	background: url(/assets/images/header/page-about-news.jpg) no-repeat top left;
-}
+body#page-404                       h1 { background: url(/assets/images/header/page-404-en.jpg)              no-repeat top left; }
+body#page-410                       h1 { background: url(/assets/images/header/page-410-en.jpg)              no-repeat top left; }
 
-body#page-media #main h1 {
-	background: url(/assets/images/header/page-media.jpg) no-repeat top left;
-}
+body.lang-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
+body.lang-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
+body.lang-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
+body.lang-en#page-media             h1 { background: url(/assets/images/header/page-media-en.jpg)             no-repeat top left; }
+body.lang-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
+body.lang-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
+body.lang-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
 
-body#page-media-screenshots #main h1 {
-	background: url(/assets/images/header/page-media-screenshots.jpg) no-repeat top left;
-}
+body.lang-de#page-play              h1 { background: url(/assets/images/header/page-play-de.jpg)              no-repeat top left; }
+body.lang-de#page-about             h1 { background: url(/assets/images/header/page-about-de.jpg)             no-repeat top left; }
+body.lang-de#page-about-news        h1 { background: url(/assets/images/header/page-about-news-de.jpg)        no-repeat top left; }
+body.lang-de#page-media             h1 { background: url(/assets/images/header/page-media-de.jpg)             no-repeat top left; }
+body.lang-de#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-de.jpg) no-repeat top left; }
+body.lang-de#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-de.jpg) no-repeat top left; }
+body.lang-de#page-developers        h1 { background: url(/assets/images/header/page-developers-de.jpg)        no-repeat top left; }
 
-body#page-media-concept-art #main h1 {
-	background: url(/assets/images/header/page-media-concept-art.jpg) no-repeat top left;
-}
+body.lang-fi#page-play              h1 { background: url(/assets/images/header/page-play-fi.jpg)              no-repeat top left; }
+body.lang-fi#page-about             h1 { background: url(/assets/images/header/page-about-fi.jpg)             no-repeat top left; }
+body.lang-fi#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fi.jpg)        no-repeat top left; }
+body.lang-fi#page-media             h1 { background: url(/assets/images/header/page-media-fi.jpg)             no-repeat top left; }
+body.lang-fi#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fi.jpg) no-repeat top left; }
+body.lang-fi#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fi.jpg) no-repeat top left; }
+body.lang-fi#page-developers        h1 { background: url(/assets/images/header/page-developers-fi.jpg)        no-repeat top left; }
 
-body#page-developers #main h1 {
-	background: url(/assets/images/header/page-developers.jpg) no-repeat top left;
-}
+body.lang-fr#page-play              h1 { background: url(/assets/images/header/page-play-fr.jpg)              no-repeat top left; }
+body.lang-fr#page-about             h1 { background: url(/assets/images/header/page-about-fr.jpg)             no-repeat top left; }
+body.lang-fr#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fr.jpg)        no-repeat top left; }
+body.lang-fr#page-media             h1 { background: url(/assets/images/header/page-media-fr.jpg)             no-repeat top left; }
+body.lang-fr#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fr.jpg) no-repeat top left; }
+body.lang-fr#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fr.jpg) no-repeat top left; }
+body.lang-fr#page-developers        h1 { background: url(/assets/images/header/page-developers-fr.jpg)        no-repeat top left; }
+
+body.lang-it#page-play              h1 { background: url(/assets/images/header/page-play-it.jpg)              no-repeat top left; }
+body.lang-it#page-about             h1 { background: url(/assets/images/header/page-about-it.jpg)             no-repeat top left; }
+body.lang-it#page-about-news        h1 { background: url(/assets/images/header/page-about-news-it.jpg)        no-repeat top left; }
+body.lang-it#page-media             h1 { background: url(/assets/images/header/page-media-it.jpg)             no-repeat top left; }
+body.lang-it#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-it.jpg) no-repeat top left; }
+body.lang-it#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-it.jpg) no-repeat top left; }
+body.lang-it#page-developers        h1 { background: url(/assets/images/header/page-developers-it.jpg)        no-repeat top left; }
+
+body.lang-nl#page-play              h1 { background: url(/assets/images/header/page-play-nl.jpg)              no-repeat top left; }
+body.lang-nl#page-about             h1 { background: url(/assets/images/header/page-about-nl.jpg)             no-repeat top left; }
+body.lang-nl#page-about-news        h1 { background: url(/assets/images/header/page-about-news-nl.jpg)        no-repeat top left; }
+body.lang-nl#page-media             h1 { background: url(/assets/images/header/page-media-nl.jpg)             no-repeat top left; }
+body.lang-nl#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-nl.jpg) no-repeat top left; }
+body.lang-nl#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-nl.jpg) no-repeat top left; }
+body.lang-nl#page-developers        h1 { background: url(/assets/images/header/page-developers-nl.jpg)        no-repeat top left; }
 
 .halfwidth-with-banner #main h1 {
 	display: none;
@@ -272,7 +397,7 @@ body#page-developers #main h1 {
 	position: absolute;
 
 	width: 471px;
-	height: 681px; 
+	height: 681px;
 
 	top: 20px;
 	left: 0;
@@ -319,6 +444,10 @@ body#page-developers #main h1 {
 	font-style: italic;
 
 	color: #927250;
+}
+
+#main abbr.acronym {
+	font-variant: small-caps;
 }
 
 #main q {

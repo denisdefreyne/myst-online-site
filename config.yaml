@@ -1,2 +1,8 @@
-output_dir: "output"
-router:     "versioned"
+# Built-in
+output_dir:      "output"
+router:          "versioned"
+index_filenames: [ 'index.html', 'index.php' ]
+
+# Custom
+assets_base_url:  ''#http://moul-assets.stoneship.org'
+base_url:         ''#http://mystonline.com'

@@ -7,10 +7,8 @@ filename:     "index"
 extension:    "html"
 filters_pre:
   - erb
+  - italicize_proper_names
+filters_post:
+  - rubypants_ddfreyne
 
 # Custom
-size:             "halfwidth"
-has_banner:       false
-assets_base_url:  http://moul-assets.stoneship.org
-base_url:         http://mystonline.com
-language:         en
