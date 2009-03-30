@@ -39,7 +39,7 @@ module MOULSiteHelpers::Localization
     },
     'Finnish translation' => {
       'de' => 'Finnische Übersetzung',
-      'es' => 'WARNING: untranslated',
+      'es' => 'Traducción en finés',
       'fi' => 'WARNING: untranslated',
       'fr' => 'Version finlandaise',
       'it' => 'Traduzione Finlandese',

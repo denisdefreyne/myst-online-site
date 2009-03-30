@@ -1,0 +1,18 @@
+<h1><span>Galería: Capturas</span></h1>
+
+<ul id="subnav">
+	<li><span class="active">Capturas</span></li>
+	<li><a href="/es/galeria/arte-conceptual/">Arte Conceptual</a></li>
+</ul>
+
+<p>Clica en cualquier imagen para obtener una versión más grande. <a href="/es/galeria/">Volver a la página de la galería</a>.</p>
+
+<ul class="gallery">
+<% (1..67).each do |i| %>
+	<li>
+		<a href="/assets/images/media/screenshots/full/<%= i %>.jpg">
+			<img src="<%= @site.config[:assets_base_url] %>/assets/images/media/screenshots/thumbnails/<%= i %>.jpg">
+		</a>
+	</li>
+<% end %>
+</ul>

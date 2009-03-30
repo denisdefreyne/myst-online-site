@@ -31,7 +31,7 @@ $path_mapping = array(
 		'/about/news/'        => '/info/noticias/',
 		'/media/'             => '/galeria/',
 		'/media/screenshots/' => '/galeria/capturas/',
-		'/media/concept-art/' => '/galeria/bocetos/',
+		'/media/concept-art/' => '/galeria/arte-conceptual/',
 		'/developers/'        => '/desarrolladores/'
 	),
 	'fi' => array(

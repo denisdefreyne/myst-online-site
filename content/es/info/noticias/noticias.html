@@ -1,0 +1,9 @@
+<img src="<%= @site.config[:assets_base_url] %>/assets/images/sidebar/2.jpg" id="sidebar-pic">
+
+<h1><span>Información: Noticias</span></h1>
+
+<p class="note">¡Suscríbete a nuestro <a href="http://feeds2.feedburner.com/uru_es">hilo de noticias</a> para estar informado al momento!</p>
+
+<% articles_in('es').each do |article| %>
+	<%= render 'article', :article => article %>
+<% end %>

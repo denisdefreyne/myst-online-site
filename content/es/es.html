@@ -1,0 +1,7 @@
+<img src="<%= @site.config[:assets_base_url] %>/assets/images/sidebar/home.jpg" id="sidebar-pic-home">
+
+<h1>Últimas noticias</h1>
+
+<%= render 'article', :article => articles_in('es').first %>
+
+<p class="note">Puedes encontrar información pasada en el <a href="/es/info/noticias/">archivo de noticias</a>. ¡Suscríbete a nuestro <a href="http://feeds2.feedburner.com/uru_es">hilo de noticias</a> para estar informado al momento!</p>

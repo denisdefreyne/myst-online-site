@@ -1,0 +1,15 @@
+# Built-in
+filters_pre:
+  - "erb"
+filters_post: []
+layout:       "none"
+extension:    "xml"
+custom_path:  /es/info/noticias/_feed.xml
+
+# Custom
+is_hidden:    "true"
+feed_url:     "http://feeds2.feedburner.com/uru_es"
+title:        "Noticias de Myst Online: Uru Live"
+base_url:     "http://mystonline.com"
+author_name:  "Myst Online: Uru Live team"
+author_uri:   "http://mystonline.com/"
