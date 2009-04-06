@@ -1,6 +1,7 @@
 # Built-in
 binary:       false
-filters:      []
+filters:
+  - rainpress
 
 # Custom
 asset_id:     "style-screen"
