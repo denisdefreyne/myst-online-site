@@ -4,5 +4,5 @@ filters:
   - rainpress
 
 # Custom
-asset_id:     "style-screen"
-version:      "7"
+asset_id:     "style-forums"
+version:      "3"

@@ -1,0 +1,8 @@
+# Built-in
+binary:       false
+filters:
+  - rainpress
+
+# Custom
+asset_id:     "style-screen"
+version:      "8"

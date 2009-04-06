@@ -16,7 +16,7 @@
 }
 
 #forums.big {
-	background: #541b00 url(http://moul-assets.stoneship.org/assets/images/forums/background-top.jpg) top left no-repeat;
+	background: #541b00 url(/assets/images/forums/background-top.jpg) top left no-repeat;
 }
 
 #forums.big .wrapper {
@@ -24,14 +24,14 @@
 
 	min-height: 400px;
 
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/background-bottom.jpg) bottom no-repeat;
+	background: url(/assets/images/forums/background-bottom.jpg) bottom no-repeat;
 }
 
 #forums.small {
 	margin: 0;
 	padding: 20px;
 
-	background: #541b00 url(http://moul-assets.stoneship.org/assets/images/forums/background-top.jpg) top left no-repeat;
+	background: #541b00 url(/assets/images/forums/background-top.jpg) top left no-repeat;
 }
 
 /** ========== GENERAL ========== */
@@ -286,7 +286,7 @@
 /** ----- GENERAL ----- */
 
 #forums .box {
-	background: #f1dab0 url(http://moul-assets.stoneship.org/assets/images/forums/paper-background.jpg) top left repeat-y;
+	background: #f1dab0 url(/assets/images/forums/paper-background.jpg) top left repeat-y;
 }
 
 #forums div.box {
@@ -342,15 +342,15 @@
 }
 
 #forums .box h3 {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg);
+	background: url(/assets/images/forums/paper-background-20.jpg);
 }
 
 #forums .box h3.bigger {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-30.jpg);
+	background: url(/assets/images/forums/paper-background-30.jpg);
 }
 
 #forums .box h4 {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg);
+	background: url(/assets/images/forums/paper-background-20.jpg);
 }
 
 /** ========== BOX - TABLE ========== */
@@ -379,7 +379,7 @@
 /* odd */
 
 #forums table.box td.odd {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-05.jpg);
+	background: url(/assets/images/forums/paper-background-05.jpg);
 }
 
 /** ----- HEADER ----- */
@@ -388,7 +388,7 @@
 
 #forums table.box tr.big-header th,
 #forums table.box tr.big-header-many th {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-30.jpg);
+	background: url(/assets/images/forums/paper-background-30.jpg);
 }
 
 #forums table.box tr.big-header th,
@@ -415,7 +415,7 @@
 
 #forums table.box tr.small-header th,
 #forums table.box tr.small-header-many th {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg);
+	background: url(/assets/images/forums/paper-background-20.jpg);
 }
 
 #forums table.box tr.small-header th,
@@ -702,7 +702,7 @@
 }
 
 #forums .message-form .message-form-main {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg);
+	background: url(/assets/images/forums/paper-background-20.jpg);
 }
 
 #forums .message-form .message-form-main-buttons {
@@ -736,7 +736,7 @@
 
 	border: 0;
 
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-10.jpg);
+	background: url(/assets/images/forums/paper-background-10.jpg);
 }
 
 #forums .message-form textarea {
@@ -800,7 +800,7 @@
 #forums div.box .inside-posts {
 	padding: 0;
 
-	background: #f1dab0 url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-post.jpg) top left repeat-y;
+	background: #f1dab0 url(/assets/images/forums/paper-background-post.jpg) top left repeat-y;
 }
 
 #forums .post {
@@ -827,7 +827,7 @@
 }
 
 #forums .post .message .header p.meta {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-10.jpg) right;
+	background: url(/assets/images/forums/paper-background-10.jpg) right;
 
 	margin: 0 0 10px 0;
 	padding: 5px 10px;
@@ -856,7 +856,7 @@
 
 	color: #900;
 
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-10.jpg);
+	background: url(/assets/images/forums/paper-background-10.jpg);
 
 	padding: 0.2em 0.4em;
 
@@ -885,7 +885,7 @@
 #forums .post .message .spoiler {
 	color: #1b0e02;
 
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-10.jpg);
+	background: url(/assets/images/forums/paper-background-10.jpg);
 
 	padding: 10px;
 }
@@ -896,7 +896,7 @@
 #forums .post .message blockquote blockquote,
 #forums .box .inside-preview .spoiler .spoiler,
 #forums .post .message .spoiler .spoiler {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg);
+	background: url(/assets/images/forums/paper-background-20.jpg);
 }
 
 #forums .box .inside-preview pre pre pre,
@@ -905,7 +905,7 @@
 #forums .post .message blockquote blockquote blockquote,
 #forums .box .inside-preview .spoiler .spoiler .spoiler,
 #forums .post .message .spoiler .spoiler .spoiler {
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-30.jpg);
+	background: url(/assets/images/forums/paper-background-30.jpg);
 }
 
 #forums.small .post .footer {
@@ -915,7 +915,7 @@
 #forums .post .footer {
 	padding: 2px 10px;
 
-	background: url(http://moul-assets.stoneship.org/assets/images/forums/paper-background-20.jpg) right;
+	background: url(/assets/images/forums/paper-background-20.jpg) right;
 
 	clear: both;
 }
