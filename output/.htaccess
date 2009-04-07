@@ -1,0 +1,96 @@
+# Error documents
+ErrorDocument 404 /error-404.php
+ErrorDocument 410 /error-410.html
+
+# Redirect old site to new site
+RewriteEngine On
+RewriteBase   /
+RewriteCond   %{HTTP_HOST} !^mystonline\.com$ [NC]
+RewriteRule   ^(.*)$ http://mystonline.com/$1 [L,R=301]
+
+# Redirect blog
+RewriteCond   %{QUERY_STRING} feed [NC]
+RewriteRule   ^blog http://feeds2.feedburner.com/uru [L,R=301]
+
+# Redirect media
+RewriteRule   ^media/images/screen([0-9]+)\.jpg http://mystonline.com/assets/images/media/screenshots/full/$1.jpg [L,R=301]
+RewriteRule   ^media/screen([0-9]+)\.html       http://mystonline.com/assets/images/media/screenshots/full/$1.jpg [L,R=301]
+
+# Redirect
+Redirect permanent /betasignup.php                        http://mystonline.com/play/
+Redirect permanent /blog                                  http://mystonline.com/about/news/
+Redirect permanent /demo.html                             http://mystonline.com/play/
+Redirect permanent /email.html                            http://mystonline.com/play/
+Redirect permanent /forum                                 http://mystonline.com/forums/
+Redirect permanent /gameinfo.html                         http://mystonline.com/play/
+Redirect permanent /gameinfo.php                          http://mystonline.com/play/
+Redirect permanent /game_features.html                    http://mystonline.com/play/
+Redirect permanent /game_news.html                        http://mystonline.com/play/
+Redirect permanent /game_news_coming.html                 http://mystonline.com/about/news/
+Redirect permanent /game_news_faq.html                    http://mystonline.com/play/
+Redirect permanent /game_news_promotions.html             http://mystonline.com/play/
+Redirect permanent /game_requirements.html                http://mystonline.com/play/
+Redirect permanent /game_story.html                       http://mystonline.com/play/
+Redirect permanent /images/screenshots/concept1.jpg       http://mystonline.com/assets/images/media/concept-art/full/15.jpg
+Redirect permanent /images/screenshots/concept2.jpg       http://mystonline.com/assets/images/media/concept-art/full/16.jpg
+Redirect permanent /macsignup.html                        http://mystonline.com/play/
+Redirect permanent /media.html                            http://mystonline.com/media/
+Redirect permanent /media/myst_online_uru_live_manual.pdf http://mystonline.com/play/
+Redirect permanent /media_artwork.html                    http://mystonline.com/media/concept-art/
+Redirect permanent /media_screenshots.html                http://mystonline.com/media/screenshots/
+Redirect permanent /news/rss.php                          http://feeds2.feedburner.com/uru
+Redirect permanent /posting.php                           http://mystonline.com/forums/posting.php
+Redirect permanent /screen.php                            http://mystonline.com/media/screenshots/
+Redirect permanent /signup.html                           http://mystonline.com/play/
+Redirect permanent /signup_tryitbuyit_domestic.html       http://mystonline.com/play/
+Redirect permanent /support.html                          http://mystonline.com/play/
+Redirect permanent /viewforum.php                         http://mystonline.com/forums/viewforum.php
+Redirect permanent /xml/feed.xml                          http://feeds2.feedburner.com/uru
+Redirect permanent /media/images/play-now-01.jpg          http://mystonline.com/old/play-now-01.jpg
+Redirect permanent /media/images/play-now-02.jpg          http://mystonline.com/old/play-now-02.jpg
+Redirect permanent /media/images/play-now-03.jpg          http://mystonline.com/old/play-now-03.jpg
+Redirect permanent /media/images/play-now-04.jpg          http://mystonline.com/old/play-now-04.jpg
+Redirect permanent /media/images/play-now-05.jpg          http://mystonline.com/old/play-now-05.jpg
+Redirect permanent /media/images/play-now-06.jpg          http://mystonline.com/old/play-now-06.jpg
+Redirect permanent /media/images/play-now-07.jpg          http://mystonline.com/old/play-now-07.jpg
+Redirect permanent /media/images/play-now-08.jpg          http://mystonline.com/old/play-now-08.jpg
+
+# Gone
+Redirect gone /assets/scripts/nav.js
+Redirect gone /assets/style/moul.css
+Redirect gone /codeofconduct
+Redirect gone /code_of_conduct.html
+Redirect gone /community.html
+Redirect gone /community/customization
+Redirect gone /conte.php
+Redirect gone /content_community.html
+Redirect gone /content_press.html
+Redirect gone /content_aboutgametap.html
+Redirect gone /content_media_video.html
+Redirect gone /content_termsconditions.html
+Redirect gone /content_story_wide_140907.html
+Redirect gone /content_story_wide_070807.html
+Redirect gone /content_story_wide_053107.html
+Redirect gone /content_gamefeatures.html
+Redirect gone /content_codeofconduct.html
+Redirect gone /faq.php
+Redirect gone /happening.html
+Redirect gone /images/footer_logos.jpg
+Redirect gone /ingame.html
+Redirect gone /ingame_feed.php
+Redirect gone /links.html
+Redirect gone /media/images/play-now-01.jpg
+Redirect gone /media_downloadables.html
+Redirect gone /media_videos.html
+Redirect gone /mysterium.html
+Redirect gone /mystralia.html
+Redirect gone /naming_policy
+Redirect gone /nda/nda.html
+Redirect gone /newsletter
+Redirect gone /outgame.html
+Redirect gone /pages/submit_fansite.php
+Redirect gone /podcasts/podcast_rand_12_5.mp3
+Redirect gone /press.html
+Redirect gone /privacy_policy.html
+Redirect gone /spotlight.html
+Redirect gone /terms_conditions.html
