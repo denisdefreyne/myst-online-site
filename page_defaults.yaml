@@ -10,5 +10,6 @@ filters_pre:
   - italicize_proper_names
 filters_post:
   - rubypants_ddfreyne
+  - relativize_paths_in_html
 
 # Custom
