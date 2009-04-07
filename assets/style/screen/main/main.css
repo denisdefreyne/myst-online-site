@@ -312,6 +312,8 @@ body.mystonline-com-en#page-media             h1 { background: url(/assets/image
 body.mystonline-com-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
 body.mystonline-com-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
 body.mystonline-com-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
+body.mystonline-com-en#page-archive           h1 { background: url(/assets/images/header/page-archive-en.jpg)           no-repeat top left; }
+body.mystonline-com-en#page-archive-story     h1 { background: url(/assets/images/header/page-archive-story-en.jpg)     no-repeat top left; }
 
 body.mystonline-com-de#page-play              h1 { background: url(/assets/images/header/page-play-de.jpg)              no-repeat top left; }
 body.mystonline-com-de#page-about             h1 { background: url(/assets/images/header/page-about-de.jpg)             no-repeat top left; }
