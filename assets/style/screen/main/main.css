@@ -474,6 +474,55 @@ body.mystonline-com-nl#page-developers        h1 { background: url(/assets/image
 	text-decoration: underline;
 }
 
+/* images */
+
+#main .figure {
+	text-align: center;
+}
+
+#main .figure img {
+	width: 400px;
+	height: 250px;
+}
+
+#main .figure .caption {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #927250;
+
+	line-height: 18px;
+
+	margin: 0 0 20px 0;
+}
+
+#main .figure .caption i {
+	font-style: normal;
+}
+
+/* lists */
+
+#main ul {
+	margin: 20px 0 20px 25px;
+}
+
+#main li {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #290f00;
+
+	line-height: 18px;
+
+	list-style-type: square;
+
+	margin: 0;
+}
+
 /* sub-navigation */
 
 #main #subnav {

@@ -5,6 +5,23 @@ module MOULSiteFilters
     identifier :italicize_proper_names
 
     WORDS = [
+      'Yeesha',
+      'Marie Sutherland',
+      'Atrus',
+      'Cate Alexander',
+      'Minkata',
+      'K\'veer',
+      'Ahnonay Cathedral',
+      'Ahnonay',
+      'Rose Taylor',
+      'Wheely Engberg',
+      'Wheely',
+      'Michael Engberg',
+      'Negilahn',
+      'Douglas Sharper',
+      'Sharper',
+      'Phil Henderson',
+      'Dr. Watson',
       'Cyan Worlds, Inc.',
       'Cyan Worlds',
       'CyanChat',
@@ -43,6 +60,11 @@ module MOULSiteFilters
       'Uru',
       'MORE',
       'MO:UL',
+      'Reteltee',
+      'D\'ni Guild Advisor',
+      'D\'ni Guilds',
+      'D\'ni Restoration Council',
+      'DRC',
       'D\'ni',
       'Riven',
       'GameTap',
@@ -61,7 +83,7 @@ module MOULSiteFilters
     ]
 
     def run(content)
-      @regex ||= Regexp.union(*[ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new(Regexp.escape(w)) }].flatten)
+      @regex ||= Regexp.union(*[ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new('\b' + Regexp.escape(w) + '\b') }].flatten)
 
       inside_element = false
       inside_header  = false
