@@ -1,30 +1,30 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="<%= language_code_of(@page) %>">
+<html lang="<%= language_code_of(this_item) %>">
 	<head>
 		<meta http-equiv="Content-Type"     content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en">
 
 		<!-- title and description -->
-		<title>Myst Online: Uru Live - <%= @page.title %></title>
-<% if language_code_of(@page) == 'en' %>
+		<title>Myst Online: Uru Live - <%= this_item.title %></title>
+<% if language_code_of(this_item) == 'en' %>
 		<meta name="description" content="Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.">
-<% elsif language_code_of(@page) == 'de' %>
+<% elsif language_code_of(this_item) == 'de' %>
 		<meta name="description" content="Myst Online: Uru Live ist ein Massive-Multiplayer-Online-Adventurespiel, das in Kürze als Open Source freigegeben werden soll.">
-<% elsif language_code_of(@page) == 'es' %>
+<% elsif language_code_of(this_item) == 'es' %>
 		<meta name="description" content="Myst Online: Uru Live es un juego de aventura multijugador online masivo a punto de convertirse a código abierto.">
-<% elsif language_code_of(@page) == 'fi' %>
+<% elsif language_code_of(this_item) == 'fi' %>
 		<meta name="description" content="Myst Online: Uru Live tulee pian olemaan avoimeen lähdekoodiin perustuva massiivinen seikkailu-verkkomoninpeli.">
-<% elsif language_code_of(@page) == 'fr' %>
+<% elsif language_code_of(this_item) == 'fr' %>
 		<meta name="description" content="Myst Online: Uru Live sera bientôt un jeu d'aventure en ligne multijoueurs à code source ouverte.">
-<% elsif language_code_of(@page) == 'it' %>
+<% elsif language_code_of(this_item) == 'it' %>
 		<meta name="description" content="Myst Online: Uru Live è un Massively Multiplayer Online Game che sarà presto Open Source.">
-<% elsif language_code_of(@page) == 'nl' %>
+<% elsif language_code_of(this_item) == 'nl' %>
 		<meta name="description" content="Myst Online: Uru Live is een massive multiplayer online adventure-spel dat binnenkort open-source gemaakt zal worden.">
 <% else %>
 		<!-- WARNING: untranslated -->
 <% end %>
 		<!-- style -->
-		<link href="<%= @site.config[:assets_base_url] + asset('style-screen').path %>" rel="stylesheet" type="text/css">
+		<link href="<%= @site.config[:assets_base_url] + item('style-screen').path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
 		<style type="text/css" media="screen">
 			#sidebar-pic, #sidebar-pic-home { display: none; }
@@ -32,43 +32,43 @@
 		<![endif]-->
 
 		<!-- related pages -->
-		<link rel="home" href="/<%=h language_code_of(@page) %>/">
-<% translations_of(@page).each do |tp| %>
-		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', language_code_of(@page)) %>">
+		<link rel="home" href="/<%=h language_code_of(this_item) %>/">
+<% translations_of(this_item).each do |tp| %>
+		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', language_code_of(this_item)) %>">
 <% end %>
 
 		<!-- feed -->
-<% if language_code_of(@page) == 'en' %>
+<% if language_code_of(this_item) == 'en' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds2.feedburner.com/uru">
-<% elsif language_code_of(@page) == 'de' %>
+<% elsif language_code_of(this_item) == 'de' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live news" href="http://feeds2.feedburner.com/uru_de">
-<% elsif language_code_of(@page) == 'es' %>
+<% elsif language_code_of(this_item) == 'es' %>
 		<link rel="alternate" type="application/atom+xml" title="Noticias de Myst Online: Uru Live" href="http://feeds2.feedburner.com/uru_es">
-<% elsif language_code_of(@page) == 'fi' %>
+<% elsif language_code_of(this_item) == 'fi' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live uutisia" href="http://feeds2.feedburner.com/uru_fi">
-<% elsif language_code_of(@page) == 'fr' %>
+<% elsif language_code_of(this_item) == 'fr' %>
 		<link rel="alternate" type="application/atom+xml" title="Nouvelles de Myst Online: Uru Live" href="http://feeds2.feedburner.com/uru_fr">
-<% elsif language_code_of(@page) == 'it' %>
+<% elsif language_code_of(this_item) == 'it' %>
 		<link rel="alternate" type="application/atom+xml" title="Notizie di Myst Online: Uru Live" href="http://feeds2.feedburner.com/uru_it">
-<% elsif language_code_of(@page) == 'nl' %>
+<% elsif language_code_of(this_item) == 'nl' %>
 		<link rel="alternate" type="application/atom+xml" title="Myst Online: Uru Live nieuws" href="http://feeds2.feedburner.com/uru_nl">
 <% else %>
 		<!-- WARNING: untranslated -->
 <% end %>
 	</head>
-<% if @page.page_id %>
-	<body class="mystonline-com mystonline-com-<%= language_code_of(@page) %>" id="page-<%=h @page.page_id %>">
+<% if this_item.item_id %>
+	<body class="mystonline-com mystonline-com-<%= language_code_of(this_item) %>" id="page-<%=h this_item.item_id %>">
 <% else %>
-	<body class="mystonline-com mystonline-com-<%= language_code_of(@page) %>">
+	<body class="mystonline-com mystonline-com-<%= language_code_of(this_item) %>">
 <% end %>
 		<div id="lang-picker">
 			<ul>
 <% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano', ], [ 'nl', 'Nederlands' ], [ 'fi', 'Suomi' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
-<% if language_code_of(@page) == lang[0] %>
+<% if language_code_of(this_item) == lang[0] %>
 					<span lang="<%=h lang[0] %>"><%=h lang[1] %></span>
 <% else %>
-					<a href="<%= translation_of(@page, lang[0]) ? translation_of(@page, lang[0]).path : '#' %>" lang="<%=h lang[0] %>" hreflang="<%=h lang[0] %>"><%= lang[1] %></a>
+					<a href="<%= translation_of(this_item, lang[0]) ? translation_of(this_item, lang[0]).path : '#' %>" lang="<%=h lang[0] %>" hreflang="<%=h lang[0] %>"><%= lang[1] %></a>
 <% end %>
 				</li>
 <% end %>
@@ -76,20 +76,20 @@
 		</div>
 		<div id="wrapper">
 			<div id="header">
-				<div id="link-home"><a href="/<%= language_code_of(@page) %>/"><span>Myst Online: Uru Live</span></a></div>
+				<div id="link-home"><a href="/<%= language_code_of(this_item) %>/"><span>Myst Online: Uru Live</span></a></div>
 			</div>
 <%= render 'nav' %>
 <%= render 'ie6-warning' %>
-<% if @page.has_banner? %>
+<% if this_item.has_banner? %>
 			<div id="banner"></div>
-			<div id="main-wrapper-outside" class="<%= @page.size || 'halfwidth' %> <%= @page.size || 'halfwidth' %>-with-banner">
+			<div id="main-wrapper-outside" class="<%= this_item.size || 'halfwidth' %> <%= this_item.size || 'halfwidth' %>-with-banner">
 <% else %>
-			<div id="main-wrapper-outside" class="<%= @page.size || 'halfwidth' %>">
+			<div id="main-wrapper-outside" class="<%= this_item.size || 'halfwidth' %>">
 <% end %>
 				<div id="main-wrapper-inside">
 					<div id="main">
 						<div id="page">
-<%= @page.content %>
+<%= (block_given? ? yield : this_item.content) %>
 						</div>
 					</div>
 				</div>

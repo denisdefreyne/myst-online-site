@@ -1,0 +1,649 @@
+/* ----- GENERAL ----- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* ----- WRAPPER ----- */
+
+body {
+	text-align: center;
+
+	background: #000;
+}
+
+#wrapper {
+	width: 960px;
+
+	margin: 10px auto;
+
+	text-align: left;
+}
+
+/* ----- LANGUAGE PICKER ----- */
+
+#lang-picker {
+	text-align: right;
+}
+
+#lang-picker ul {
+	width: 960px;
+
+	margin: 10px auto;
+}
+
+#lang-picker ul li {
+	display: inline;
+
+	margin: 0 0 0 10px;
+}
+
+#lang-picker a,
+#lang-picker span {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 10px;
+
+	padding: 10px 0;
+
+	letter-spacing: 1px;
+
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#lang-picker span {
+	color: #fff;
+}
+
+#lang-picker a:link,
+#lang-picker a:visited {
+	color: #666;
+}
+
+#lang-picker a:hover {
+	color: #999;
+}
+
+#lang-picker a:active {
+	color: #fff;
+}
+
+/* ----- HEADER ----- */
+
+#header {
+	background: #6a3506 url(/assets/images/header/header-v2.jpg) no-repeat;
+
+	position: relative;
+
+	width: 960px;
+	height: 126px;
+}
+
+/* header */
+
+#header #link-home span {
+	display: none;
+}
+
+#header #link-home a,
+#header #link-home div.hover {
+	position: absolute;
+
+	top: 0;
+	left: 320px;
+
+	width: 313px;
+	height: 126px;
+
+	background: url(/assets/images/header/header-v2.jpg) -320px 0;
+}
+
+#header #link-home a:hover,
+#header #link-home div.hover {
+	background-position: -320px -126px;
+}
+
+#header #link-home a   { z-index: 100; }
+#header #link-home div { z-index: 50;  }
+
+/* ----- NAVIGATION ----- */
+
+#nav {
+	position: relative;
+
+	height: 69px;
+
+	background: #43290D;
+}
+
+body.mystonline-com-en #nav { background: #43290D url(/assets/images/header/nav-v2-en.jpg); }
+body.mystonline-com-de #nav { background: #43290D url(/assets/images/header/nav-v2-de.jpg); }
+body.mystonline-com-es #nav { background: #43290D url(/assets/images/header/nav-v2-es.jpg); }
+body.mystonline-com-fi #nav { background: #43290D url(/assets/images/header/nav-v2-fi.jpg); }
+body.mystonline-com-fr #nav { background: #43290D url(/assets/images/header/nav-v2-fr.jpg); }
+body.mystonline-com-it #nav { background: #43290D url(/assets/images/header/nav-v2-it.jpg); }
+body.mystonline-com-nl #nav { background: #43290D url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li,
+#nav li a,
+#nav li div.hover {
+	display: block;
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 160px;
+	height: 69px;
+}
+
+#nav li a   { z-index: 100; }
+#nav li div { z-index: 50;  }
+
+#nav li a span {
+	display: none;
+}
+
+#nav li#nav-home       { top: 0; left: 0;     }
+#nav li#nav-play       { top: 0; left: 160px; }
+#nav li#nav-about      { top: 0; left: 320px; }
+#nav li#nav-forums     { top: 0; left: 480px; }
+#nav li#nav-media      { top: 0; left: 640px; }
+#nav li#nav-developers { top: 0; left: 800px; }
+
+body.mystonline-com-en #nav li a, body.mystonline-com-en #nav li div.hover { background: url(/assets/images/header/nav-v2-en.jpg); }
+body.mystonline-com-de #nav li a, body.mystonline-com-de #nav li div.hover { background: url(/assets/images/header/nav-v2-de.jpg); }
+body.mystonline-com-es #nav li a, body.mystonline-com-es #nav li div.hover { background: url(/assets/images/header/nav-v2-es.jpg); }
+body.mystonline-com-fi #nav li a, body.mystonline-com-fi #nav li div.hover { background: url(/assets/images/header/nav-v2-fi.jpg); }
+body.mystonline-com-fr #nav li a, body.mystonline-com-fr #nav li div.hover { background: url(/assets/images/header/nav-v2-fr.jpg); }
+body.mystonline-com-it #nav li a, body.mystonline-com-it #nav li div.hover { background: url(/assets/images/header/nav-v2-it.jpg); }
+body.mystonline-com-nl #nav li a, body.mystonline-com-nl #nav li div.hover { background: url(/assets/images/header/nav-v2-nl.jpg); }
+
+#nav li#nav-home a                                               { background-position: 0      0; }
+#nav li#nav-play a                                               { background-position: -160px 0; }
+#nav li#nav-about a                                              { background-position: -320px 0; }
+#nav li#nav-forums a                                             { background-position: -480px 0; }
+#nav li#nav-media a                                              { background-position: -640px 0; }
+#nav li#nav-developers a                                         { background-position: -800px 0; }
+
+#nav li#nav-home a:hover,       #nav li#nav-home div.hover       { background-position: 0      -69px; }
+#nav li#nav-play a:hover,       #nav li#nav-play div.hover       { background-position: -160px -69px; }
+#nav li#nav-about a:hover,      #nav li#nav-about div.hover      { background-position: -320px -69px; }
+#nav li#nav-forums a:hover,     #nav li#nav-forums div.hover     { background-position: -480px -69px; }
+#nav li#nav-media a:hover,      #nav li#nav-media div.hover      { background-position: -640px -69px; }
+#nav li#nav-developers a:hover, #nav li#nav-developers div.hover { background-position: -800px -69px; }
+
+/* ----- INTERNET EXPLORER 6 WARNING ----- */
+
+.ie6-warning {
+	padding: 4px 3px;
+
+	background: #ffc;
+
+	color: #900;
+
+	font-size: 11px;
+	font-family: Verdana, Arial, sans-serif;
+
+	line-height: 15px
+}
+
+.ie6-warning a:link,
+.ie6-warning a:visited {
+	color: #000;
+}
+
+.ie6-warning a:hover {
+	color: #333;
+}
+
+.ie6-warning a:active {
+	color: #000;
+}
+
+/* ----- BANNER ----- */
+
+#banner {
+	width: 960px;
+	height: 213px;
+
+	background: #715535;
+
+	position: relative;
+}
+
+body.mystonline-com-en #banner { background: #715535 url(/assets/images/header/banner-en.jpg) no-repeat top left; }
+body.mystonline-com-de #banner { background: #715535 url(/assets/images/header/banner-de.jpg) no-repeat top left; }
+body.mystonline-com-es #banner { background: #715535 url(/assets/images/header/banner-es.jpg) no-repeat top left; }
+body.mystonline-com-fi #banner { background: #715535 url(/assets/images/header/banner-fi.jpg) no-repeat top left; }
+body.mystonline-com-fr #banner { background: #715535 url(/assets/images/header/banner-fr.jpg) no-repeat top left; }
+body.mystonline-com-it #banner { background: #715535 url(/assets/images/header/banner-it.jpg) no-repeat top left; }
+body.mystonline-com-nl #banner { background: #715535 url(/assets/images/header/banner-nl.jpg) no-repeat top left; }
+
+/* ----- GENERAL ----- */
+
+/* main wrapper out */
+
+#main-wrapper-outside.halfwidth {
+	background: #fecc99 url(/assets/images/background/right-middle.jpg) repeat-y top left;
+}
+
+#main-wrapper-outside.fullwidth {
+	background: #fecc99 url(/assets/images/background/full-middle.jpg) repeat-y top left;
+}
+
+/* main wrapper in */
+
+.halfwidth #main-wrapper-inside {
+	background: url(/assets/images/background/right-bottom.jpg) no-repeat bottom left;
+}
+
+.fullwidth #main-wrapper-inside {
+	background: url(/assets/images/background/full-bottom.jpg) no-repeat bottom left;
+}
+
+/* main wrapper main */
+
+.halfwidth #main {
+	background: url(/assets/images/background/right-top.jpg) no-repeat top left;
+
+	min-height: 800px;
+
+	padding: 38px 60px 60px 471px;
+}
+
+.halfwidth-with-banner #main {
+	background: url(/assets/images/background/right-top-with-banner.jpg) no-repeat top left;
+
+	min-height: 800px;
+
+	padding: 58px 60px 60px 471px;
+}
+
+.fullwidth #main {
+	background: url(/assets/images/background/full-top.jpg) no-repeat top left;
+
+	min-height: 440px;
+
+	padding: 38px 55px 100px 75px;
+}
+
+#main {
+	position: relative;
+}
+
+/* page */
+
+.halfwidth-with-banner #page {
+	margin: -120px 0 0 0;
+}
+
+/* headers */
+
+#main h1 {
+	position: relative;
+
+	height: 132px;
+}
+
+.halfwidth #main h1 {
+	top:  0;
+	left: 0;
+
+	width: 489px;
+}
+
+.fullwidth #main h1 {
+	top:  0;
+	left: 5px;
+
+	width: 880px;
+}
+
+body#page-error-404                           h1 { background: url(/assets/images/header/page-error-404-en.jpg)         no-repeat top left; }
+body#page-error-410                           h1 { background: url(/assets/images/header/page-error-410-en.jpg)         no-repeat top left; }
+
+body.mystonline-com-en#page-play              h1 { background: url(/assets/images/header/page-play-en.jpg)              no-repeat top left; }
+body.mystonline-com-en#page-about             h1 { background: url(/assets/images/header/page-about-en.jpg)             no-repeat top left; }
+body.mystonline-com-en#page-about-news        h1 { background: url(/assets/images/header/page-about-news-en.jpg)        no-repeat top left; }
+body.mystonline-com-en#page-media             h1 { background: url(/assets/images/header/page-media-en.jpg)             no-repeat top left; }
+body.mystonline-com-en#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-en.jpg) no-repeat top left; }
+body.mystonline-com-en#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-en.jpg) no-repeat top left; }
+body.mystonline-com-en#page-developers        h1 { background: url(/assets/images/header/page-developers-en.jpg)        no-repeat top left; }
+body.mystonline-com-en#page-archive           h1 { background: url(/assets/images/header/page-archive-en.jpg)           no-repeat top left; }
+body.mystonline-com-en#page-archive-story     h1 { background: url(/assets/images/header/page-archive-story-en.jpg)     no-repeat top left; }
+
+body.mystonline-com-de#page-play              h1 { background: url(/assets/images/header/page-play-de.jpg)              no-repeat top left; }
+body.mystonline-com-de#page-about             h1 { background: url(/assets/images/header/page-about-de.jpg)             no-repeat top left; }
+body.mystonline-com-de#page-about-news        h1 { background: url(/assets/images/header/page-about-news-de.jpg)        no-repeat top left; }
+body.mystonline-com-de#page-media             h1 { background: url(/assets/images/header/page-media-de.jpg)             no-repeat top left; }
+body.mystonline-com-de#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-de.jpg) no-repeat top left; }
+body.mystonline-com-de#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-de.jpg) no-repeat top left; }
+body.mystonline-com-de#page-developers        h1 { background: url(/assets/images/header/page-developers-de.jpg)        no-repeat top left; }
+
+body.mystonline-com-es#page-play              h1 { background: url(/assets/images/header/page-play-es.jpg)              no-repeat top left; }
+body.mystonline-com-es#page-about             h1 { background: url(/assets/images/header/page-about-es.jpg)             no-repeat top left; }
+body.mystonline-com-es#page-about-news        h1 { background: url(/assets/images/header/page-about-news-es.jpg)        no-repeat top left; }
+body.mystonline-com-es#page-media             h1 { background: url(/assets/images/header/page-media-es.jpg)             no-repeat top left; }
+body.mystonline-com-es#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-es.jpg) no-repeat top left; }
+body.mystonline-com-es#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-es.jpg) no-repeat top left; }
+body.mystonline-com-es#page-developers        h1 { background: url(/assets/images/header/page-developers-es.jpg)        no-repeat top left; }
+
+body.mystonline-com-fi#page-play              h1 { background: url(/assets/images/header/page-play-fi.jpg)              no-repeat top left; }
+body.mystonline-com-fi#page-about             h1 { background: url(/assets/images/header/page-about-fi.jpg)             no-repeat top left; }
+body.mystonline-com-fi#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fi.jpg)        no-repeat top left; }
+body.mystonline-com-fi#page-media             h1 { background: url(/assets/images/header/page-media-fi.jpg)             no-repeat top left; }
+body.mystonline-com-fi#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fi.jpg) no-repeat top left; }
+body.mystonline-com-fi#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fi.jpg) no-repeat top left; }
+body.mystonline-com-fi#page-developers        h1 { background: url(/assets/images/header/page-developers-fi.jpg)        no-repeat top left; }
+
+body.mystonline-com-fr#page-play              h1 { background: url(/assets/images/header/page-play-fr.jpg)              no-repeat top left; }
+body.mystonline-com-fr#page-about             h1 { background: url(/assets/images/header/page-about-fr.jpg)             no-repeat top left; }
+body.mystonline-com-fr#page-about-news        h1 { background: url(/assets/images/header/page-about-news-fr.jpg)        no-repeat top left; }
+body.mystonline-com-fr#page-media             h1 { background: url(/assets/images/header/page-media-fr.jpg)             no-repeat top left; }
+body.mystonline-com-fr#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-fr.jpg) no-repeat top left; }
+body.mystonline-com-fr#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-fr.jpg) no-repeat top left; }
+body.mystonline-com-fr#page-developers        h1 { background: url(/assets/images/header/page-developers-fr.jpg)        no-repeat top left; }
+
+body.mystonline-com-it#page-play              h1 { background: url(/assets/images/header/page-play-it.jpg)              no-repeat top left; }
+body.mystonline-com-it#page-about             h1 { background: url(/assets/images/header/page-about-it.jpg)             no-repeat top left; }
+body.mystonline-com-it#page-about-news        h1 { background: url(/assets/images/header/page-about-news-it.jpg)        no-repeat top left; }
+body.mystonline-com-it#page-media             h1 { background: url(/assets/images/header/page-media-it.jpg)             no-repeat top left; }
+body.mystonline-com-it#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-it.jpg) no-repeat top left; }
+body.mystonline-com-it#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-it.jpg) no-repeat top left; }
+body.mystonline-com-it#page-developers        h1 { background: url(/assets/images/header/page-developers-it.jpg)        no-repeat top left; }
+
+body.mystonline-com-nl#page-play              h1 { background: url(/assets/images/header/page-play-nl.jpg)              no-repeat top left; }
+body.mystonline-com-nl#page-about             h1 { background: url(/assets/images/header/page-about-nl.jpg)             no-repeat top left; }
+body.mystonline-com-nl#page-about-news        h1 { background: url(/assets/images/header/page-about-news-nl.jpg)        no-repeat top left; }
+body.mystonline-com-nl#page-media             h1 { background: url(/assets/images/header/page-media-nl.jpg)             no-repeat top left; }
+body.mystonline-com-nl#page-media-screenshots h1 { background: url(/assets/images/header/page-media-screenshots-nl.jpg) no-repeat top left; }
+body.mystonline-com-nl#page-media-concept-art h1 { background: url(/assets/images/header/page-media-concept-art-nl.jpg) no-repeat top left; }
+body.mystonline-com-nl#page-developers        h1 { background: url(/assets/images/header/page-developers-nl.jpg)        no-repeat top left; }
+
+.halfwidth-with-banner #main h1 {
+	display: none;
+}
+
+#main h1 span {
+	display: none;
+}
+
+#main h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-weight: normal;
+
+	color: #6a4a17;
+
+	text-transform: uppercase;
+
+	padding: 6px 0 0 0;
+	margin: 47px 0 18px 0;
+}
+
+#main h2 span {
+	display: none;
+}
+
+#main h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+
+	text-transform: uppercase;
+
+	color: #6a4a17;
+	color: #000;
+
+	margin: 20px 0;
+}
+
+/* pictures */
+
+#main #sidebar-pic {
+	position: absolute;
+
+	width: 471px;
+	height: 681px;
+
+	top: 20px;
+	left: 0;
+}
+
+#main #sidebar-pic-home {
+	position: absolute;
+
+	width: 471px;
+	height: 640px;
+
+	top: 0;
+	left: 0;
+}
+
+/* text */
+
+#main p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+
+	color: #290f00;
+
+	line-height: 18px;
+
+	margin: 0 0 20px 0;
+}
+
+#main .meta {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #927250;
+
+	line-height: 18px;
+
+	margin: -10px 0 30px 0;
+}
+
+#main p.note {
+	font-style: italic;
+
+	color: #927250;
+}
+
+#main abbr.acronym {
+	font-variant: small-caps;
+}
+
+#main q {
+	font-style: italic;
+}
+
+#main p a {
+	color: #824000;
+
+	text-decoration: underline;
+}
+
+#main p a:hover {
+	color: #541b00;
+
+	text-decoration: underline;
+}
+
+/* images */
+
+#main .figure {
+	text-align: center;
+}
+
+#main .figure img {
+	width: 400px;
+	height: 250px;
+}
+
+#main .figure .caption {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #927250;
+
+	line-height: 18px;
+
+	margin: 0 0 20px 0;
+}
+
+#main .figure .caption i {
+	font-style: normal;
+}
+
+/* lists */
+
+#main ul {
+	margin: 20px 0 20px 25px;
+}
+
+#main li {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: italic;
+
+	color: #290f00;
+
+	line-height: 18px;
+
+	list-style-type: square;
+
+	margin: 0;
+}
+
+/* sub-navigation */
+
+#main #subnav {
+	margin: 0 0 20px 0;
+}
+
+#main #subnav li {
+	display: inline;
+
+	margin: 0 10px 0 0;
+}
+
+#main #subnav a,
+#main #subnav span.active {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	font-weight: bold;
+
+	text-transform: uppercase;
+}
+
+#main #subnav a {
+	text-decoration: underline;
+}
+
+#main #subnav a:link,
+#main #subnav a:visited {
+	color: #927250;
+}
+
+#main #subnav a:hover {
+	color: #541b00;
+
+	text-decoration: underline;
+}
+
+#main #subnav a:active {
+	color: #000000;
+
+	text-decoration: none;
+}
+
+#main #subnav span.active {
+	color: #541b00;
+}
+
+/* special */
+
+#main .special {
+	background: #fddfb7;
+
+	margin: 20px 0;
+	padding: 0 10px;
+}
+
+#main .special p {
+	margin: 0;
+	padding: 10px 0;
+
+	color: #824000;
+
+	font-size: 13px;
+
+	line-height: 18px;
+}
+
+/* gallery */
+
+#main .gallery {
+	margin:  0;
+	padding: 20px 0;
+
+	position: relative;
+}
+
+#main .gallery li {
+	display: inline;
+
+	list-style-type: none;
+
+	line-height: 50px;
+
+	margin-right: 10px;
+}
+
+#main .gallery li a img {
+	border: 0;
+}
+
+#main .gallery img {
+	width: 193px;
+	height: 120px;
+}
+
+/* ----- FOOTER ----- */
+
+#footer {
+	padding: 20px 0 40px 0;
+}
+
+#footer img#footer-logo-cyan {
+	float: right;
+
+	margin: 0 20px;
+
+	width: 55px;
+	height: 69px;
+}
+
+#footer p {
+	margin: 10px 70px 10px 0;
+
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+
+	line-height: 18px;
+
+	text-align: right;
+
+	color: #444;
+}

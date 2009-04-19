@@ -1,0 +1,12 @@
+# Built-in
+filters_pre:
+  - rainpress
+  - relativize_paths_in_css
+layout: none
+filters_post: []
+extension: 'css'
+custom_path: '/assets/style/screen/main-v8.css'
+
+# Custom
+item_id:      "style-screen"
+version:      "8"

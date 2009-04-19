@@ -2,7 +2,7 @@
 
 // Configuration
 $base_url  = '<%= @site.config[:base_url] %>';
-$page_path = '<%= @page.path %>';
+$page_path = '<%= @page ? @page.path : @item.path %>';
 $path_mapping = array(
 	'en' => array(
 		'/'                   => '/',

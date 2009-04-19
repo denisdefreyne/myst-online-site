@@ -17,9 +17,9 @@ module MOULSiteHelpers
     :guild_of_writers     => 'http://www.guildofwriters.com/'
   }
 
-  # Returns the asset with the given asset ID.
-  def asset(asset_id)
-    @assets.find { |asset| asset.asset_id == asset_id }
+  # Returns the item with the given item ID.
+  def item(item_id)
+    all_items.find { |item| item.item_id == item_id }
   end
 
   # Returns the web site for the given identifier.

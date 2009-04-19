@@ -71,29 +71,29 @@ module MOULSiteHelpers::Localization
     },
   }
 
-  # Returns the page's language code
-  def language_code_of(page)
-    page.language_code || page.path[1..2]
+  # Returns the item's language code
+  def language_code_of(item)
+    item.language_code || (item.path.match(/^\/(..)\//) || [])[1]
   end
 
-  # Returns the page's human-readable language in English
-  def language_of(page)
-    ENGLISH_LANGUAGE_NAMES[language_code_of(page)]
+  # Returns the item's human-readable language in English
+  def language_of(item)
+    ENGLISH_LANGUAGE_NAMES[language_code_of(item)]
   end
 
   # Returns all articles in the given language
   def articles_in(lang)
-    @pages.select { |p| p.kind == 'article' && language_code_of(p) == lang }.sort_by { |a| a.created_at }.reverse
+    all_items.select { |p| p.kind == 'article' && language_code_of(p) == lang }.sort_by { |a| a.created_at }.reverse
   end
 
-  # Returns the page's translations
-  def translations_of(page)
-    @pages.select { |p| p.page_id && p.page_id == page.page_id && p.path != page.path }
+  # Returns the item's translations
+  def translations_of(item)
+    all_items.select { |p| p.item_id && p.item_id == item.item_id && p.path != item.path }
   end
 
-  # Returns the page's translation in the given language
-  def translation_of(page, lang)
-    @pages.find { |p| p.page_id == page.page_id && language_code_of(p) == lang }
+  # Returns the item's translation in the given language
+  def translation_of(item, lang)
+    all_items.find { |p| p.item_id == item.item_id && language_code_of(p) == lang }
   end
 
   # Translates the given string into the given language

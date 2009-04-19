@@ -3,4 +3,4 @@
 # Custom
 title:          "Inicio"
 has_banner:     true
-page_id:        home
+item_id:        home

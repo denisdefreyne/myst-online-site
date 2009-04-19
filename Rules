@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+item '/assets/*' do |i|
+  i.filter :rainpress
+  #i.filter :relativize_paths, :type => :css
+  i.write
+end
+
+item '*' do |i|
+  if language_code_of(i.item.to_proxy).nil?
+    i.filter :erb
+    i.write
+  elsif i.item.to_proxy.kind == 'article'
+    i.filter :erb
+  else
+    i.filter :erb
+    i.filter :italicize_proper_names
+    i.layout 'default'
+    i.filter :rubypants_ddfreyne
+    #i.filter :relativize_paths, :type => :html
+    i.write
+  end
+end
+
+layout '*' => :erb

@@ -3,4 +3,4 @@
 # Custom
 title:          "Etusivu"
 has_banner:     true
-page_id:        home
+item_id:        home

@@ -1,8 +1,11 @@
 # Built-in
-binary:       false
-filters:
+filters_pre:
   - rainpress
   - relativize_paths_in_css
+layout: none
+filters_post: []
+extension: 'css'
+custom_path: '/assets/style/screen/forums-v3.css'
 
 # Custom
 item_id:      "style-forums"

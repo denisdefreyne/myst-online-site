@@ -29,7 +29,7 @@ namespace :publish do
 
     # Don't touch this!
     puts 'Publishing assets...'
-    system('rsync', '-gpPrvz', src, dst)
+    system('rsync', '-gpPrvz', '--delete-after', src, dst)
     puts 'Assets published.'
   end
 
