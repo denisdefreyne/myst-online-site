@@ -1,4 +1,4 @@
-module MOULSiteHelpers::Localization
+module MOULSite::Helpers::Localization
 
   # Language names in English
   ENGLISH_LANGUAGE_NAMES = {
@@ -11,9 +11,15 @@ module MOULSiteHelpers::Localization
     'nl' => 'Dutch'
   }
 
-  # Returns the item's language code
+  # Returns the language_code attribute, or, if the former is nil, the
+  # language code derived from the path.
   def language_code_of(item)
     item.language_code || (item.path.match(/^\/(..)\//) || [])[1]
+  end
+
+  # Returns the item_id attribute of the given item.
+  def canonical_identifier_of(item)
+    item.item_id
   end
 
   # Returns the item's human-readable language in English
@@ -23,17 +29,7 @@ module MOULSiteHelpers::Localization
 
   # Returns all articles in the given language
   def articles_in(lang)
-    all_items.select { |p| p.kind == 'article' && language_code_of(p) == lang }.sort_by { |a| a.created_at }.reverse
-  end
-
-  # Returns the item's translations
-  def translations_of(item)
-    all_items.select { |p| p.item_id && p.item_id == item.item_id && p.path != item.path }
-  end
-
-  # Returns the item's translation in the given language
-  def translation_of(item, lang)
-    all_items.find { |p| p.item_id == item.item_id && language_code_of(p) == lang }
+    items_in(lang).select { |p| p.kind == 'article' }
   end
 
   # Translates the given string into the given language
@@ -119,4 +115,4 @@ module MOULSiteHelpers::Localization
 
 end
 
-include MOULSiteHelpers::Localization
+include MOULSite::Helpers::Localization

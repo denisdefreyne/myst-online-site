@@ -4,3 +4,6 @@ include Nanoc::Helpers::LinkTo
 include Nanoc::Helpers::Render
 include Nanoc::Helpers::XMLSitemap
 include Nanoc::Helpers::Filtering
+
+include Nanoc::Helpers::Localization
+include MOULSite::Helpers::Localization
