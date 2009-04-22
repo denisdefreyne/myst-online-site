@@ -6,7 +6,7 @@
 
 		<!-- title and description -->
 		<title>Myst Online: Uru Live - <%= this_item.title %></title>
-		<meta name="description" content="<%= t('<GAME DESCRIPTION>', language_code_of(this_item)) %>">
+		<meta name="description" content="<%= t('<GAME DESCRIPTION>', :to => language_code_of(this_item)) %>">
 
 		<!-- style -->
 		<link href="<%= @site.config[:assets_base_url] + item('style-screen').path %>" rel="stylesheet" type="text/css">
@@ -19,11 +19,11 @@
 		<!-- related pages -->
 		<link rel="home" href="/<%=h language_code_of(this_item) %>/">
 <% translations_of(this_item).each do |tp| %>
-		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', language_code_of(this_item)) %>">
+		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', :to => language_code_of(this_item)) %>">
 <% end %>
 
 		<!-- feed -->
-		<link rel="alternate" type="application/atom+xml" title="<%= t('<FEED TITLE>', language_code_of(this_item)) %>" href="<%= t('<FEED URL>', language_code_of(this_item)) %>">
+		<link rel="alternate" type="application/atom+xml" title="<%= t('<FEED TITLE>', :to => language_code_of(this_item)) %>" href="<%= t('<FEED URL>', :to => language_code_of(this_item)) %>">
 	</head>
 <% if this_item.item_id %>
 	<body class="mystonline-com mystonline-com-<%= language_code_of(this_item) %>" id="page-<%=h this_item.item_id %>">

@@ -40,8 +40,10 @@ module Nanoc::Helpers
     end
 
     # TODO document
-    # FIXME change method signature so that it matches translate('foo', :to => 'en')
-    def translate(string, dst_lang)
+    def translate(string, params={})
+      # Parse params
+      dst_lang = params[:to]
+
       # Find dictionary
       dictionary = $translation_dictionaries[dst_lang]
       if dictionary.nil?
