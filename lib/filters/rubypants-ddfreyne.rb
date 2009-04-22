@@ -4,7 +4,7 @@ module Nanoc::Filters
     identifier :rubypants_ddfreyne
 
     def run(content)
-      german = (language_code_of(@item || assigns[:item] || assigns[:page]) == 'de')
+      german = (language_code_of(defined?(@item) ? @item : (assigns[:item] || assigns[:page])) == 'de')
 
       ::RubyPantsDdfreyne.new(
         content,
