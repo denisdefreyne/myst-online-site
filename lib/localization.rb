@@ -11,6 +11,14 @@ module MOULSiteHelpers::Localization
     'nl' => 'Dutch'
   }
 
+  # 'en' => 'Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.'
+  # 'de' => 'Myst Online: Uru Live ist ein Massive-Multiplayer-Online-Adventurespiel, das in Kürze als Open Source freigegeben werden soll.'
+  # 'es' => 'Myst Online: Uru Live es un juego de aventura multijugador online masivo a punto de convertirse a código abierto.'
+  # 'fi' => 'Myst Online: Uru Live tulee pian olemaan avoimeen lähdekoodiin perustuva massiivinen seikkailu-verkkomoninpeli.'
+  # 'fr' => 'Myst Online: Uru Live sera bientôt un jeu d'aventure en ligne multijoueurs à code source ouverte.'
+  # 'it' => 'Myst Online: Uru Live è un Massively Multiplayer Online Game che sarà presto Open Source.'
+  # 'nl' => 'Myst Online: Uru Live is een massive multiplayer online adventure-spel dat binnenkort open-source gemaakt zal worden.'
+
   # English strings and their translations in different languages.
   TRANSLATED_STRINGS = {
     'English translation' => {
@@ -69,6 +77,33 @@ module MOULSiteHelpers::Localization
       'it' => 'Traduzione Olandese',
       'nl' => 'Nederlandse vertaling'
     },
+    '<GAME DESCRIPTION>' => {
+      'en' => 'Myst Online: Uru Live is a soon to be open-sourced massive multiplayer online adventure game.',
+      'de' => 'Myst Online: Uru Live ist ein Massive-Multiplayer-Online-Adventurespiel, das in Kürze als Open Source freigegeben werden soll.',
+      'es' => 'Myst Online: Uru Live es un juego de aventura multijugador online masivo a punto de convertirse a código abierto.',
+      'fi' => 'Myst Online: Uru Live tulee pian olemaan avoimeen lähdekoodiin perustuva massiivinen seikkailu-verkkomoninpeli.',
+      'fr' => 'Myst Online: Uru Live sera bientôt un jeu d\'aventure en ligne multijoueurs à code source ouverte.',
+      'it' => 'Myst Online: Uru Live è un Massively Multiplayer Online Game che sarà presto Open Source.',
+      'nl' => 'Myst Online: Uru Live is een massive multiplayer online adventure-spel dat binnenkort open-source gemaakt zal worden.'
+    },
+    '<FEED TITLE>' => {
+      'de' => 'Myst Online: Uru Live news',
+      'en' => 'Myst Online: Uru Live news',
+      'es' => 'Noticias de Myst Online: Uru Live',
+      'fi' => 'Myst Online: Uru Live uutisia',
+      'fr' => 'Nouvelles de Myst Online: Uru Live',
+      'it' => 'Notizie di Myst Online: Uru Live',
+      'nl' => 'Myst Online: Uru Live nieuws'
+    },
+    '<FEED URL>' => {
+      'de' => 'http://feeds2.feedburner.com/uru_de',
+      'en' => 'http://feeds2.feedburner.com/uru',
+      'es' => 'http://feeds2.feedburner.com/uru_es',
+      'fi' => 'http://feeds2.feedburner.com/uru_fi',
+      'fr' => 'http://feeds2.feedburner.com/uru_fr',
+      'it' => 'http://feeds2.feedburner.com/uru_it',
+      'nl' => 'http://feeds2.feedburner.com/uru_nl'
+    }
   }
 
   # Returns the item's language code
