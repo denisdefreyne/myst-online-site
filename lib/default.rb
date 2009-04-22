@@ -8,30 +8,37 @@ if Nanoc::VERSION < '2.2'
   exit unless ENV['FORCE'] == 'true'
 end
 
+module MOULSite
+end
+
 # Module in which all MO:UL site-specific helpers reside
-module MOULSiteHelpers
+module MOULSite::Helpers
 
-  WEBSITE_URLS = {
-    :guild_of_maintainers => 'http://www.guildofmaintainers.org/',
-    :guild_of_messengers  => 'http://www.guildofmessengers.com/',
-    :guild_of_writers     => 'http://www.guildofwriters.com/'
-  }
+  module Miscellaneous
 
-  # Returns the item with the given item ID.
-  def item(item_id)
-    all_items.find { |item| item.item_id == item_id }
-  end
+    WEBSITE_URLS = {
+      :guild_of_maintainers => 'http://www.guildofmaintainers.org/',
+      :guild_of_messengers  => 'http://www.guildofmessengers.com/',
+      :guild_of_writers     => 'http://www.guildofwriters.com/'
+    }
 
-  # Returns the web site for the given identifier.
-  def website_of(id)
-    WEBSITE_URLS[id]
-  end
+    # Returns the item with the given item ID.
+    def item(item_id)
+      all_items.find { |item| item.item_id == item_id }
+    end
 
-  # Returns the properly marked up translated guild name.
-  def translated_guild_name(id, translated, original)
-    link_to(translated, website_of(id), :title => original) + %[ (<span lang="en">#{original}</span>)]
+    # Returns the web site for the given identifier.
+    def website_of(id)
+      WEBSITE_URLS[id]
+    end
+
+    # Returns the properly marked up translated guild name.
+    def translated_guild_name(id, translated, original)
+      link_to(translated, website_of(id), :title => original) + %[ (<span lang="en">#{original}</span>)]
+    end
+
   end
 
 end
 
-include MOULSiteHelpers
+include MOULSite::Helpers::Miscellaneous
