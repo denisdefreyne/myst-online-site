@@ -30,9 +30,9 @@ module Nanoc::Helpers
 
       # Load all translations
       $translation_dictionaries = {}
-      Dir['lib/locales/*.yaml'].each do |filename|
+      Dir['translations/*.yaml'].each do |filename|
         # Get translation name
-        language_code = filename.sub(%r{^lib/locales/(\w+)\.yaml}, '\1')
+        language_code = filename.sub(%r{^translations/(\w+)\.yaml}, '\1')
 
         # Load dictionary
         $translation_dictionaries[language_code] = Dictionary.from_file_with_name(filename)
