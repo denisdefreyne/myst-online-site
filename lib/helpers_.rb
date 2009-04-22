@@ -10,3 +10,5 @@ include MOULSite::Helpers::Localization
 
 include Nanoc::Helpers::Translating
 load_translations
+
+include MOULSite::Helpers::Miscellaneous
