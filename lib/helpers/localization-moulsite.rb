@@ -32,21 +32,4 @@ module MOULSite::Helpers::Localization
     items_in(lang).select { |p| p.kind == 'article' }
   end
 
-  # Translates the given string into the given language
-  def t(string, dst_lang)
-    # Don't translate English texts
-    return string if dst_lang == 'en'
-
-    # Try translating using locales
-    # FIXME do not use a global variable
-    unless defined?($locales)
-      $locales = {}
-      Dir['lib/locales/*.yaml'].each do |locale_filename|
-        locale_name = locale_filename.sub(%r{^lib/locales/(\w+)\.yaml}, '\1')
-        $locales[locale_name.to_sym] = YAML.load_file(locale_filename)
-      end
-    end
-    ($locales[dst_lang.to_sym] || {})[string]
-  end
-
 end
