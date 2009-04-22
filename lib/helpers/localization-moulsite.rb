@@ -11,16 +11,23 @@ module MOULSite::Helpers::Localization
     'nl' => 'Dutch'
   }
 
-  # Returns the language_code attribute, or, if the former is nil, the
-  # language code derived from the path.
-  def language_code_of(item)
-    item.language_code || (item.path.match(/^\/(..)\//) || [])[1]
+  # RequiredMethods contains methods required by Nanoc::Helpers::Localization.
+  module RequiredMethods
+
+    # Returns the language_code attribute, or, if the former is nil, the
+    # language code derived from the path.
+    def language_code_of(item)
+      item.language_code || (item.path.match(/^\/(..)\//) || [])[1]
+    end
+
+    # Returns the item_id attribute of the given item.
+    def canonical_identifier_of(item)
+      item.item_id
+    end
+
   end
 
-  # Returns the item_id attribute of the given item.
-  def canonical_identifier_of(item)
-    item.item_id
-  end
+  include RequiredMethods
 
   # Returns the item's human-readable language in English
   def language_of(item)
