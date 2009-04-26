@@ -5,8 +5,8 @@ filters_pre:
 layout: none
 filters_post: []
 extension: 'css'
-custom_path: '/assets/style/screen/main-v8.css'
+custom_path: '/assets/style/screen/main-v10.css'
 
 # Custom
 item_id:      "style-screen"
-version:      "8"
+version:      "10"
