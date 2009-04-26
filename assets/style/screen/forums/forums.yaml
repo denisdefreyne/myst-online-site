@@ -1,9 +1,0 @@
-# Built-in
-binary:       false
-filters:
-  - rainpress
-  - relativize_paths_in_css
-
-# Custom
-item_id:      "style-forums"
-version:      "3"
