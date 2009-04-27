@@ -1,5 +1,6 @@
 namespace :publish do
 
+  desc 'Publish site to the staging server'
   task :staging do
     # This tasks uploads the content of the 'output' directory to the web
     # server. This specific rake task is specific to the Myst Online web site,
@@ -22,6 +23,7 @@ namespace :publish do
     puts 'Site published.'
   end
 
+  desc 'Publish site assets to the assets server'
   task :assets do
     # Settings
     src = '/Users/ddfreyne/Documents/Development/nanoc/sites-moul/output/assets/' # trailing slash
