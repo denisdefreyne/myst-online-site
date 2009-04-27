@@ -36,7 +36,7 @@ module MOULSite::Helpers::Localization
 
   # Returns all articles in the given language
   def articles_in(lang)
-    items_in(lang).select { |p| p.kind == 'article' }
+    items_in(lang).select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.reverse
   end
 
 end
