@@ -1,4 +1,4 @@
-module Nanoc::Helpers
+module Nanoc3::Helpers
 
   # TODO document
   #
@@ -7,12 +7,12 @@ module Nanoc::Helpers
 
     # TODO document
     def items_in(language_code)
-      all_items.select { |i| language_code_of(i) == language_code }
+      @items.select { |i| language_code_of(i) == language_code }
     end
 
     # TODO document
     def translations_of(item)
-      all_items.select { |i| !language_code_of(i).nil? && canonical_identifier_of(i) == canonical_identifier_of(item) && i.path != item.path }
+      @items.select { |i| !language_code_of(i).nil? && canonical_identifier_of(i) == canonical_identifier_of(item) && i.identifier != item.identifier }
     end
 
     # TODO document

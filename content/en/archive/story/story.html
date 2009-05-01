@@ -4,9 +4,9 @@
 
 <p>Archived story posts are sorted in ascending order, i.e. newer posts are located below older posts.</p>
 
-<% @page.children.sort_by { |p| p.created_at || Date.today }.each do |subpage| %>
-<div class="section" id="section-<%= subpage.path.split('/')[-2] %>">
-	<h2><%=h subpage.title %></h2>
+<% @item.children.sort_by { |i| i[:created_at] || Date.today }.each do |subpage| %>
+<div class="section" id="section-<%= subpage.identifier.split('/')[-2] %>">
+	<h2><%=h subpage[:title] %></h2>
 	<%= subpage.content %>
 </div>
 <% end %>

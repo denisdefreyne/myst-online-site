@@ -1,7 +1,7 @@
 # Built-in
 filters_pre:
   - rainpress
-  - relativize_paths_in_css
+  #- relativize_paths_in_css
 layout: none
 filters_post: []
 extension: 'css'

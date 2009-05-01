@@ -11,7 +11,7 @@ module MOULSite::Helpers
 
     # Returns the item with the given item ID.
     def item(item_id)
-      all_items.find { |item| item.item_id == item_id }
+      @items.find { |item| item[:item_id] == item_id }
     end
 
     # Returns the web site for the given identifier.

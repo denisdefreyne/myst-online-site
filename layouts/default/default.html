@@ -1,15 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="<%= language_code_of(this_item) %>">
+<html lang="<%= language_code_of(@item) %>">
 	<head>
 		<meta http-equiv="Content-Type"     content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Language" content="en">
 
 		<!-- title and description -->
-		<title>Myst Online: Uru Live - <%= this_item.title %></title>
-		<meta name="description" content="<%= t('<GAME DESCRIPTION>', :to => language_code_of(this_item)) %>">
+		<title>Myst Online: Uru Live - <%= @item[:title] %></title>
+		<meta name="description" content="<%= t('<GAME DESCRIPTION>', :to => language_code_of(@item)) %>">
 
 		<!-- style -->
-		<link href="<%= @site.config[:assets_base_url] + item('style-screen').path %>" rel="stylesheet" type="text/css">
+		<link href="<%= @site.config[:assets_base_url] + item('style-screen').reps[0].path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
 		<style type="text/css" media="screen">
 			#sidebar-pic, #sidebar-pic-home { display: none; }
@@ -17,27 +17,27 @@
 		<![endif]-->
 
 		<!-- related pages -->
-		<link rel="home" href="/<%=h language_code_of(this_item) %>/">
-<% translations_of(this_item).each do |tp| %>
-		<link rel="alternate" href="<%=h tp.path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', :to => language_code_of(this_item)) %>">
+		<link rel="home" href="/<%=h language_code_of(@item) %>/">
+<% translations_of(@item).each do |tp| %>
+		<link rel="alternate" href="<%=h tp.reps[0].path %>" hreflang="<%= language_code_of(tp) %>" title="<%= t(language_of(tp) + ' translation', :to => language_code_of(@item)) %>">
 <% end %>
 
 		<!-- feed -->
-		<link rel="alternate" type="application/atom+xml" title="<%= t('<FEED TITLE>', :to => language_code_of(this_item)) %>" href="<%= t('<FEED URL>', :to => language_code_of(this_item)) %>">
+		<link rel="alternate" type="application/atom+xml" title="<%= t('<FEED TITLE>', :to => language_code_of(@item)) %>" href="<%= t('<FEED URL>', :to => language_code_of(@item)) %>">
 	</head>
-<% if this_item.item_id %>
-	<body class="mystonline-com mystonline-com-<%= language_code_of(this_item) %>" id="page-<%=h this_item.item_id %>">
+<% if @item[:item_id] %>
+	<body class="mystonline-com mystonline-com-<%= language_code_of(@item) %>" id="page-<%=h @item[:item_id] %>">
 <% else %>
-	<body class="mystonline-com mystonline-com-<%= language_code_of(this_item) %>">
+	<body class="mystonline-com mystonline-com-<%= language_code_of(@item) %>">
 <% end %>
 		<div id="lang-picker">
 			<ul>
 <% [ [ 'en', 'English' ], [ 'de', 'Deutsch' ], [ 'es', 'Español' ], [ 'fr', 'français' ], [ 'it', 'Italiano', ], [ 'nl', 'Nederlands' ], [ 'fi', 'Suomi' ] ].each do |lang| %>
 				<li id="lang-picker-<%= lang[0] %>">
-<% if language_code_of(this_item) == lang[0] %>
+<% if language_code_of(@item) == lang[0] %>
 					<span lang="<%=h lang[0] %>"><%=h lang[1] %></span>
 <% else %>
-					<a href="<%= translation_of(this_item, :in => lang[0]) ? translation_of(this_item, :in => lang[0]).path : '#' %>" lang="<%=h lang[0] %>" hreflang="<%=h lang[0] %>"><%= lang[1] %></a>
+					<a href="<%= translation_of(@item, :in => lang[0]) ? translation_of(@item, :in => lang[0]).reps[0].path : '#' %>" lang="<%=h lang[0] %>" hreflang="<%=h lang[0] %>"><%= lang[1] %></a>
 <% end %>
 				</li>
 <% end %>
@@ -45,20 +45,20 @@
 		</div>
 		<div id="wrapper">
 			<div id="header">
-				<div id="link-home"><a href="/<%= language_code_of(this_item) %>/"><span>Myst Online: Uru Live</span></a></div>
+				<div id="link-home"><a href="/<%= language_code_of(@item) %>/"><span>Myst Online: Uru Live</span></a></div>
 			</div>
 <%= render 'nav' %>
 <%= render 'ie6-warning' %>
-<% if this_item.has_banner? %>
+<% if @item[:has_banner] %>
 			<div id="banner"></div>
-			<div id="main-wrapper-outside" class="<%= this_item.size || 'halfwidth' %> <%= this_item.size || 'halfwidth' %>-with-banner">
+			<div id="main-wrapper-outside" class="<%= @item[:size] || 'halfwidth' %> <%= @item[:size] || 'halfwidth' %>-with-banner">
 <% else %>
-			<div id="main-wrapper-outside" class="<%= this_item.size || 'halfwidth' %>">
+			<div id="main-wrapper-outside" class="<%= @item[:size] || 'halfwidth' %>">
 <% end %>
 				<div id="main-wrapper-inside">
 					<div id="main">
 						<div id="page">
-<%= (block_given? ? yield : this_item.content) %>
+<%= yield %>
 						</div>
 					</div>
 				</div>

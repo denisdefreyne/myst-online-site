@@ -1,6 +1,6 @@
 module MOULSiteFilters
 
-  class ItalicizeProperNamesFilter < Nanoc::Filter
+  class ItalicizeProperNamesFilter < Nanoc3::Filter
 
     identifier :italicize_proper_names
 
@@ -82,7 +82,7 @@ module MOULSiteFilters
       'Guilde des Ecrivains'
     ]
 
-    def run(content)
+    def run(content, params={})
       @regex ||= Regexp.union(*[ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new('\b' + Regexp.escape(w) + '\b') }].flatten)
 
       inside_element = false

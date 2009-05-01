@@ -1,4 +1,4 @@
-module Nanoc::Helpers
+module Nanoc3::Helpers
 
   # TODO document
   module Translating

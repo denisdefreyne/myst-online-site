@@ -1,6 +1,6 @@
-<h2><%=h @article.title %></h2>
+<h2><%=h @article[:title] %></h2>
 
-<% if @article.has_real_created_at? %>
+<% if @article[:has_real_created_at] %>
 <div class="meta">
 	<!-- WARNING: untranslated -->
 </div>

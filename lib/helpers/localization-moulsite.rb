@@ -11,18 +11,18 @@ module MOULSite::Helpers::Localization
     'nl' => 'Dutch'
   }
 
-  # RequiredMethods contains methods required by Nanoc::Helpers::Localization.
+  # RequiredMethods contains methods required by Nanoc3::Helpers::Localization.
   module RequiredMethods
 
     # Returns the language_code attribute, or, if the former is nil, the
     # language code derived from the path.
     def language_code_of(item)
-      item.language_code || (item.path.match(/^\/(..)\//) || [])[1]
+      item[:language_code] || (item.identifier.match(/^\/(..)\//) || [])[1]
     end
 
     # Returns the item_id attribute of the given item.
     def canonical_identifier_of(item)
-      item.item_id
+      item[:item_id]
     end
 
   end
@@ -36,7 +36,7 @@ module MOULSite::Helpers::Localization
 
   # Returns all articles in the given language
   def articles_in(lang)
-    items_in(lang).select { |p| p.kind == 'article' }.sort_by { |a| a.created_at }.reverse
+    items_in(lang).select { |i| i[:kind] == 'article' }.sort_by { |a| a[:created_at] }.reverse
   end
 
 end
