@@ -1,7 +1,5 @@
 # Built-in
 skip_output: true
-filters_pre:
-  - erb
 
 # Custom 
 title: "Status di Myst Online: Uru Live—Strani Tempi"

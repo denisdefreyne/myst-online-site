@@ -1,8 +1,5 @@
 # Built-in
-layout:       none
 extension:    php
-filters_pre:  [ 'erb' ]
-filters_post: []
 
 # Custom
 kind:         redirect

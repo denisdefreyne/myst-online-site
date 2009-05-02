@@ -11,6 +11,11 @@ item '/sitemap_xml/' do |rep|
   rep.write
 end
 
+item '/*/feed_private/' do |rep|
+  rep.filter :erb
+  rep.write
+end
+
 item '*' do |rep|
   # language-based redirects
   if rep.item[:kind] == 'redirect'

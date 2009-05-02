@@ -1,7 +1,5 @@
 # Built-in
 skip_output: true
-filters_pre:
-  - erb
 
 # Custom 
 title: "Statut de MORE Uru Live—Des temps troublés"

@@ -1,8 +1,4 @@
 # Built-in
-filters_pre:
-  - "erb"
-filters_post: []
-layout:       "none"
 extension:    "xml"
 custom_path:  /en/about/news/_feed.xml
 

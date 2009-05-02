@@ -1,6 +1,5 @@
 # Built-in
 custom_path:    "/error-404.php"
-filters_post:   []
 
 # Custom 
 title:          "Page Not Found"
