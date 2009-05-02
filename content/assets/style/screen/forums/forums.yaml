@@ -10,3 +10,4 @@ custom_path: '/assets/style/screen/forums-v3.css'
 # Custom
 item_id:      "style-forums"
 version:      "3"
+is_hidden:    true
