@@ -6,12 +6,20 @@ item '/assets/*' do |rep|
   rep.write
 end
 
+item '/sitemap_xml/' do |rep|
+  rep.filter :erb
+  rep.write
+end
+
 item '*' do |rep|
-  if language_code_of(rep.item).nil?
+  # language-based redirects
+  if rep.item[:kind] == 'redirect'
     rep.filter :erb
     rep.write
+  # articles that are included in other pages
   elsif rep.item[:kind] == 'article'
     rep.filter :erb
+  # normal pages
   else
     rep.filter :erb
     rep.filter :italicize_proper_names

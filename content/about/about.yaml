@@ -5,4 +5,5 @@ filters_pre:  [ 'erb' ]
 filters_post: []
 
 # Custom
-is_hidden: true
+is_hidden:    true
+kind:         redirect

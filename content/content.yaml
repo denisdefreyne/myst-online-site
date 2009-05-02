@@ -5,3 +5,4 @@ filters_pre:  [ 'erb' ]
 filters_post: []
 
 # Custom
+kind:         redirect
