@@ -2,7 +2,7 @@
 
 item '/assets/*' do |rep|
   rep.filter :rainpress
-  #rep.filter :relativize_paths, :type => :css
+  rep.filter :relativize_paths, :type => :css
   rep.write
 end
 
@@ -17,7 +17,7 @@ item '*' do |rep|
     rep.filter :italicize_proper_names
     rep.layout 'default'
     rep.filter :rubypants_ddfreyne
-    #rep.filter :relativize_paths, :type => :html
+    rep.filter :relativize_paths, :type => :html
     rep.write
   end
 end
