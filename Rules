@@ -1,22 +1,22 @@
 #!/usr/bin/env ruby
 
-item '/assets/*' do |rep|
+compile '/assets/*' do |rep|
   rep.filter :rainpress
   rep.filter :relativize_paths, :type => :css
   rep.write
 end
 
-item '/sitemap_xml/' do |rep|
+compile '/sitemap_xml/' do |rep|
   rep.filter :erb
   rep.write
 end
 
-item '/*/feed_private/' do |rep|
+compile '/*/feed_private/' do |rep|
   rep.filter :erb
   rep.write
 end
 
-item '*' do |rep|
+compile '*' do |rep|
   # language-based redirects
   if rep.item[:kind] == 'redirect'
     rep.filter :erb
