@@ -1,5 +1,3 @@
-extension:    "xml"
-custom_path:  /fi/tietoa/uutisia/_feed.xml
 is_hidden:    "true"
 feed_url:     "http://feeds2.feedburner.com/uru_fi"
 title:        "Myst Online: Uru Live uutisia"

@@ -39,12 +39,33 @@ end
 
 #### Mapping
 
+map '/sitemap_xml/' do |rep|
+  '/sitemap.xml'
+end
+
+map '/errors/404/' do |rep|
+  '/error-404.php'
+end
+
+map '/errors/410/' do |rep|
+  '/error-410.php'
+end
+
+map '/assets/*' do |rep|
+  # build path with version
+  rep.item.identifier[0..-2] + '-v' + rep.item[:version].to_s + '.css'
+end
+
+map '/*/feed_private/' do |rep|
+  # custom path for historical reasons
+  rep.item.identifier[%r{^(.*/)feed_private/}, 1] + '_feed.xml'
+end
+
 map '*' do |rep|
-  if rep.item[:custom_path]
-    rep.item[:custom_path]
+  if rep.item[:kind] == 'redirect'
+    rep.item.identifier + 'index.php'
   else
-    extension = rep.item[:extension] || 'html'
-    rep.item.identifier + 'index.' + extension
+    rep.item.identifier + 'index.html'
   end
 end
 

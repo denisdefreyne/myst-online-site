@@ -1,5 +1,3 @@
-extension:    "xml"
-custom_path:  /en/about/news/_feed.xml
 is_hidden:    "true"
 feed_url:     "http://feeds2.feedburner.com/uru"
 title:        "Myst Online: Uru Live news"
