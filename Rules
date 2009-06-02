@@ -43,7 +43,8 @@ map '*' do |rep|
   if rep.item[:custom_path]
     rep.item[:custom_path]
   else
-    rep.item.identifier + 'index.html'
+    extension = rep.item[:extension] || 'html'
+    rep.item.identifier + 'index.' + extension
   end
 end
 
