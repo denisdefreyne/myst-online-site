@@ -1,6 +1,9 @@
 #
 # = RubyPants -- SmartyPants ported to Ruby
 #
+# Modified by Denis Defreyne
+#   Copyright (C) 2009 Denis Defreyne
+#
 # Ported by Christian Neukirchen <mailto:chneukirchen@gmail.com>
 #   Copyright (C) 2004 Christian Neukirchen
 #
@@ -163,7 +166,7 @@
 # liability, or tort (including negligence or otherwise) arising in
 # any way out of the use of this software, even if advised of the
 # possibility of such damage.
-# 
+#
 #
 # == Links
 #
@@ -174,6 +177,13 @@
 #
 # Christian Neukirchen:: http://kronavita.de/chris
 #
+# Denis Defreyne:: http://stoneship.org
+#
+#
+# == Modifications by Denis Defreyne
+#
+# * Added support for German quotes
+# * Various speed improvements
 
 
 class RubyPantsDdfreyne < String
@@ -337,12 +347,23 @@ class RubyPantsDdfreyne < String
   #      \\    \"    \'    \.    \-    \`
   #
   def process_escapes(str)
-    str.gsub('\\\\', '&#92;').
-      gsub('\"', '&#34;').
-      gsub("\\\'", '&#39;').
-      gsub('\.', '&#46;').
-      gsub('\-', '&#45;').
-      gsub('\`', '&#96;')
+    # Build map of escapes
+    @_process_escapes_map ||= {
+      '\\\\' => '&#92;',
+      '\"'   => '&#34;',
+      "\\\'" => '&#39;',
+      '\.'   => '&#46;',
+      '\-'   => '&#45;',
+      '\`'   => '&#96;'
+    }
+
+    # Build matching regexp
+    @_process_escapes_regexp ||= Regexp.union(@_process_escapes_map.keys)
+
+    # Replace
+    str.gsub(@_process_escapes_regexp) do |s|
+      @_process_escapes_map[s]
+    end
   end
 
   # The string, with each instance of "<tt>--</tt>" translated to an
@@ -357,7 +378,9 @@ class RubyPantsDdfreyne < String
   # em-dash HTML entity.
   #
   def educate_dashes_oldschool(str)
-    str.gsub(/---/, '&#8212;').gsub(/--/, '&#8211;')
+    str.gsub(/---?/) do |s|
+      s == '---' ? '&#8212;' : '&#8211;'
+    end
   end
 
   # Return the string, with each instance of "<tt>--</tt>" translated
@@ -371,7 +394,9 @@ class RubyPantsDdfreyne < String
   # Aaron Swartz for the idea.)
   #
   def educate_dashes_inverted(str)
-    str.gsub(/---/, '&#8211;').gsub(/--/, '&#8212;')
+    str.gsub(/---?/) do |s|
+      s == '---' ? '&#8211;' : '&#8212;'
+    end
   end
 
   # Return the string, with each instance of "<tt>...</tt>" translated
@@ -379,21 +404,25 @@ class RubyPantsDdfreyne < String
   # spaces between the dots.
   #
   def educate_ellipses(str)
-    str.gsub('...', '&#8230;').gsub('. . .', '&#8230;')
+    str.gsub(/\.\.\.|\. \. \./, '&#8230;')
   end
 
   # Return the string, with "<tt>``backticks''</tt>"-style single quotes
   # translated into HTML curly quote entities.
   #
   def educate_backticks(str)
-    str.gsub("``", '&#8220;').gsub("''", '&#8221;')
+    str.gsub(/``|''/) do |s|
+      s == '``' ? '&#8220;' : '&#8221;'
+    end
   end
 
   # Return the string, with "<tt>`backticks'</tt>"-style single quotes
   # translated into HTML curly quote entities.
   #
   def educate_single_backticks(str)
-    str.gsub("`", '&#8216;').gsub("'", '&#8217;')
+    str.gsub(/`|'/) do |s|
+      s == '`' ? '&#8216;' : '&#8217;'
+    end
   end
 
   # Return the string, with "educated" curly quote HTML entities.
