@@ -1,6 +1,3 @@
-# Built-in
 extension:    "xml"
 custom_path:  "/sitemap.xml"
-
-# Custom
 is_hidden:    "true"

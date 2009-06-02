@@ -1,7 +1,4 @@
-# Built-in
 custom_path:    "/error-404.php"
-
-# Custom 
 title:          "Page Not Found"
 item_id:        error-404
 language_code:  "en"

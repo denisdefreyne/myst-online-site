@@ -1,8 +1,5 @@
-# Built-in
 extension:    'css'
 custom_path:  '/assets/style/screen/main-v10.css'
-
-# Custom
 item_id:      "style-screen"
 version:      "10"
 is_hidden:    true
