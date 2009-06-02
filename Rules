@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+#### Compilation
+
 compile '/assets/*' do |rep|
   rep.filter :rainpress
   rep.filter :relativize_paths, :type => :css
@@ -34,5 +36,17 @@ compile '*' do |rep|
     rep.write
   end
 end
+
+#### Mapping
+
+map '*' do |rep|
+  if rep.item[:custom_path]
+    rep.item[:custom_path]
+  else
+    rep.item.identifier + 'index.html'
+  end
+end
+
+#### Layout
 
 layout '*' => :erb
