@@ -3,77 +3,16 @@
 // Configuration
 $base_url  = '<%= @site.config[:base_url] %>';
 $page_path = '<%= @item_rep.path %>';
+
+// Build mapping (see Localization helper for details)
 $path_mapping = array(
-	'en' => array(
-		'/'                   => '/',
-		'/play/'              => '/play/',
-		'/about/'             => '/about/',
-		'/about/news/'        => '/about/news/',
-		'/media/'             => '/media/',
-		'/media/screenshots/' => '/media/screenshots/',
-		'/media/concept-art/' => '/media/concept-art/',
-		'/developers/'        => '/developers/'
+<% MOULSite::Helpers::Localization::CANONICAL_IDENTIFIER_MAPPING.each_pair do |language_code, mapping| %>
+	'<%= language_code %>' => array(
+<% mapping.each_pair do |original, translated| %>
+		'<%= original %>' => '<%= translated %>',
+<% end %>
 	),
-	'de' => array(
-		'/'                   => '/',
-		'/play/'              => '/spielen/',
-		'/about/'             => '/info/',
-		'/about/news/'        => '/info/news/',
-		'/media/'             => '/medien/',
-		'/media/screenshots/' => '/medien/screenshots/',
-		'/media/concept-art/' => '/medien/concept-art/',
-		'/developers/'        => '/entwickler/'
-	),
-	'es' => array(
-		'/'                   => '/',
-		'/play/'              => '/jugar/',
-		'/about/'             => '/info/',
-		'/about/news/'        => '/info/noticias/',
-		'/media/'             => '/galeria/',
-		'/media/screenshots/' => '/galeria/capturas/',
-		'/media/concept-art/' => '/galeria/arte-conceptual/',
-		'/developers/'        => '/desarrolladores/'
-	),
-	'fi' => array(
-		'/'                   => '/',
-		'/play/'              => '/pelaa/',
-		'/about/'             => '/tietoa/',
-		'/about/news/'        => '/tietoa/uutisia/',
-		'/media/'             => '/media/',
-		'/media/screenshots/' => '/media/kuvakaappauksia/',
-		'/media/concept-art/' => '/media/luonnoksia/',
-		'/developers/'        => '/tuotekehittelijat/'
-	),
-	'fr' => array(
-		'/'                   => '/',
-		'/play/'              => '/jouez/',
-		'/about/'             => '/informations/',
-		'/about/news/'        => '/informations/nouvelles/',
-		'/media/'             => '/medias/',
-		'/media/screenshots/' => '/medias/captures-d-ecran/',
-		'/media/concept-art/' => '/medias/concepts-artistiques/',
-		'/developers/'        => '/developpeurs/'
-	),
-	'it' => array(
-		'/'                   => '/',
-		'/play/'              => '/gioca/',
-		'/about/'             => '/informazioni/',
-		'/about/news/'        => '/informazioni/notizie/',
-		'/media/'             => '/media/',
-		'/media/screenshots/' => '/media/immagini/',
-		'/media/concept-art/' => '/media/concept-art/',
-		'/developers/'        => '/sviluppatori/'
-	),
-	'nl' => array(
-		'/'                   => '/',
-		'/play/'              => '/speel/',
-		'/about/'             => '/over/',
-		'/about/news/'        => '/over/nieuws/',
-		'/media/'             => '/media/',
-		'/media/screenshots/' => '/media/schermafbeeldingen/',
-		'/media/concept-art/' => '/media/ontwerpschetsen/',
-		'/developers/'        => '/ontwikkelaars/'
-	)
+<% end %>
 );
 
 // Parse Accept-Language headers
