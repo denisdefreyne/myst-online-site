@@ -4,6 +4,6 @@
 
 <p class="note">Assicuratevi di iscrivervi al <a href="http://feeds2.feedburner.com/uru_it">news feed</a> per restare informati!</p>
 
-<% articles_in('it').each do |article| %>
+<% articles_below(@item).each do |article| %>
 	<%= render 'article', :article => article %>
 <% end %>

@@ -2,37 +2,37 @@
 	<!-- WARNING: untranslated -->
 <% elsif language_code_of(@item) == 'de' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Dieser Artikel ist derzeit noch nicht auf Deutsch verfügbar. Du kannst <%= link_to 'diesen Artikel auf Englisch', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> lesen, bis die deutsche Übersetzung verfügbar ist. Wir entschuldigen uns für jegliche Unannehmlichkeiten, die dies verursachen mag.</p>
+		<p>Dieser Artikel ist derzeit noch nicht auf Deutsch verfügbar. Du kannst <%= link_to 'diesen Artikel auf Englisch', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> lesen, bis die deutsche Übersetzung verfügbar ist. Wir entschuldigen uns für jegliche Unannehmlichkeiten, die dies verursachen mag.</p>
 	<% else %>
 		<p>Diese Seite ist derzeit noch nicht auf Deutsch verfügbar. Du kannst <%= link_to 'diese Seite auf Englisch', translation_of(@item, :in => 'en') %> lesen, bis die deutsche Übersetzung verfügbar ist. Wir bitten etwaige Unannehmlichkeiten zu entschuldigen.</p>
 	<% end %>
 <% elsif language_code_of(@item) == 'es' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Este artículo aún no está disponible en Español. Puedes leer <%= link_to 'este artículo en inglés', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> hasta que la traducción a Español esté disponible. Pedimos disculpas por las molestias que esto pueda ocasionar.</p>
+		<p>Este artículo aún no está disponible en Español. Puedes leer <%= link_to 'este artículo en inglés', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> hasta que la traducción a Español esté disponible. Pedimos disculpas por las molestias que esto pueda ocasionar.</p>
 	<% else %>
 		<p>Esta página aún no está disponible en Español. Puedes leer <%= link_to 'esta página en inglés', translation_of(@item, :in => 'en') %> hasta que la traducción a Español esté disponible. Pedimos disculpas por las molestias que esto pueda ocasionar.</p>
 	<% end %>
 <% elsif language_code_of(@item) == 'fi' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Artikkelia ei ole vielä saatavana suomeksi. Voit lukea <%= link_to 'artikkelin englanniksi', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> kunnes suomalainen käännös valmistuu. Pahoittelemme asiasta koituvaa hankaluutta.</p>
+		<p>Artikkelia ei ole vielä saatavana suomeksi. Voit lukea <%= link_to 'artikkelin englanniksi', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> kunnes suomalainen käännös valmistuu. Pahoittelemme asiasta koituvaa hankaluutta.</p>
 	<% else %>
 		<p>Sivua ei ole vielä saatavana suomeksi. Voit lukea <%= link_to 'sivun englanniksi', translation_of(@item, :in => 'en') %> kunnes suomalainen käännös valmistuu. Pahoittelemme asiasta koituvaa hankaluutta.</p>
 	<% end %>
 <% elsif language_code_of(@item) == 'fr' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Cet article n'est pas encore disponible en français. Vous pouvez <%= link_to 'le lire en anglais', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> en attendant que la version française soit disponible. Veuillez-nous excuser pour cet inconvénient.</p>
+		<p>Cet article n'est pas encore disponible en français. Vous pouvez <%= link_to 'le lire en anglais', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> en attendant que la version française soit disponible. Veuillez-nous excuser pour cet inconvénient.</p>
 	<% else %>
 		<p>Cette page n'est pas encore disponible en français. Vous pouvez <%= link_to 'la lire en anglais', translation_of(@item, :in => 'en') %> en attendant que la version française soit disponible. Veuillez-nous excuser pour cet inconvénient.</p>
 	<% end %>
 <% elsif language_code_of(@item) == 'it' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Questo articolo non è ancora disponibile in Italiano. Puoi leggerlo <%= link_to 'in inglese', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> finchè la traduzione Italiana non sarà pronta. Ci scusiamo per ogni inconvenienza che questo potrebbe causare.</p>
+		<p>Questo articolo non è ancora disponibile in Italiano. Puoi leggerlo <%= link_to 'in inglese', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> finchè la traduzione Italiana non sarà pronta. Ci scusiamo per ogni inconvenienza che questo potrebbe causare.</p>
 	<% else %>
 		<p>Questa pagina non è ancora disponibile in Italiano. Puoi leggerla <%= link_to 'in inglese', translation_of(@item, :in => 'en') %> finchè la traduzione Italiana non sarà pronta. Ci scusiamo per ogni inconvenienza che questo potrebbe causare.</p>
 	<% end %>
 <% elsif language_code_of(@item) == 'nl' %>
 	<% if @item[:kind] == 'article' %>
-		<p>Dit artikel is nog niet beschikbaar in het Nederlands. U kunt de <%= link_to 'Engelstalige versie van dit artikel', translation_of(@items.find { |i| i[:item_id] == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> lezen tot de Nederlandstalige versie er komt. Onze excuses voor dit ongemak.</p>
+		<p>Dit artikel is nog niet beschikbaar in het Nederlands. U kunt de <%= link_to 'Engelstalige versie van dit artikel', translation_of(@items.find { |i| item_id_of(i) == 'about-news' && language_code_of(i) == 'en' }, :in => 'en') %> lezen tot de Nederlandstalige versie er komt. Onze excuses voor dit ongemak.</p>
 	<% else %>
 		<p>Deze pagina is nog niet beschikbaar in het Nederlands. U kunt de <%= link_to 'Engelstalige versie van deze pagina', translation_of(@item, :in => 'en') %> lezen tot de Nederlandstalige versie er komt. Onze excuses voor dit ongemak.</p>
 	<% end %>

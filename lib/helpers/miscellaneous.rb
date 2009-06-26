@@ -9,9 +9,9 @@ module MOULSite::Helpers
       :guild_of_writers     => 'http://www.guildofwriters.com/'
     }
 
-    # Returns the item with the given item ID.
-    def item(item_id)
-      @items.find { |item| item[:item_id] == item_id }
+    # Returns the item with the given identifier.
+    def item(identifier)
+      @items.find { |item| item.identifier == identifier }
     end
 
     # Returns the web site for the given identifier.
@@ -22,6 +22,21 @@ module MOULSite::Helpers
     # Returns the properly marked up translated guild name.
     def translated_guild_name(id, translated, original)
       link_to(translated, website_of(id), :title => original) + %[ (<span lang="en">#{original}</span>)]
+    end
+
+    # Returns the list of sorted articles below the given parent item (e.g. /nl/over/nieuws/).
+    def articles_below(parent_item)
+      parent_item = item(parent_item) if parent_item.is_a? String
+      articles = parent_item.children.select { |a| a[:kind] == 'article' }
+      articles.sort_by { |a| a[:created_at] }.reverse
+    end
+
+    # Returns the ID of this item (e.g. about-news). This ID can be used in the class HTML attribute.
+    def item_id_of(item)
+      canonical_identifier = canonical_identifier_of(item)
+      return if canonical_identifier.nil?
+
+      canonical_identifier.gsub(/^\/|\/$/, '').gsub('/', '-')
     end
 
   end

@@ -9,7 +9,7 @@
 		<meta name="description" content="<%= t('<GAME DESCRIPTION>', :to => language_code_of(@item)) %>">
 
 		<!-- style -->
-		<link href="<%= @site.config[:assets_base_url] + item('style-screen').reps[0].path %>" rel="stylesheet" type="text/css">
+		<link href="<%= @site.config[:assets_base_url] + item('/assets/style/screen/main/').reps[0].path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
 		<style type="text/css" media="screen">
 			#sidebar-pic, #sidebar-pic-home { display: none; }
@@ -25,8 +25,8 @@
 		<!-- feed -->
 		<link rel="alternate" type="application/atom+xml" title="<%= t('<FEED TITLE>', :to => language_code_of(@item)) %>" href="<%= t('<FEED URL>', :to => language_code_of(@item)) %>">
 	</head>
-<% if @item[:item_id] %>
-	<body class="mystonline-com mystonline-com-<%= language_code_of(@item) %>" id="page-<%=h @item[:item_id] %>">
+<% if item_id_of(@item) %>
+	<body class="mystonline-com mystonline-com-<%= language_code_of(@item) %>" id="page-<%=h item_id_of(@item) %>">
 <% else %>
 	<body class="mystonline-com mystonline-com-<%= language_code_of(@item) %>">
 <% end %>
