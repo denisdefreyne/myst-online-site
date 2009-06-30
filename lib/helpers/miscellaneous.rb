@@ -36,7 +36,8 @@ module MOULSite::Helpers
       canonical_identifier = canonical_identifier_of(item)
       return if canonical_identifier.nil?
 
-      canonical_identifier.gsub(/^\/|\/$/, '').gsub('/', '-')
+      item_id_candidate = canonical_identifier.gsub(/^\/|\/$/, '').gsub('/', '-')
+      item_id_candidate.empty? ? 'home' : item_id_candidate
     end
 
   end
