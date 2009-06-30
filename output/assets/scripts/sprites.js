@@ -1,10 +1,20 @@
 function setup(id)
 {
 	$(id).mouseover(function() {
-		$(this).append('<div class="hover"></div>');
-		$(id + ' div.hover').css({ display: 'none' }).fadeIn(200);
+		var hover = $(id + ' div.hover');
+
+		if(hover.length == 0)
+		{
+			$(this).append('<div class="hover"></div>');
+			hover = $(id + ' div.hover');
+			hover.css({ opacity: 0.0 });
+		}
+		else
+			hover.stop();
+
+		hover.fadeTo(200, 1.0);
 	}).mouseout(function() {
-		$(id + ' div.hover').fadeOut(200, function() {
+		$(id + ' div.hover').stop().fadeTo(500, 0.0, function() {
 			$(this).remove();
 		});
 	});
