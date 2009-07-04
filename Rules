@@ -15,6 +15,13 @@ compile '/*/feed_private/' do |rep|
   rep.filter :erb
 end
 
+compile '/en/errors/*' do |rep|
+  rep.filter :erb
+  rep.filter :italicize_proper_names
+  rep.layout 'default'
+  rep.filter :rubypants_ddfreyne
+end
+
 compile '*' do |rep|
   # language-based redirects
   if rep.item[:kind] == 'redirect'
