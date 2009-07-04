@@ -24,14 +24,15 @@ compile '/en/errors/*' do |rep|
 end
 
 compile '*' do |rep|
-  # language-based redirects
-  if rep.item[:kind] == 'redirect'
+  case rep.item[:kind]
+  when 'redirect'
+    # language-based redirects
     rep.filter :erb
-  # articles that are included in other pages
-  elsif rep.item[:kind] == 'article'
+  when 'article', 'fragment'
+    # fragments (such as articles) that are included in other pages
     rep.filter :erb
-  # normal pages
   else
+    # normal pages
     rep.filter :erb
     rep.filter :italicize_proper_names
     rep.layout 'default'
@@ -68,11 +69,12 @@ route '/*/feed_private/' do |rep|
 end
 
 route '*' do |rep|
-  if rep.item[:kind] == 'redirect'
+  case rep.item[:kind]
+  when 'redirect'
     # dynamic pages
     rep.item.identifier + 'index.php'
-  elsif rep.item[:kind] == 'article'
-    # don't write articles
+  when 'article', 'fragment'
+    # don't write fragments (such as articles)
     nil
   else
     # normal pages
