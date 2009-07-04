@@ -12,7 +12,12 @@ module Nanoc3::Helpers
 
     # TODO document
     def translations_of(item)
-      @items.select { |i| !language_code_of(i).nil? && canonical_identifier_of(i) == canonical_identifier_of(item) && i.identifier != item.identifier }
+      @items.select do |i|
+        language_code_of(i) &&
+        canonical_identifier_of(i) &&
+        canonical_identifier_of(i) == canonical_identifier_of(item) &&
+        i.identifier != item.identifier
+      end
     end
 
     # TODO document
