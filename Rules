@@ -5,24 +5,20 @@
 compile '/assets/*' do |rep|
   rep.filter :rainpress
   rep.filter :relativize_paths, :type => :css
-  rep.write
 end
 
 compile '/sitemap_xml/' do |rep|
   rep.filter :erb
-  rep.write
 end
 
 compile '/*/feed_private/' do |rep|
   rep.filter :erb
-  rep.write
 end
 
 compile '*' do |rep|
   # language-based redirects
   if rep.item[:kind] == 'redirect'
     rep.filter :erb
-    rep.write
   # articles that are included in other pages
   elsif rep.item[:kind] == 'article'
     rep.filter :erb
@@ -33,7 +29,6 @@ compile '*' do |rep|
     rep.layout 'default'
     rep.filter :rubypants_ddfreyne
     rep.filter :relativize_paths, :type => :html
-    rep.write
   end
 end
 
@@ -64,6 +59,8 @@ end
 route '*' do |rep|
   if rep.item[:kind] == 'redirect'
     rep.item.identifier + 'index.php'
+  elsif rep.item[:kind] == 'article'
+    nil
   else
     rep.item.identifier + 'index.html'
   end
