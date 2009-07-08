@@ -7,7 +7,7 @@
 <% @item.children.sort_by { |i| i[:created_at] || Date.today }.each do |subpage| %>
 <div class="section" id="section-<%= subpage.identifier.split('/')[-2] %>">
 	<h2><%=h subpage[:title] %></h2>
-	<%= subpage.content %>
+	<%= subpage.reps[0].content_at_snapshot(:pre) %>
 </div>
 <% end %>
 
