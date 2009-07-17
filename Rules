@@ -84,4 +84,4 @@ end
 
 #### Layout
 
-layout '*' => :erb
+layout '*', :erb
