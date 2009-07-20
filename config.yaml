@@ -1,6 +1,10 @@
 # Built-in
 output_dir:      "output"
 index_filenames: [ 'index.html', 'index.php' ]
+data_sources:
+  - type: filesystem
+    items_root: '/'
+    layouts_root: '/'
 
 # Custom
 assets_base_url:  'http://static.mystonline.stoneship.org'
