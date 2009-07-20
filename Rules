@@ -2,83 +2,83 @@
 
 #### Compilation
 
-compile '/assets/*' do |rep|
-  rep.filter :rainpress
-  rep.filter :relativize_paths, :type => :css
+compile '/assets/*' do
+  filter :rainpress
+  filter :relativize_paths, :type => :css
 end
 
-compile '/sitemap_xml/' do |rep|
-  rep.filter :erb
+compile '/sitemap_xml/' do
+  filter :erb
 end
 
-compile '/*/feed_private/' do |rep|
-  rep.filter :erb
+compile '/*/feed_private/' do
+  filter :erb
 end
 
-compile '/en/errors/*' do |rep|
+compile '/en/errors/*' do
   # don't relativize paths in error pages
-  rep.filter :erb
-  rep.filter :italicize_proper_names
-  rep.layout 'default'
-  rep.filter :rubypants_ddfreyne
+  filter :erb
+  filter :italicize_proper_names
+  layout 'default'
+  filter :rubypants_ddfreyne
 end
 
-compile '*' do |rep|
-  case rep.item[:kind]
+compile '*' do
+  case item[:kind]
   when 'redirect'
     # language-based redirects
-    rep.filter :erb
+    filter :erb
   when 'article', 'fragment'
     # fragments (such as articles) that are included in other pages
-    rep.filter :erb
+    filter :erb
   else
     # normal pages
-    rep.filter :erb
-    rep.filter :italicize_proper_names
-    rep.layout 'default'
-    rep.filter :rubypants_ddfreyne
-    rep.filter :relativize_paths, :type => :html
+    filter :erb
+    filter :italicize_proper_names
+    layout 'default'
+    filter :rubypants_ddfreyne
+    filter :relativize_paths, :type => :html
   end
 end
 
 #### Routing
 
-route '/sitemap_xml/' do |rep|
+route '/sitemap_xml/' do
   # needs to be in the web root
   '/sitemap.xml'
 end
 
-route '/en/errors/404/' do |rep|
+route '/en/errors/404/' do
   # custom path for historical reasons
   '/error-404.php'
 end
 
-route '/en/errors/410/' do |rep|
+route '/en/errors/410/' do
   # custom path for historical reasons
   '/error-410.php'
 end
 
-route '/assets/*' do |rep|
+route '/assets/*' do
   # path with version
-  rep.item.identifier[0..-2] + '-v' + rep.item[:version].to_s + '.css'
+  item.identifier[0..-2] + '-v' + item[:version].to_s + '.css'
 end
 
-route '/*/feed_private/' do |rep|
+route '/*/feed_private/' do
   # custom path for historical reasons
-  rep.item.identifier[%r{^(.*/)feed_private/}, 1] + '_feed.xml'
+  item.identifier[%r{^(.*/)feed_private/}, 1] + '_feed.xml'
 end
 
-route '*' do |rep|
-  case rep.item[:kind]
+route '*' do
+  case item[:kind]
   when 'redirect'
     # dynamic pages
-    rep.item.identifier + 'index.php'
+    item.identifier + 'index.php'
   when 'article', 'fragment'
     # don't write fragments (such as articles)
     nil
   else
     # normal pages
-    rep.item.identifier + 'index.html'
+    item.identifier + 'index.html'
   end
 end
 
