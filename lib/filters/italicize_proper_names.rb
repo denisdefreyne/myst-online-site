@@ -83,26 +83,42 @@ module MOULSiteFilters
     ]
 
     def run(content, params={})
-      @regex ||= Regexp.union(*[ /<h\d>/, /<\/h\d>/, /</, />/, WORDS.map { |w| Regexp.new('\b' + Regexp.escape(w) + '\b') }].flatten)
+      @regex ||= begin
+        regexp_parts = [
+          /\<h\d\>/, /\<\/h\d\>/,
+          '<i>',     '</i>',
+          '<',       '>',
+          WORDS.map { |w| Regexp.new('\b' + Regexp.escape(w) + '\b') }
+        ].flatten
+        Regexp.union(*regexp_parts)
+      end
 
       inside_element = false
       inside_header  = false
+      inside_italic  = false
 
       content_new = content.gsub(@regex) do |match|
-        if match == '<'
+        case match
+        when '<'
           inside_element = true
           match
-        elsif match == '>'
+        when '>'
           inside_element = false
           match
-        elsif match =~ /<h\d>/
+        when '<i>'
+          inside_italic = true
+          match
+        when '</i>'
+          inside_italic = false
+          match
+        when /<h\d>/
           inside_header = true
           match
-        elsif match =~ /<\/h\d>/
+        when /<\/h\d>/
           inside_header = false
           match
         else
-          inside_element || inside_header ? match : "<i>#{match}</i>"
+          inside_element || inside_header || inside_italic ? match : "<i>#{match}</i>"
         end
       end
 
