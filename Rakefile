@@ -1,5 +1,4 @@
-Dir['tasks/**/*.rake'].sort.each { |rakefile| load rakefile }
+require 'nanoc3'
+require 'nanoc3/tasks'
 
-task :default do
-  puts 'This is an example rake task.'
-end
+Dir['tasks/**/*.rake'].sort.each { |rakefile| load rakefile }
