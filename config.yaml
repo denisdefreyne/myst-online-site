@@ -8,4 +8,5 @@ data_sources:
 
 # Custom
 assets_base_url:  'http://static.mystonline.com'
+#base_url:         'http://staging.mystonline.stoneship.org'
 base_url:         'http://mystonline.com'
