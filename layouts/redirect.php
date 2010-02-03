@@ -9,6 +9,7 @@ $path_mapping = array(
 <% MOULSite::Helpers::Localization::CANONICAL_IDENTIFIER_MAPPING.each_pair do |language_code, mapping| %>
 	'<%= language_code %>' => array(
 <% mapping.each_pair do |original, translated| %>
+<% next if translated.nil? %>
 		'<%= original %>' => '<%= translated %>',
 <% end %>
 	),
@@ -44,13 +45,18 @@ function redirect($lang)
 {
 	global $base_url, $page_path, $path_mapping;
 
-	if($_SERVER['SERVER_PROTOCOL'] == 'HTTP/1.1')
+	// Make sure that we can redirect to this language
+	if (!isset($path_mapping[$lang][$page_path]))
+		return;
+
+	// Redirect
+	if ($_SERVER['SERVER_PROTOCOL'] == 'HTTP/1.1')
 		header('HTTP/1.1 303 See Other');
 	else
 		header('HTTP/1.0 302 Moved Temporarily');
-
 	header('Location: ' . $base_url . '/' . $lang . $path_mapping[$lang][$page_path]);
 
+	// Stop!
 	exit();
 }
 
