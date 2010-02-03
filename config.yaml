@@ -1,4 +1,5 @@
 # Built-in
+
 output_dir:      "output"
 index_filenames: [ 'index.html', 'index.php' ]
 data_sources:
@@ -7,5 +8,12 @@ data_sources:
     layouts_root: '/'
 
 # Custom
-assets_base_url:  'http://static.mystonline.com'
-base_url:         'http://mystonline.com'
+
+#assets_base_url:  'http://static.mystonline.com'
+#base_url:         'http://mystonline.com'
+
+#assets_base_url:  'http://staging.mystonline.stoneship.org'
+#base_url:         'http://staging.mystonline.stoneship.org'
+
+assets_base_url:  'http://localhost:3000'
+base_url:         'http://localhost:3000'
