@@ -506,7 +506,8 @@ body.mystonline-com-nl#page-developers        h1 { background: url(/assets/image
 
 /* lists */
 
-#main ul {
+#main ul,
+#main ol {
 	margin: 20px 0 20px 25px;
 }
 
@@ -520,9 +521,28 @@ body.mystonline-com-nl#page-developers        h1 { background: url(/assets/image
 
 	line-height: 18px;
 
-	list-style-type: square;
-
 	margin: 0;
+}
+
+#main ul li {
+	list-style-type: square;
+}
+
+#main ol li {
+	list-style-type: decimal;
+}
+
+#main ol.nonnumbered li {
+	list-style-type: none;
+}
+
+#main .nonnumbered {
+	margin: 20px 0;
+}
+
+#main ol.big li,
+#main ul.big li {
+	margin: 18px 0;
 }
 
 /* sub-navigation */
