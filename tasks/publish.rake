@@ -19,7 +19,7 @@ namespace :publish do
 
     # Don't touch this!
     puts 'Publishing site...'
-    system('rsync', '-gpPrvz', '--delete-after', src, dst)
+    system('rsync', '-gpPtrvz', '--delete-after', src, dst)
     puts 'Site published.'
   end
 
@@ -31,7 +31,7 @@ namespace :publish do
 
     # Don't touch this!
     puts 'Publishing assets...'
-    system('rsync', '-gpPrvz', '--delete-after', src, dst)
+    system('rsync', '-gpPtrvz', '--delete-after', src, dst)
     puts 'Assets published.'
   end
 
