@@ -10,8 +10,8 @@ module MOULSite::Helpers
     }
 
     # Returns the item with the given identifier.
-    def item(identifier)
-      @items.find { |item| item.identifier == identifier }
+    def item_named(identifier)
+      @items.find { |i| i.identifier == identifier }
     end
 
     # Returns the web site for the given identifier.
@@ -26,7 +26,7 @@ module MOULSite::Helpers
 
     # Returns the list of sorted articles below the given parent item (e.g. /nl/over/nieuws/).
     def articles_below(parent_item)
-      parent_item = item(parent_item) if parent_item.is_a? String
+      parent_item = item_named(parent_item) if parent_item.is_a? String
       articles = parent_item.children.select { |a| a[:kind] == 'article' }
       articles.sort_by { |a| a[:created_at] }.reverse
     end

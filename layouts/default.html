@@ -9,7 +9,7 @@
 		<meta name="description" content="<%= t('<GAME DESCRIPTION>', :to => language_code_of(@item)) %>">
 
 		<!-- style -->
-		<link href="<%= @site.config[:assets_base_url] + item('/assets/style/screen/main/').reps[0].path %>" rel="stylesheet" type="text/css">
+		<link href="<%= @site.config[:assets_base_url] + item_named('/assets/style/screen/main/').reps[0].path %>" rel="stylesheet" type="text/css">
 		<!--[if lte IE 6]>
 		<style type="text/css" media="screen">
 			#sidebar-pic, #sidebar-pic-home { display: none; }
